@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Giỏ hàng | BéBite</title>
+
+
+    <!-- =====================================================
+         FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS CHUNG CỦA WEBSITE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../bebite.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../components/components.css"
+    >
+
+
+    <!-- =====================================================
+         CSS RIÊNG TRANG CART
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="cart.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER DÙNG CHUNG
+    ====================================================== -->
+
+    <div id="bebite-header"></div>
+
+
+    <!-- =====================================================
+         MAIN CART
+    ====================================================== -->
+
+    <main class="cart-page">
+
+
+        <!-- =================================================
+             BREADCRUMB
+        ================================================== -->
+
+        <div class="cart-breadcrumb">
+
+            <a
+                href="../index.html"
+                data-bebite-home
+            >
+                TRANG CHỦ
+            </a>
+
+            <span>/</span>
+
+            <span>GIỎ HÀNG</span>
+
+        </div>
+
+
+        <!-- =================================================
+             TITLE
+        ================================================== -->
+
+        <section class="cart-heading">
+
+            <h1>GIỎ HÀNG</h1>
+
+            <p>
+                Kiểm tra lại những sản phẩm bạn đã chọn
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             CART CONTENT
+        ================================================== -->
+
+        <section class="cart-content">
+
+
+            <!-- =============================================
+                 DANH SÁCH SẢN PHẨM
+            ============================================== -->
+
+            <div class="cart-products">
+
+                <div class="cart-products-head">
+
+                    <span>SẢN PHẨM</span>
+
+                    <span>SỐ LƯỢNG</span>
+
+                    <span>THÀNH TIỀN</span>
+
+                </div>
+
+
+                <div
+                    id="cartItems"
+                    class="cart-items"
+                >
+
+                    <!-- JS render sản phẩm -->
+
+                </div>
+
+
+                <!-- =========================================
+                     EMPTY CART
+                ========================================== -->
+
+                <div
+                    id="emptyCart"
+                    class="cart-empty"
+                    hidden
+                >
+
+                    <div class="cart-empty-icon">
+
+                        <i class="fa-solid fa-basket-shopping"></i>
+
+                    </div>
+
+                    <h2>GIỎ HÀNG ĐANG TRỐNG</h2>
+
+                    <p>
+                        Bạn chưa có sản phẩm nào trong giỏ hàng.
+                    </p>
+
+                    <a
+                        href="products.html"
+                        class="cart-shopping-btn"
+                    >
+                        TIẾP TỤC MUA SẮM
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 TỔNG GIỎ HÀNG
+            ============================================== -->
+
+            <aside class="cart-summary">
+
+                <h2>TỔNG GIỎ HÀNG</h2>
+
+
+                <div class="cart-summary-line">
+
+                    <span>Tạm tính</span>
+
+                    <strong id="cartSubtotal">
+                        0đ
+                    </strong>
+
+                </div>
+
+
+                <div class="cart-summary-line">
+
+                    <span>Phí vận chuyển</span>
+
+                    <strong id="cartShipping">
+                        Tính khi thanh toán
+                    </strong>
+
+                </div>
+
+
+                <div class="cart-summary-divider"></div>
+
+
+                <div class="cart-summary-total">
+
+                    <span>TỔNG CỘNG</span>
+
+                    <strong id="cartTotal">
+                        0đ
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="checkoutBtn"
+                    class="cart-checkout-btn"
+                >
+                    TIẾN HÀNH THANH TOÁN
+                </button>
+
+
+                <a
+                    href="products.html"
+                    class="cart-continue-link"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    TIẾP TỤC MUA SẮM
+
+                </a>
+
+
+                <button
+                    type="button"
+                    id="clearCartBtn"
+                    class="cart-clear-btn"
+                >
+                    XÓA TOÀN BỘ GIỎ HÀNG
+                </button>
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER DÙNG CHUNG
+    ====================================================== -->
+
+    <div id="bebite-footer"></div>
+
+
+    <!-- =====================================================
+         JS RIÊNG CART
+    ====================================================== -->
+
+    <script src="cart.js"></script>
+
+
+    <!-- =====================================================
+         COMPONENTS HEADER + FOOTER
+    ====================================================== -->
+
+    <script src="../components/components.js"></script>
+
+
+</body>
+
+</html>

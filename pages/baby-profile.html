@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hồ sơ của bé | Bébite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+    <link rel="stylesheet" href="../bebite.css">
+    <link rel="stylesheet" href="baby-profile.css">
+     <link rel="stylesheet" href="../components/components.css">
+</head>
+
+<body class="baby-profile-page">
+        <div id="bebite-header"></div>
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main class="baby-profile-main">
+
+
+<!-- =============================================
+             FORM TẠO HỒ SƠ
+        ============================================== -->
+
+        <section
+            class="profile-create"
+            id="profileCreate"
+        >
+
+            <div class="profile-create-intro">
+
+                <p class="profile-small-title">
+                    BABY PROFILE
+                </p>
+
+                <h1>
+                    CÙNG BÉBITE<br>
+                    HIỂU BÉ HƠN
+                </h1>
+
+                <p>
+                    Hoàn thiện một vài thông tin để Bébite
+                    có thể ghi nhớ hồ sơ và đồng hành cùng bé.
+                </p>
+
+            </div>
+
+
+            <div class="profile-card">
+
+                <form id="babyProfileForm">
+
+
+                    <!-- TÊN -->
+
+                    <div class="profile-field">
+
+                        <label for="babyName">
+                            TÊN CỦA BÉ
+                        </label>
+
+                        <input
+                            type="text"
+                            id="babyName"
+                            placeholder="Ví dụ: Bé Bông"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- NGÀY SINH -->
+
+                    <div class="profile-field">
+
+                        <label for="babyBirthday">
+                            NGÀY / THÁNG / NĂM SINH
+                        </label>
+
+                        <input
+                            type="date"
+                            id="babyBirthday"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- GIỚI TÍNH -->
+
+                    <div class="profile-field">
+
+                        <label>
+                            GIỚI TÍNH
+                        </label>
+
+                        <div class="profile-options">
+
+                            <label class="profile-option">
+
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Bé trai"
+                                    required
+                                >
+
+                                <span>Bé trai</span>
+
+                            </label>
+
+
+                            <label class="profile-option">
+
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Bé gái"
+                                >
+
+                                <span>Bé gái</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- THÔNG TIN TỪ KHẢO SÁT -->
+
+                   <div class="survey-summary is-hidden" id="surveySummary">
+
+                        <p class="survey-summary-title">
+                            THÔNG TIN ĐÃ CUNG CẤP
+                        </p>
+
+                        <div class="summary-item">
+
+                            <span>Độ tuổi</span>
+
+                            <strong id="summaryAge">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>Giai đoạn ăn dặm</span>
+
+                            <strong id="summaryStage">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>Sản phẩm quan tâm</span>
+
+                            <strong id="summaryInterest">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>Dị ứng</span>
+
+                            <strong id="summaryAllergy">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="profile-submit"
+                    >
+                        LƯU HỒ SƠ CỦA BÉ
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =============================================
+             GIAO DIỆN CHÍNH BABY PROFILE
+        ============================================== -->
+
+        <section
+            class="profile-dashboard is-hidden"
+            id="profileDashboard"
+        >
+
+            <div class="dashboard-container">
+
+
+                <!-- WELCOME -->
+
+                <div class="dashboard-welcome">
+
+                    <p class="profile-small-title">
+                        BABY PROFILE
+                    </p>
+
+                    <h1>
+                        XIN CHÀO,
+                        <span id="profileBabyName">
+                            BÉ
+                        </span>!
+                    </h1>
+
+                    <p>
+                        Đây là không gian riêng để Bébite
+                        đồng hành cùng bé trong hành trình lớn khôn.
+                    </p>
+
+                </div>
+
+<!-- THÔNG TIN CHÍNH -->
+
+<div class="dashboard-grid">
+
+
+ <!-- ========================================= CARD THÔNG TIN BÉ ========================================== --> 
+  <div class="dashboard-card baby-info-card"> 
+    <div class="baby-info-header"> <div class="baby-info-heading"> 
+        <div class="card-title"> THÔNG TIN CỦA BÉ </div> 
+        <p class="baby-info-subtitle"> Hồ sơ cơ bản của bé </p> 
+    </div> 
+    <!-- ACTION --> 
+     <div class="profile-dashboard-actions"> 
+        <button type="button" class="profile-logout-button" id="logoutBtn" > Đăng xuất </button>
+     </div> </div> <div class="baby-info"> <div>
+         <span>Tên</span> <strong id="dashboardName">—</strong> </div>
+          <div> <span>Ngày sinh</span> <strong id="dashboardBirthday">—</strong> </div>
+           <div> <span>Giới tính</span> <strong id="dashboardGender">—</strong> </div> 
+        </div> </div>
+
+<div class="personalization-profile-title">
+
+    <span>HỒ SƠ CỦA BÉ</span>
+
+    <div class="personalization-profile-actions">
+
+        <span class="personalization-status">
+            <i class="fa-solid fa-circle"></i>
+            ĐANG CÁ NHÂN HÓA
+        </span>
+
+<button type="button"
+        class="personalization-update-btn"
+        id="editProfileButton">
+    <i class="fa-solid fa-pen"></i>
+    CẬP NHẬT
+</button>
+
+    </div>
+
+</div>
+        <div class="personalization-tags">
+
+            <div class="personalization-tag">
+                <span>Độ tuổi</span>
+                <strong id="personalAge">—</strong>
+            </div>
+
+            <div class="personalization-tag">
+                <span>Giai đoạn</span>
+                <strong id="personalStage">—</strong>
+            </div>
+
+            <div class="personalization-tag">
+                <span>Quan tâm</span>
+                <strong id="personalInterest">—</strong>
+            </div>
+
+            <div class="personalization-tag">
+                <span>Dị ứng</span>
+                <strong id="personalAllergy">—</strong>
+            </div>
+
+        </div>
+
+    </div>
+               <!-- GỢI Ý -->
+
+                <div class="dashboard-recommendation">
+
+                    <div>
+
+                        <p class="profile-small-title">
+                            GỢI Ý DÀNH RIÊNG CHO BÉ
+                        </p>
+
+                        <h2>
+                            KHÁM PHÁ NHỮNG ĐIỀU<br>
+                            PHÙ HỢP VỚI BÉ
+                        </h2>
+
+                        <p>
+                            Dựa trên thông tin bạn đã chia sẻ,
+                            Bébite sẽ giúp bạn tìm thấy những sản phẩm
+                            phù hợp hơn với hành trình của bé.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="products.html"
+                        class="dashboard-button"
+                    >
+                        KHÁM PHÁ SẢN PHẨM
+                    </a>
+
+                </div>
+
+   <div class="personalization-how">
+
+        <h2>
+            BÉBITE CÁ NHÂN HÓA<br>
+            HÀNH TRÌNH CỦA BÉ NHƯ THẾ NÀO?
+        </h2>
+
+
+        <div class="personalization-steps">
+
+            <div class="personalization-step">
+
+                <div class="personalization-step-number">
+                    01
+                </div>
+
+                <div>
+                    <strong>HỒ SƠ CỦA BÉ</strong>
+
+                    <p>
+                        Ghi nhận độ tuổi, giai đoạn,
+                        sở thích và thông tin dị ứng.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="personalization-step">
+
+                <div class="personalization-step-number">
+                    02
+                </div>
+
+                <div>
+                    <strong>PHÂN TÍCH NHU CẦU</strong>
+
+                    <p>
+                        Hệ thống dựa trên thông tin
+                        đã cung cấp để xác định nhóm
+                        sản phẩm phù hợp hơn.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="personalization-step">
+
+                <div class="personalization-step-number">
+                    03
+                </div>
+
+                <div>
+                    <strong>GỢI Ý PHÙ HỢP</strong>
+
+                    <p>
+                        Những sản phẩm liên quan được
+                        ưu tiên hiển thị để mẹ dễ khám phá.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>            
+    <!-- =============================================
+         PHÂN TÍCH CÁ NHÂN HÓA
+    ============================================== -->
+
+    <div class="personalization-analysis">
+
+        <div class="personalization-analysis-heading">
+
+            <div>
+
+
+                <h2>
+                    PHÂN TÍCH RIÊNG CHO BÉ
+                </h2>
+
+                <p>
+                    Từ hồ sơ của bé, Bébite tổng hợp các yếu tố về độ tuổi,
+                    giai đoạn, nhu cầu và thông tin dị ứng để xác định nhóm
+                    sản phẩm nên được ưu tiên khám phá.
+                </p>
+            </div>
+
+            <div class="personalization-fit-score">
+                <strong id="personalFitScore">—</strong>
+                <span id="personalFitLabel">MỨC ĐỘ PHÙ HỢP</span>
+            </div>
+
+        </div>
+
+
+        <div class="personalization-analysis-grid">
+
+            <!-- BIỂU ĐỒ -->
+            <div class="personalization-chart-card">
+
+                <div class="personalization-card-heading">
+                    <div>
+                        <span>NHÓM SẢN PHẨM</span>
+                        <strong>ƯU TIÊN KHÁM PHÁ</strong>
+                    </div>
+
+                    <span class="personalization-chart-note">
+                        % tham khảo
+                    </span>
+                </div>
+
+                <div
+                    class="personalization-chart"
+                    id="personalizationChart"
+                ></div>
+
+                <p class="personalization-disclaimer">
+                    Mức độ trên là minh họa của hệ thống dựa trên hồ sơ đã cung cấp,
+                    không thay thế việc kiểm tra thành phần thực tế của từng sản phẩm.
+                </p>
+
+            </div>
+
+
+            <!-- PHÂN TÍCH HỒ SƠ -->
+            <div class="personalization-insight-card">
+
+                <div class="personalization-card-heading">
+                    <div>
+                        <span>HỒ SƠ CỦA BÉ</span>
+                        <strong>ĐIỂM NỔI BẬT</strong>
+                    </div>
+                </div>
+
+                <div class="personalization-insights" id="personalizationInsights"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- GIAI ĐOẠN ĂN DẶM -->
+        <div class="personalization-stage-card">
+
+            <div class="personalization-stage-copy">
+                <span>HÀNH TRÌNH ĂN DẶM</span>
+                <strong id="personalStageTitle">—</strong>
+                <p id="personalStageDescription">—</p>
+            </div>
+
+            <div class="personalization-stage-progress">
+                <div class="personalization-stage-line">
+                    <span class="stage-point" data-stage="1">01</span>
+                    <span class="stage-connector"></span>
+                    <span class="stage-point" data-stage="2">02</span>
+                    <span class="stage-connector"></span>
+                    <span class="stage-point" data-stage="3">03</span>
+                </div>
+
+                <div class="personalization-stage-labels">
+                    <span>Mới bắt đầu</span>
+                    <span>Làm quen</span>
+                    <span>Ổn định</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+<!-- =============================================
+     LỊCH SỬ MUA HÀNG
+============================================== -->
+
+<div class="dashboard-orders">
+
+    <div class="orders-header">
+
+        <div>
+            <p class="profile-small-title">
+                MULTI-CHANNEL ORDERS
+            </p>
+
+            <h2>
+                ĐƠN HÀNG ĐA KÊNH
+            </h2>
+        </div>
+
+        <a href="cart.html" class="orders-view-all">
+            Xem giỏ hàng →
+        </a>
+
+    </div>
+
+<!-- BỘ LỌC ĐƠN HÀNG ĐA KÊNH -->
+<div class="orders-filter" id="ordersFilter">
+
+    <button
+        type="button"
+        class="orders-filter-btn active"
+        data-channel="all"
+    >
+        Tất cả
+    </button>
+
+    <button
+        type="button"
+        class="orders-filter-btn"
+        data-channel="website"
+    >
+        Website
+    </button>
+
+    <button
+        type="button"
+        class="orders-filter-btn"
+        data-channel="shopee"
+    >
+        Shopee
+    </button>
+
+    <button
+        type="button"
+        class="orders-filter-btn"
+        data-channel="tiktok_shop"
+    >
+        TikTok Shop
+    </button>
+
+</div>
+
+
+<div class="orders-list" id="ordersList">
+
+    <!-- JS sẽ render đơn hàng ở đây -->
+
+</div>
+
+</div>
+</div>
+        </section>
+<!-- =========================
+     POPUP CẬP NHẬT KHẢO SÁT
+========================= -->
+
+<div class="survey-edit-overlay is-hidden" id="surveyEditOverlay">
+
+    <div class="survey-edit-modal">
+
+        <button
+            type="button"
+            class="survey-edit-close"
+            id="closeSurveyEdit"
+        >
+            ×
+        </button>
+
+        <p class="profile-small-title">
+            CẬP NHẬT THÔNG TIN
+        </p>
+
+        <h2>
+            CẬP NHẬT KHẢO SÁT
+        </h2>
+
+        <p class="survey-edit-description">
+            Cập nhật thông tin để Bébite điều chỉnh
+            gợi ý phù hợp hơn với bé.
+        </p>
+
+
+        <!-- =========================
+             01. ĐỘ TUỔI
+        ========================= -->
+
+        <div class="survey-edit-question">
+
+            <label>
+                ĐỘ TUỔI CỦA BÉ
+            </label>
+
+            <div
+                class="survey-edit-options"
+                id="editSurveyAge"
+            ></div>
+
+        </div>
+
+
+        <!-- =========================
+             02. GIAI ĐOẠN
+        ========================= -->
+
+        <div class="survey-edit-question">
+
+            <label>
+                GIAI ĐOẠN ĂN DẶM
+            </label>
+
+            <div
+                class="survey-edit-options"
+                id="editSurveyStage"
+            ></div>
+
+        </div>
+
+
+        <!-- =========================
+             03. SẢN PHẨM QUAN TÂM
+        ========================= -->
+
+        <div class="survey-edit-question">
+
+            <label>
+                SẢN PHẨM BÉ QUAN TÂM
+            </label>
+
+            <div
+                class="survey-edit-options"
+                id="editSurveyInterest"
+            ></div>
+
+        </div>
+
+
+        <!-- =========================
+             04. DỊ ỨNG
+        ========================= -->
+
+        <div class="survey-edit-question">
+
+            <label>
+                BÉ CÓ DỊ ỨNG GÌ KHÔNG?
+            </label>
+
+            <div
+                class="survey-edit-options"
+                id="editSurveyAllergy"
+            ></div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="profile-submit"
+            id="saveSurveyEdit"
+        >
+            LƯU THAY ĐỔI
+        </button>
+
+    </div>
+
+</div>
+<div class="view-analysis-cta">
+    <button type="button" id="viewProductAnalysis">
+        <span>Xem phân tích sản phẩm phù hợp với bé</span>
+        <span class="view-analysis-arrow">↑</span>
+    </button>
+</div>
+    </main>
+ <!-- ================================
+     SHARED FOOTER
+================================= -->
+<div id="bebite-footer"></div>
+
+    <!-- Main JavaScript -->
+    <script src="../bebite.js"></script>
+
+    <script src="baby-profile.js"></script>
+    <script src="../components/components.js"></script>
+
+</body>
+
+</html>

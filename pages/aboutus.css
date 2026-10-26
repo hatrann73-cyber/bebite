@@ -1,0 +1,990 @@
+/* =========================================================
+   BEBITE - ABOUT US
+   ========================================================= */
+
+.about-page {
+    width: 100%;
+    overflow: hidden;
+    background: #fffef7;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.about-breadcrumb {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    padding: 15px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+
+    color: #1C60B8;
+}
+
+.about-breadcrumb a {
+    color: #1C60B8;
+    text-decoration: none;
+}
+
+.about-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.section-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    color: #2871ad;
+}
+
+.about-page h2 {
+    margin: 0;
+
+    font-family: "Potta One", cursive;
+    font-weight: 400;
+
+    color: #1464a7;
+}
+
+.about-page p {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.about-hero {
+    position: relative;
+
+    min-height: 390px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.45fr 1fr;
+    align-items: center;
+
+    padding: 40px 0 55px;
+
+    box-sizing: border-box;
+
+    background: #276db1;
+
+    overflow: visible;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+
+    max-width: 440px;
+
+    margin: 0 auto;
+
+    padding: 0 30px;
+
+    text-align: center;
+}
+
+.hero-content .small-title {
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+
+    color: #dff4ff;
+
+    letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+    margin: 0;
+
+    font-family: "Potta One", cursive;
+    font-size: 27px;
+    line-height: 1.35;
+    font-weight: 400;
+
+    color: white;
+}
+
+.hero-line {
+    width: 45px;
+    height: 2px;
+
+    margin: 17px auto;
+
+    background: #cbf55d;
+}
+
+.hero-content p {
+    max-width: 370px;
+
+    margin: 0 auto 8px;
+
+    font-size: 10px;
+    line-height: 1.7;
+
+    color: #eaf5ff;
+}
+
+
+/* HERO IMAGES */
+
+.hero-image {
+    position: relative;
+
+    z-index: 2;
+
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* LEFT */
+
+.hero-image-left {
+    width: 210px;
+    height: 250px;
+
+    justify-self: end;
+
+    margin-right: 25px;
+
+    margin-top: -25px;
+}
+
+
+/* RIGHT */
+
+.hero-image-right {
+    width: 195px;
+    height: 205px;
+
+    justify-self: start;
+
+    margin-left: 25px;
+
+    margin-top: -5px;
+}
+
+
+/* FLOATING IMAGE */
+
+.hero-floating-image {
+    position: absolute;
+
+    z-index: 5;
+
+    width: 105px;
+    height: 125px;
+
+    overflow: hidden;
+
+    border: 5px solid #fffef7;
+
+    box-sizing: border-box;
+
+    box-shadow: #1C60B8;
+}
+
+.hero-floating-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.hero-floating-image {
+    left: calc(50% - 475px);
+    bottom: 32px;
+}
+
+.hero-floating-bottom {
+    left: auto;
+    right: calc(50% - 475px);
+
+    bottom: -38px;
+
+    width: 105px;
+    height: 140px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.about-intro {
+    max-width: 1180px;
+
+    margin: 75px auto 0;
+
+    padding: 0 30px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    align-items: center;
+}
+
+.intro-image {
+    position: relative;
+
+    height: 330px;
+
+    overflow: hidden;
+}
+
+.intro-image::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.intro-content {
+    padding-right: 15px;
+}
+
+.intro-content h2 {
+    font-size: 21px;
+    line-height: 1.45;
+
+    margin-bottom: 18px;
+}
+
+.intro-content > p {
+    margin: 0 0 11px;
+
+    font-size: 10px;
+    line-height: 1.8;
+
+    color: #1C60B8;
+}
+
+
+/* QUOTE */
+
+.quote-box {
+    position: relative;
+
+    margin-top: 21px;
+    padding: 15px 18px 15px 28px;
+
+    background: #e9f7f4;
+
+    border-left: 4px solid #cbf55d;
+}
+
+.quote-box p {
+    margin: 0;
+
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.7;
+
+    color: #1C60B8;
+}
+
+.quote-mark {
+    position: absolute;
+
+    top: 8px;
+    left: 9px;
+
+    font-family: Georgia, serif;
+    font-size: 28px;
+
+    line-height: 1;
+
+    color: #cbf55d;
+}
+
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.about-values {
+    max-width: 1180px;
+
+    margin: 90px auto 0;
+
+    padding: 0 30px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 55px;
+
+    align-items: center;
+}
+
+.values-content h2 {
+    font-size: 21px;
+    line-height: 1.45;
+
+    margin-bottom: 18px;
+}
+
+.value-line {
+    width: 50px;
+    height: 2px;
+
+    margin-bottom: 18px;
+
+    background: #cbf55d;
+}
+
+.values-content > p {
+    max-width: 500px;
+
+    margin: 0 0 9px;
+
+    font-size: 11px;
+    line-height: 1.8;
+
+    color: #1C60B8;
+}
+
+
+/* VALUE LIST */
+
+.value-list {
+    margin-top: 27px;
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+.value-number {
+    flex: 0 0 auto;
+
+    font-family: "Potta One", cursive;
+    font-size: 13px;
+
+    color: #2871ad;
+}
+
+.value-item h3 {
+    margin: 0 0 5px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #2871ad;
+}
+
+.value-item p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 1.7;
+
+    color: #1C60B8;
+}
+
+
+/* VALUE IMAGE */
+
+.values-image {
+    position: relative;
+
+    height: 400px;
+
+    padding: 0 10px 10px 0;
+
+    box-sizing: border-box;
+}
+
+.values-image img {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.image-decoration {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 92%;
+    height: 92%;
+
+    background: #276db1;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.about-philosophy {
+    margin-top: 100px;
+
+    padding: 70px 30px 80px;
+
+    background: #f5f8ed;
+
+    text-align: center;
+}
+
+.philosophy-heading {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+.philosophy-heading .section-label {
+    color: #2871ad;
+}
+
+.philosophy-heading h2 {
+    font-size: 23px;
+    line-height: 1.45;
+}
+
+.philosophy-heading p {
+    max-width: 650px;
+
+    margin: 18px auto 0;
+
+    font-size: 10px;
+    line-height: 1.8;
+
+    color: #1C60B8;
+}
+
+
+/* PHILOSOPHY GRID */
+
+.philosophy-grid {
+    max-width: 900px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.philosophy-card {
+    min-height: 225px;
+
+    padding: 25px 22px;
+
+    box-sizing: border-box;
+
+    background: #fffef7;
+
+    border: 1px solid #e2e8df;
+
+    text-align: left;
+}
+
+.philosophy-icon {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #cbf55d;
+
+    border-radius: 50%;
+
+    color: #1d659f;
+}
+
+.philosophy-card > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Potta One", cursive;
+    font-size: 10px;
+
+    color: #1C60B8;
+}
+
+.philosophy-card h3 {
+    margin: 0 0 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #2871ad;
+}
+
+.philosophy-card p {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.75;
+
+    color: #1C60B8;
+}
+
+
+/* =========================================================
+   PROMISE
+   ========================================================= */
+
+.about-promise {
+    max-width: 1180px;
+
+    margin: 100px auto;
+
+    padding: 0 30px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 55px;
+
+    align-items: center;
+}
+
+.promise-content h2 {
+    font-size: 22px;
+    line-height: 1.45;
+    margin-bottom: 35px;
+}
+
+.promise-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 23px;
+}
+
+.promise-number {
+    flex: 0 0 auto;
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #cbf55d;
+
+    color: #1d659f;
+
+    font-family: "Potta One", cursive;
+    font-size: 12px;
+}
+
+.promise-item h3 {
+    margin: 1px 0 6px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+font-style: italic;
+    color: #1C60B8;
+}
+
+.promise-item p {
+    margin: 0;
+
+    max-width: 500px;
+
+    font-size: 12px;
+    line-height: 1.75;
+
+    color: #1C60B8;
+}
+
+
+/* PROMISE IMAGE */
+
+.promise-image {
+    position: relative;
+
+    height: 590px;
+
+    padding: 0 9px 9px 0;
+
+    box-sizing: border-box;
+}
+
+.promise-image img {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.promise-blue-block {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 92%;
+    height: 92%;
+
+    background: #276db1;
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.about-final {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 65px 30px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #276db1;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.final-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 600px;
+}
+
+.final-content > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #cbf55d;
+}
+
+.final-content h2 {
+    margin: 0;
+
+    font-size: 25px;
+    line-height: 1.45;
+
+    color: white;
+}
+
+.final-content p {
+    max-width: 500px;
+
+    margin: 15px auto 22px;
+
+    font-size: 10px;
+    line-height: 1.7;
+
+    color: #eaf5ff;
+}
+
+
+/* BUTTON */
+
+.final-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    background: #cbf55d;
+
+    color: #1C60B8;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.final-button:hover {
+    transform: translateY(-2px);
+
+    background: #d8ff7d;
+}
+
+.final-button i {
+    font-size: 9px;
+}
+
+
+/* DECORATION */
+
+.final-decoration {
+    position: absolute;
+
+    color: rgba(203, 245, 93, 0.16);
+
+    font-size: 170px;
+}
+
+.final-decoration-left {
+    left: -40px;
+    bottom: -65px;
+
+    transform: rotate(-25deg);
+}
+
+.final-decoration-right {
+    right: -35px;
+    top: -65px;
+
+    transform: rotate(25deg);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-floating-image {
+        display: none;
+    }
+
+    .about-hero {
+        grid-template-columns: 0.8fr 1.4fr 0.8fr;
+    }
+
+    .hero-image-left {
+        width: 170px;
+        height: 220px;
+    }
+
+    .hero-image-right {
+        width: 160px;
+        height: 180px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .about-hero {
+        grid-template-columns: 1fr;
+
+        padding: 45px 25px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .about-intro,
+    .about-values,
+    .about-promise {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-top: 65px;
+    }
+
+    .intro-image {
+        height: 350px;
+    }
+
+    .values-image,
+    .promise-image {
+        height: 350px;
+
+        max-width: 550px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .about-philosophy {
+        margin-top: 70px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .philosophy-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-breadcrumb {
+        padding: 13px 17px;
+    }
+
+    .about-hero {
+        min-height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 9px;
+    }
+
+    .about-intro,
+    .about-values,
+    .about-promise {
+        padding: 0 18px;
+    }
+
+    .intro-image {
+        height: 250px;
+    }
+
+    .values-image,
+    .promise-image {
+        height: 280px;
+    }
+
+    .about-philosophy {
+        padding: 55px 18px;
+    }
+
+    .philosophy-heading h2 {
+        font-size: 19px;
+    }
+
+    .promise-content h2,
+    .values-content h2,
+    .intro-content h2 {
+        font-size: 18px;
+    }
+
+    .about-final {
+        padding: 55px 20px;
+    }
+
+    .final-content h2 {
+        font-size: 21px;
+    }
+
+    .final-decoration {
+        font-size: 100px;
+    }
+
+}

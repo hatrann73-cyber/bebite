@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sản phẩm | Bébite</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Potta+One&display=swap"
+        rel="stylesheet">
+
+    <!-- ICON -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="../components/components.css">
+</head>
+
+<body>
+    <div id="bebite-header"></div>
+
+
+    <!-- =================================================
+         LOCATION BAR
+    ================================================== -->
+
+    <div class="location-bar">
+
+        <div class="location-container">
+
+<span class="location-bar-message">
+    <i class="fa-solid fa-truck-fast"></i>
+   <small> Chọn địa chỉ để tham khảo khu vực giao hàng.</small> 
+</span>
+
+            <button class="location-button" id="locationButton" type="button" aria-haspopup="dialog" aria-controls="locationModal">
+                <i class="fa-regular fa-map"></i>
+                <span id="selectedLocationText">Chọn địa chỉ của bạn</span>
+            </button>
+
+            <button class="close-location" id="closeLocationBar" type="button" aria-label="Đóng thanh địa chỉ">
+                ×
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- LOCATION MODAL -->
+    <div class="location-modal" id="locationModal" aria-hidden="true">
+        <div class="location-overlay" data-close-location></div>
+        <section class="location-dialog" role="dialog" aria-modal="true" aria-labelledby="locationModalTitle">
+            <div class="location-dialog-header">
+                <div>
+                    <p class="location-eyebrow">ĐỊA CHỈ GIAO HÀNG</p>
+        <h2 id="locationModalTitle">Khu vực bạn quan tâm</h2>
+<p class="location-modal-description">
+    Chọn địa chỉ để tham khảo khu vực giao hàng.;
+    lựa chọn này chưa ảnh hưởng đến sản phẩm hoặc phí vận chuyển.
+</p>
+                </div>
+                <button class="location-dialog-close" id="locationModalClose" type="button" aria-label="Đóng">&times;</button>
+            </div>
+
+            <div class="location-fields">
+                <label>
+                    Tỉnh / Thành phố
+                    <select id="provinceSelect">
+                        <option value="">Đang tải...</option>
+                    </select>
+                </label>
+                <label>
+                    Quận / Huyện
+                    <select id="districtSelect" disabled>
+                        <option value="">Chọn tỉnh / thành phố trước</option>
+                    </select>
+                </label>
+                <label>
+                    Phường / Xã
+                    <select id="wardSelect" disabled>
+                        <option value="">Chọn quận / huyện trước</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="location-preview" id="locationPreview">Vui lòng chọn đầy đủ địa chỉ để tiếp tục.</div>
+
+            <div class="location-dialog-actions">
+                <button class="location-cancel" id="locationCancel" type="button">Hủy</button>
+                <button class="location-confirm" id="locationConfirm" type="button" disabled>Xác nhận địa chỉ</button>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- =================================================
+         CATEGORY BAR
+    ================================================== -->
+
+    <div class="category-bar" id="categoryBar">
+
+        <a href="#" class="category-filter active" data-category="all">Tất cả</a>
+        <a href="#" class="category-filter" data-category="Sữa bột">Sữa bột</a>
+        <a href="#" class="category-filter" data-category="Các loại hạt">Các loại hạt</a>
+        <a href="#" class="category-filter" data-category="Bánh ăn dặm">Bánh ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Bánh hũ">Bánh hũ</a>
+        <a href="#" class="category-filter" data-category="Bánh quy ăn dặm">Bánh quy ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Dầu ăn dặm">Dầu ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Trái cây nghiền">Trái cây nghiền</a>
+        <a href="#" class="category-filter" data-category="Sữa chua uống">Sữa chua uống</a>
+        <a href="#" class="category-filter" data-category="Bánh gạo">Bánh gạo</a>
+        <a href="#" class="category-filter" data-category="Cháo ăn dặm">Cháo ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Dầu massage">Dầu massage</a>
+
+    </div>
+
+
+    <!-- =================================================
+         BREADCRUMB
+    ================================================== -->
+
+    <div class="breadcrumb">
+
+        <span>
+            <i class="fa-solid fa-house"></i>
+        </span>
+
+        <span>›</span>
+
+        <span>Dinh dưỡng toàn diện</span>
+
+        <span>›</span>
+
+    </div>
+
+
+    <!-- =================================================
+         PRODUCTS SECTION
+    ================================================== -->
+
+    <main id="products-section">
+
+        <div class="page-container">
+
+            <h1 class="page-title">
+                Dinh dưỡng toàn diện
+            </h1>
+
+
+            <div class="products-layout">
+
+
+                <!-- =====================================
+                     SIDEBAR
+                ====================================== -->
+
+                <aside class="filter-sidebar">
+
+                    <div class="filter-group open">
+                        <button class="filter-title" type="button">
+                            Dành cho bé dị ứng đạm bò
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
+                        <div class="filter-content">
+                            <label>
+                                <input type="checkbox" data-filter="allergy" value="cow-milk-protein-free">
+                                Dành cho bé dị ứng đạm bò
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group open">
+                        <button class="filter-title" type="button">
+                            Loại sản phẩm
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
+                        <div class="filter-content">
+                            <label><input type="checkbox" data-filter="category" value="Sữa bột">Sữa bột</label>
+                            <label><input type="checkbox" data-filter="category" value="Bánh ăn dặm">Bánh ăn dặm</label>
+                            <label><input type="checkbox" data-filter="category" value="Bánh gạo">Bánh gạo</label>
+                            <label><input type="checkbox" data-filter="category" value="Bánh quy ăn dặm">Bánh quy ăn dặm</label>
+                            <label><input type="checkbox" data-filter="category" value="Cháo ăn dặm">Cháo ăn dặm</label>
+                            <label><input type="checkbox" data-filter="category" value="Các loại hạt">Các loại hạt</label>
+                            <label><input type="checkbox" data-filter="category" value="Dầu ăn dặm">Dầu ăn dặm</label>
+                            <label><input type="checkbox" data-filter="category" value="Sữa chua uống">Sữa chua uống</label>
+                            <label><input type="checkbox" data-filter="category" value="Trái cây nghiền">Trái cây nghiền</label>
+                        </div>
+                    </div>
+
+                </aside>
+
+
+                <!-- =====================================
+                     PRODUCT AREA
+                ====================================== -->
+
+                <section class="product-area">
+
+
+                    <!-- SORT -->
+
+                    <div class="product-toolbar">
+
+                        <div></div>
+
+                        <select id="sortSelect">
+
+                            <option value="default">
+                                Sắp xếp theo
+                            </option>
+
+                            <option value="asc">
+                                Giá tăng dần
+                            </option>
+
+                            <option value="desc">
+                                Giá giảm dần
+                            </option>
+
+                            <option value="newest">
+                                Sản phẩm mới
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PRODUCT GRID -->
+
+                    <div
+                        class="product-grid"
+                        id="productGrid"
+                    >
+
+                        <!-- PRODUCTS LOAD FROM API -->
+
+                    </div>
+
+
+                    <!-- PAGINATION -->
+
+                    <div
+                        class="pagination"
+                        id="pagination"
+                    ></div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =================================================
+                 PERSONALIZED PRODUCTS
+            ================================================== -->
+
+            <section class="personalized-section">
+
+                <h2 class="section-title">
+                    Dành riêng cho bạn
+                </h2>
+
+                <p class="personalized-subtitle">
+                    Sản phẩm được gợi ý dựa trên hồ sơ của bé
+                </p>
+
+                <div
+                    class="personalized-grid"
+                    id="personalizedGrid"
+                ></div>
+
+            </section>
+
+
+            <!-- BACK TO TOP -->
+
+            <div class="back-top">
+
+                <button onclick="window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    Lên đầu trang
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+<!-- ================================
+     SHARED FOOTER
+================================= -->
+<div id="bebite-footer"></div>
+
+
+<!-- ================================
+     PAGE JS
+================================= -->
+<script src="products.js"></script>
+
+<!-- ================================
+     SHARED HEADER + FOOTER
+================================= -->
+<script src="../components/components.js"></script>
+
+</body>
+
+</html>

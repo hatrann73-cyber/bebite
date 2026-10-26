@@ -1,0 +1,23 @@
+
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local database files
+*.sqlite
+*.db
+bebite_db.sql
+# Local MySQL configuration and test scripts
+my.ini
+check-db.js
+# Local MySQL data directory
+Data/

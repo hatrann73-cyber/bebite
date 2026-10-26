@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng ký | BÉBITE</title>
+
+    <link rel="stylesheet" href="bebite.css">
+    <link rel="stylesheet" href="register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Potta+One&display=swap" rel="stylesheet">
+    <!-- CSS HEADER + FOOTER DÙNG CHUNG -->
+    <link rel="stylesheet" href="../components/components.css">
+</head>
+<!-- =====================================================
+         HEADER DÙNG CHUNG
+    ===================================================== -->
+
+    <div id="bebite-header"></div>
+<body>
+
+    <!-- REGISTER -->
+    <main class="register-page">
+
+        <section class="register-card">
+
+            <div class="register-heading">
+                <h1>Tạo tài khoản</h1>
+
+                <p>
+                    Tham gia cùng BÉBITE<br>
+                    và bắt đầu hành trình ăn dặm phù hợp hơn cho bé.
+                </p>
+            </div>
+
+
+            <form id="registerForm">
+
+                <!-- HỌ TÊN -->
+                <div class="form-group">
+                    <label for="registerName">
+                        Họ và tên
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Nhập họ và tên"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="registerEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Nhập email của bạn"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="registerPassword">
+                        Mật khẩu
+                    </label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Tối thiểu 6 ký tự"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            data-target="registerPassword"
+                        >
+                            Hiện
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+                    <label for="registerConfirmPassword">
+                        Xác nhận mật khẩu
+                    </label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="registerConfirmPassword"
+                            placeholder="Nhập lại mật khẩu"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            data-target="registerConfirmPassword"
+                        >
+                            Hiện
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- TERMS -->
+                <label class="terms">
+                    <input
+                        type="checkbox"
+                        id="agreeTerms"
+                        required
+                    >
+
+                    <span>
+                        Tôi đồng ý với
+                        <a href="#" onclick="return false;">
+                            Điều khoản sử dụng
+                        </a>
+                        và
+                        <a href="#" onclick="return false;">
+                            Chính sách bảo mật
+                        </a>
+                    </span>
+                </label>
+
+
+                <!-- ERROR -->
+                <div id="registerMessage" class="register-message"></div>
+
+
+                <!-- BUTTON -->
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+                    ĐĂNG KÝ
+                </button>
+
+            </form>
+
+
+            <div class="login-bottom">
+                <span>Đã có tài khoản?</span>
+
+                <a href="login.html">
+                    Đăng nhập
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+   <!-- =====================================================
+         FOOTER DÙNG CHUNG
+    ===================================================== -->
+
+    <div id="bebite-footer"></div>
+
+
+    <!-- Main JavaScript -->
+    <script src="bebite.js"></script>
+
+    <script src="register.js"></script>
+  <script src="../components/components.js"></script>
+</body>
+</html>

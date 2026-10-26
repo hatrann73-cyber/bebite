@@ -1,0 +1,1978 @@
+/* =========================================================
+   BÉBITE - HOME PAGE
+   Main stylesheet
+========================================================= */
+
+
+/* =========================================================
+   01. VARIABLES
+========================================================= */
+
+:root {
+    --blue: #1C60B8;
+    --light-blue: #A9E1F2;
+    --pale-blue: #C3EBF9;
+
+    --lime: #CBF55D;
+    --cream: #F7F9E4;
+    --cream-light: #FFFFF1;
+
+    --font-heading: "Potta One", cursive;
+    --font-organic: "Original Surfer", cursive;
+    --font-body: "Montserrat", sans-serif;
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream-light);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================================
+   03. COMMON
+========================================================= */
+
+.section-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    color: var(--blue);
+    text-align: center;
+    line-height: 1.25;
+}
+
+/* =========================================================
+   05. HERO
+========================================================= */
+
+.hero {
+    background-color: var(--cream-light);
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    padding: 35px 20px 22px;
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: clamp(34px, 4vw, 52px);
+    color: var(--blue);
+
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-family: var(--font-heading);
+
+    color: #245E2B;
+
+    font-size: clamp(20px, 2vw, 27px);
+
+    font-weight: 400;
+
+    margin-bottom: 7px;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto;
+
+    font-size: 11px;
+    color: #555;
+}
+
+
+/* Hero image */
+
+.hero-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   06. INTRODUCTION
+========================================================= */
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.intro-section {
+    position: relative;
+
+    background-color: #FFFFF1;
+
+    text-align: center;
+
+    padding: 18px 20px 42px;
+
+    overflow: hidden;
+}
+
+
+/* Logo nằm phía sau + hơi đè lên tiêu đề */
+
+.intro-logo {
+    position: relative;
+
+    width: 135px;
+    height: 82px;
+
+    margin: 0 auto -27px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.intro-logo img {
+ width: 130px;
+    height: 110px;
+    object-fit: contain;
+
+    opacity: 0.4;
+}
+/* Tiêu đề */
+.intro-section .section-title {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 auto 14px;
+
+font-family: var(--font-organic);
+    font-weight: 400;
+
+    line-height: 1.25;
+
+    color: var(--blue);
+
+    text-align: center;
+}
+
+
+/* Nội dung */
+
+.intro-text {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    font-family: var(--font-body);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: var(--blue);
+
+    text-align: center;
+}
+
+
+/* Link phía dưới */
+
+.intro-highlight {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 18px;
+
+    font-family: var(--font-body);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: var(--blue);
+
+    text-align: center;
+
+    cursor: pointer;
+}
+/* =========================================================
+   07. FEATURED PRODUCTS (ĐÃ TĂNG SIZE & KÍCH HOẠT KÉO TRƯỢT)
+========================================================= */
+
+:root {
+    --layer-green: #F7FEDB;
+    --blue: #2054a6;
+}
+
+.featured-products {
+    background-color: var(--cream-light);
+    padding: 50px 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.product-title {
+    font-size: clamp(34px, 4.5vw, 54px);
+    text-align: center;
+    color: var(--blue);
+    font-weight: 900;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 5;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.showcase-wrapper {
+    position: relative;
+    margin-top: -26px;
+    padding-top: 55px; /* Tăng khoảng đệm trên vì sản phẩm to hơn */
+    padding-bottom: 35px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.green-layer-bg {
+    position: absolute;
+    inset: 0;
+    background-color: var(--layer-green);
+    z-index: 1;
+}
+
+.product-showcase {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 25px; /* Giữ khoảng cách giữa các sp luôn đều nhau */
+    
+    /* Ép container luôn có nội dung tràn để kích hoạt cuộn ngang */
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    scrollbar-width: none;
+}
+
+.product-showcase:active {
+    cursor: grabbing;
+}
+
+.product-showcase::-webkit-scrollbar {
+    display: none;
+}
+
+.product-item {
+    /* Tăng kích thước sản phẩm to hơn rõ rệt */
+    flex: 0 0 240px;
+    min-width: 260px;
+    width: 260px;
+    height: 360px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: transform 0.25s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+}
+
+.product-item a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.product-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 297px; /* Cố định chiều cao theo khung để sản phẩm hiển thị to và rõ */
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+    pointer-events: none;
+}
+
+/* Scrollbar & Description */
+.custom-scrollbar-wrapper {
+    position: relative;
+    z-index: 4;
+    width: min(100% - 80px, 900px);
+    margin: 20px auto 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.custom-scrollbar-track {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(32, 84, 166, 0.12);
+    border-radius: 99px;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    background-color: var(--blue);
+    border-radius: 99px;
+    cursor: grab;
+}
+
+.custom-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+.product-description {
+    max-width: 650px;
+    margin: 25px auto 0;
+    text-align: center;
+    padding: 0 15px;
+    position: relative;
+    z-index: 5;
+}
+
+.product-description p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--blue);
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 14.5px;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+/* =========================================================
+   08. STATISTICS
+========================================================= */
+
+.statistics {
+    background-color: var(--blue);
+    padding: 15px 20px;
+}
+
+.statistics-container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    color: #FFFFFF;
+}
+
+.stat-item strong {
+    font-family: 'Potta One', cursive;
+
+    font-size: clamp(22px, 3vw, 34px);
+
+    line-height: 1;
+}
+
+.stat-item span {
+    font-family: 'Potta One', cursive;
+}
+
+/* =========================================================
+   09. QUALITY SECTION
+========================================================= */
+
+.quality-section {
+    position: relative;
+
+    /* Khoảng cách trên + dưới toàn section */
+    padding: 35px 0 50px;
+
+    /* Background cho TOÀN BỘ section */
+    background-image: url("assets/images/banners/nen2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.quality-section .section-title {
+    font-size: clamp(23px, 3vw, 36px);
+
+    /* Khoảng cách giữa title và card */
+    margin: 0 0 45px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.quality-section .section-title {
+    font-size: clamp(23px, 3vw, 36px);
+
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   QUALITY CARD
+========================================================= */
+
+/* =========================================================
+   09. QUALITY SECTION
+========================================================= */
+
+.quality-section {
+    position: relative;
+
+    padding: 50px 0 50px;
+
+    background-color: #FFFDF8;
+
+    /* BACKGROUND TOÀN BỘ SECTION */
+    background-image: url("assets/images/banners/nen2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.quality-section .section-title {
+    font-size: clamp(23px, 3vw, 36px);
+
+    margin: 0 0 45px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   QUALITY CARD
+========================================================= */
+
+.quality-item {
+    width: min(800px, 90%);
+    height: 300px;
+
+    margin: 0 auto 40px;
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+
+    border: 1px solid #CBF55D;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    box-sizing: border-box;
+}
+
+
+/* CARD 2 */
+.quality-item.reverse {
+    grid-template-columns: 65% 35%;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.quality-image {
+    width: 100%;
+    height: 300px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.quality-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.quality-content {
+    padding: 20px 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+.quality-content h3 {
+    font-family: 'Potta One', cursive;
+
+    color: #1C60B8;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    margin: 0 0 8px;
+}
+
+.quality-content p {
+    font-family: 'MONTSERRAT', sans-serif;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #1C60B8;
+
+    margin: 0;
+}
+
+/* =========================================================
+   10. SCIENTIFIC JOURNEY
+========================================================= */
+
+.journey-banner {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.journey-banner img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   11. DAILY NUTRITION
+========================================================= */
+
+.daily-nutrition {
+    background-color: var(--cream-light);
+    padding: 35px 0 45px;
+    overflow: hidden;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.daily-nutrition {
+    padding: 45px 0 70px;
+}
+
+.daily-nutrition .section-title {
+    font-size: clamp(22px, 4vw, 32px);
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.nutrition-gallery {
+    position: relative;
+    width: min(1000px, 92%);
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   LÁ / CỎ BACKGROUND
+========================= */
+
+.nutrition-greenery {
+    position: absolute;
+
+    width: 150%;
+    height: 120%;
+
+    left: 0;
+    top: 0;
+
+    transform: translateY(-50px); /* ← kéo lá lên */
+
+    object-fit: contain;
+    object-position: center;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* =========================
+   KHUNG ẢNH
+========================= */
+
+.nutrition-image {
+    position: absolute;
+
+    background: #fff;
+
+    padding: 7px;
+
+    border: none;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+
+    z-index: 2;
+
+    box-sizing: border-box;
+}
+
+.nutrition-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.image-01 {
+    width: 165px;
+    height: 165px;
+    left: 7%;
+    top: 95px;
+    transform: rotate(-5deg);
+}
+
+.image-02 {
+    width: 175px;
+    height: 160px;
+    left: 24%;
+    top: 145px;
+    transform: rotate(3deg);
+    z-index: 3;
+}
+
+.image-03 {
+    width: 165px;
+    height: 160px;
+    left: 42%;
+    top: 105px; /* hạ xuống, không đè title */
+    transform: rotate(-4deg);
+    z-index: 4;
+}
+
+.image-04 {
+    width: 170px;
+    height: 165px;
+    right: 24%;
+    top: 125px;
+    transform: rotate(4deg);
+    z-index: 3;
+}
+
+.image-05 {
+    width: 165px;
+    height: 160px;
+    right: 7%;
+    top: 85px;
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+/* =========================================================
+   12. OUR STORY
+========================================================= */
+
+/* =========================================================
+   OUR STORY
+========================================================= */
+
+.our-story {
+    position: relative;
+
+    background-color: #B7D75A;
+
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.story-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    border: none;
+}
+
+.story-label,
+.our-story .section-title,
+.story-content {
+    display: none;
+}
+
+
+/* =========================================================
+   13. FAQ
+========================================================= */
+
+.faq-section { 
+    background-color: var(--cream-light); 
+    padding: 65px 0 70px; 
+} 
+
+.faq-section .section-title { 
+    font-size: clamp(24px, 3vw, 36px); 
+    margin-bottom: 35px; 
+} 
+
+.faq-list { 
+    width: min(800px, 90%); 
+    margin: 0 auto; 
+} 
+
+.faq-item { 
+    margin-bottom: 14px; 
+    border-radius: 2px;
+    overflow: hidden;
+} 
+
+/* CÂU HỎI */
+.faq-question { 
+    width: 100%; 
+    border: none; 
+    background-color: var(--lime); 
+    color: var(--blue); 
+    padding: 14px 18px; 
+
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+
+    cursor: pointer; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; 
+    font-weight: 600; 
+    text-align: left; 
+
+    transition: 0.25s ease; 
+}
+
+.faq-question:hover { 
+    background-color: #BFEA50; 
+} 
+
+/* DẤU + */
+.faq-icon { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px; 
+    font-weight: 500; 
+    line-height: 1;
+    margin-left: 15px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease; 
+} 
+
+/* CÂU TRẢ LỜI */
+.faq-answer { 
+    max-height: 0; 
+    overflow: hidden; 
+    padding: 0 18px; 
+    background-color: #FFFDF8; 
+    
+    transition: max-height 0.3s ease, padding 0.3s ease; 
+} 
+
+.faq-answer p { 
+    margin: 0; 
+    padding: 16px 0; 
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; 
+    font-weight: 400;
+    line-height: 1.7; 
+    
+    color: #1C60B8; 
+} 
+
+/* KHI MỞ */
+.faq-item.active .faq-answer { 
+    max-height: 150px; 
+    padding: 0 18px; 
+} 
+
+.faq-item.active .faq-icon { 
+    transform: rotate(45deg); 
+}
+
+/* Back to top */
+
+.back-to-top {
+    display: block;
+
+    width: fit-content;
+
+    margin: 45px auto 0;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    border-bottom: 1px solid var(--blue);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: relative;
+
+    background-color: var(--cream-light);
+    border-top: 1px solid rgba(28, 96, 184, 0.08);
+
+    min-height: 320px;
+
+    overflow: visible;
+
+    color: #CBF55D;
+}
+
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
+    position: relative;
+    z-index: 3;
+
+    width: min(1200px, 94%);
+    min-height: 320px;
+
+    margin: 0 auto;
+
+    padding: 25px 0 130px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    column-gap: 80px;
+}
+
+/* =========================
+   COMPANY
+========================= */
+
+/* Tên công ty */
+.footer-company h3 {
+    margin: 0 0 8px;
+
+    font-family: "Potta One", cursive;
+    font-size: 15px;
+    line-height: 1;
+
+    font-weight: 200;
+    color: #2267B2;
+}
+
+
+/* Thông tin công ty */
+.footer-company p {
+    margin: 0 0 4px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    font-weight: 500;
+    color: #2267B2;
+}
+
+.footer-logo {
+    width: 138px;
+    height: auto;
+
+    display: block;
+
+    margin-left: -42px;
+    margin-bottom: 5px;
+}
+
+.footer-company h3 {
+    margin: 0 0 8px;
+
+    font-size: 15px;
+    line-height: 1.3;
+
+    font-weight: 700;
+    letter-spacing: 0.2px;
+
+    color: #2872b9;
+}
+.footer-column a,
+.footer-bottom-links a {
+    color: #2267B2;
+    font-weight: 600;
+}
+.footer .footer-column a,
+.footer .footer-bottom-links a {
+    color: #2267B2 !important;
+    font-weight: 500 !important;
+}
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.footer-right {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 15px;
+}
+
+
+/* =========================
+   MAIN MENU
+========================= */
+
+.footer-main-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 55px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column a {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #4b8bc4;
+    text-decoration: none;
+
+    font-size: 9.5px;
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #2872b9;
+}
+
+
+/* =========================
+   BOTTOM LINKS
+========================= */
+
+.footer-bottom-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 38px;
+
+    margin-top: 13px;
+}
+
+.footer-bottom-links a {
+    color: #4b8bc4;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #2872b9;
+}
+
+
+/* =========================
+   VEGETABLE DECORATION
+========================= */
+
+.footer-decoration {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 135px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.footer-decoration img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+/* =========================================================
+   15. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar-container {
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-menu a {
+        font-size: 9px;
+    }
+
+    .login-link {
+        display: none;
+    }
+
+    .product-item {
+        width: 150px;
+    }
+
+    .product-item img {
+        height: 180px;
+    }
+
+    .quality-item,
+    .quality-item.reverse {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quality-content {
+        padding: 25px;
+    }
+
+    .footer-container {
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   16. RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .header-top p {
+        font-size: 7px;
+    }
+
+    .navbar-container {
+        min-height: 58px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    .cart-button {
+        padding: 8px 11px;
+        font-size: 8px;
+    }
+
+
+    /* Hero */
+
+    .hero-content {
+        padding: 28px 15px 18px;
+    }
+
+    .hero-content p {
+        font-size: 9px;
+    }
+
+
+    /* Intro */
+
+    .intro-section {
+        padding: 30px 15px;
+    }
+
+    .intro-text {
+        font-size: 9px;
+    }
+
+
+    /* Products */
+
+    .product-showcase {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding: 0 20px 10px;
+
+        scrollbar-width: none;
+    }
+
+    .product-showcase::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-item {
+        min-width: 125px;
+    }
+
+    .product-item img {
+        height: 160px;
+    }
+
+
+    /* Statistics */
+
+    .statistics-container {
+        gap: 8px;
+    }
+
+    .stat-item {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 5px;
+    }
+
+    .stat-item strong {
+        font-size: 22px;
+    }
+
+    .stat-item span {
+        font-size: 7px;
+    }
+
+
+    /* Quality */
+
+    .quality-item,
+    .quality-item.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-image {
+        height: 190px;
+    }
+
+    .quality-content {
+        padding: 22px;
+    }
+
+
+    /* Nutrition */
+
+    .nutrition-gallery {
+        height: 300px;
+    }
+
+    .image-01 {
+        width: 120px;
+        height: 90px;
+
+        left: 0;
+    }
+
+    .image-02 {
+        width: 140px;
+        height: 100px;
+
+        left: 22%;
+    }
+
+    .image-03 {
+        width: 125px;
+        height: 90px;
+
+        right: 22%;
+    }
+
+    .image-04 {
+        width: 130px;
+        height: 95px;
+
+        right: 0;
+    }
+
+
+    /* Story */
+
+    .our-story {
+        padding: 50px 15px;
+    }
+
+    .story-container {
+        padding: 30px 22px;
+    }
+
+    .story-content {
+        font-size: 9px;
+    }
+
+
+    /* Footer */
+
+    @media (max-width: 768px) {
+
+    .footer {
+        min-height: auto;
+    }
+
+    .footer-container {
+        width: 90%;
+        padding: 30px 0 120px;
+
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-right {
+        padding-top: 0;
+    }
+
+    .footer-main-links {
+        column-gap: 25px;
+    }
+
+    .footer-bottom-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+    .footer-decoration {
+        height: 90px;
+    }
+
+}
+}
+/* =================================================
+   FIX FEATURED PRODUCTS
+================================================= */
+.product-title {
+    position: relative !important;
+    z-index: 10 !important;
+    margin-bottom: 0 !important;
+    line-height: 1 !important;
+}
+/* 1. Kéo sản phẩm lên sát tiêu đề hơn */
+.showcase-wrapper {
+    position: relative !important;
+    overflow: hidden !important;
+    margin-top: -28px !important;  
+    padding-top: 50px !important;  
+}
+
+/* 2. Dãy trượt sản phẩm */
+.product-showcase {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-end !important;
+
+    gap: 15px !important;
+
+    /* QUAN TRỌNG: Đặt width: 100% thay vì max-content để khung bị giới hạn, ép sản phẩm phải tràn ra */
+    width: 100% !important;
+    max-width: 100% !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    padding: 10px 20px 20px !important;
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.product-showcase::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3. Tăng kích thước hiển thị của từng sản phẩm */
+.product-item {
+    flex: 0 0 200px !important;  
+    width: 210px !important;
+    height: 330px !important;   
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+
+    box-sizing: border-box;
+    transition: transform 0.25s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);  
+}
+
+/* 4. Link & Hình ảnh sản phẩm */
+.product-item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.product-item img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+}
+
+/* Thanh kéo trượt phía dưới */
+.custom-scrollbar-wrapper {
+    width: calc(100% - 80px) !important;
+    margin: 15px auto 0 !important;
+    padding: 0 !important;
+}
+/* =========================
+   WELCOME / SURVEY POPUP
+========================= */
+
+#welcomePopup {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 20px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+background: rgba(236, 248, 243, 0.75) !important;
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+    z-index: 999999 !important;
+}
+
+#welcomePopup.is-hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   POPUP
+========================= */
+
+#welcomePopup .welcome-popup {
+    position: relative;
+
+    width: 500px;
+    max-width: 90vw;
+
+    padding: 30px 45px 32px;
+
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(186, 198, 92, 0.35);
+
+    box-shadow: 0 15px 45px rgba(28, 96, 184, 0.15);
+
+    text-align: center;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+#welcomePopup .welcome-logo {
+    width: 100px;
+    height: auto;
+
+    margin: 0 auto 10px;
+
+    display: block;
+}
+
+
+/* =========================
+   CLOSE
+========================= */
+
+#welcomePopup .welcome-close {
+    position: absolute;
+
+    top: 10px;
+    right: 12px;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #1C60B8;
+
+    font-size: 24px;
+    line-height: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   ALL TEXT
+========================= */
+
+#welcomePopup,
+#welcomePopup p,
+#welcomePopup h2,
+#welcomePopup span,
+#welcomePopup button {
+    color: #1C60B8;
+}
+
+/* =========================
+   SMALL TITLE
+========================= */
+
+#welcomePopup .welcome-small-title {
+    margin: 0 0 10px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.8px;
+
+    color: #1C60B8;
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+#welcomePopup h2 {
+    margin: 0 0 16px;
+
+    font-family: "Potta One", cursive;
+
+    font-size: 27px;
+    line-height: 1.35;
+
+    font-weight: 400;
+
+    color: #1C60B8;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+#welcomePopup .welcome-description {
+    margin: 0 auto 20px;
+
+    max-width: 390px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    line-height: 1.7;
+
+    color: #1C60B8;
+}
+
+
+/* =========================
+   CHECK LIST
+========================= */
+
+#welcomePopup .welcome-note {
+    width: 100%;
+
+    margin: 0 auto 20px;
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(203, 245, 93, 0.18);
+
+    text-align: left;
+}
+
+#welcomePopup .welcome-note p {
+    margin: 7px 0;
+
+    display: flex;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    color: #1C60B8;
+}
+
+#welcomePopup .welcome-note p::before {
+    content: "✓";
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+
+    margin-right: 12px;
+
+    flex-shrink: 0;
+
+    background: #CBF55D;
+
+    color: #1C60B8;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+#welcomePopup .welcome-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+
+    padding: 10px 22px;
+
+    border: none;
+    border-radius: 2px;
+
+    background: #1C60B8;
+    color: #CBF55D !important;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#welcomePopup .welcome-button:hover {
+    background: #154E96;
+}
+
+
+/* =========================
+   ĐỂ SAU
+========================= */
+
+#welcomePopup .survey-later {
+    display: block;
+
+    margin: 12px auto 0;
+
+    border: none;
+    background: transparent;
+
+    color: #1C60B8 !important;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#welcomePopup .survey-later:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SURVEY QUESTIONS
+========================= */
+
+#welcomePopup .survey-progress {
+    margin-bottom: 12px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #1C60B8;
+}
+
+#welcomePopup .question-description {
+    margin: 0 auto 20px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    line-height: 1.6;
+
+    color: #1C60B8;
+}
+
+#welcomePopup .question-options {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    width: 100%;
+}
+
+#welcomePopup .question-option {
+    width: 100%;
+
+    padding: 12px 16px;
+
+    border: none;
+    border-radius: 2px;
+
+    background: rgba(203, 245, 93, 0.20);
+
+    color: #1C60B8 !important;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#welcomePopup .question-option:hover,
+#welcomePopup .question-option.selected {
+    background: #CBF55D;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+#welcomePopup .profile-question {
+    margin: 20px 0 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+    line-height: 1.6;
+
+    color: #1C60B8;
+}
+
+#welcomePopup .profile-agree {
+    border: none;
+    background: transparent;
+
+    color: #1C60B8 !important;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HIDDEN SCREEN
+========================= */
+
+#welcomePopup .survey-screen.is-hidden {
+    display: none !important;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        gap: 40px;
+    }
+
+}
+/* =========================
+   NÚT CÂU TRƯỚC - SURVEY
+========================= */
+
+.survey-back {
+    display: block;
+    margin: 18px auto 0;
+
+    border: none;
+    background: transparent;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #2872B9;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.survey-back:hover {
+    opacity: 0.7;
+}
+
+/* 3. Khối đánh giá khách hàng (Testimonials) */
+.testimonials-section {
+    background-color: #FFFFF1;
+    padding: 55px 0 65px;
+    overflow: hidden;
+}
+
+.testimonials-section .section-title {
+    font-size: clamp(22px, 3.5vw, 34px);
+    margin-bottom: 35px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.testimonial-card {
+    background: #FFFDF8;
+    border: 1px solid #E4E8C9;
+    border-radius: 8px;
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(28, 96, 184, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(28, 96, 184, 0.09);
+    border-color: #CBF55D;
+}
+
+.testimonial-card.highlight-card {
+    background: #F8FCEB;
+    border-color: #CBF55D;
+}
+
+.testimonial-stars {
+    color: #1C60B8;
+    font-size: 14px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.testimonial-text {
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: #1C60B8;
+    margin-bottom: 18px;
+    font-style: italic;
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 12px;
+    color: #1C60B8;
+    font-weight: 700;
+}
+
+.testimonial-author span {
+    font-size: 10px;
+    color: #79A4CD;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+

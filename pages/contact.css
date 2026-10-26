@@ -1,0 +1,588 @@
+/* =========================================================
+   CONTACT PAGE - BEBITE
+   ========================================================= */
+
+.contact-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 30px 70px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.contact-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+    color: #1C60B8;
+}
+
+.contact-breadcrumb a {
+    color: #1C60B8;
+    text-decoration: none;
+}
+
+.contact-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.contact-breadcrumb span:last-child {
+    color: #1C60B8;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.contact-heading h1 {
+    margin: 0 0 12px;
+
+    font-family: "Potta One", cursive;
+    font-size: 30px;
+    font-weight: 400;
+
+    color: #2267B2;
+}
+
+.contact-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #2267B2;
+}
+
+
+/* =========================================================
+   MAIN CONTACT
+   ========================================================= */
+
+.contact-main {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CONTACT INFO
+   ========================================================= */
+
+.contact-info {
+    padding: 30px;
+
+    background: #fffef7;
+
+    border: 1px solid #dce7e8;
+    border-radius: 6px;
+}
+
+.contact-info-image {
+    width: 90px;
+    height: 90px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info-image img {
+    width: 85px;
+    max-height: 85px;
+
+    object-fit: contain;
+}
+
+.contact-info h2,
+.contact-form-box h2 {
+    margin: 0 0 12px;
+
+    font-family: "Potta One", cursive;
+    font-size: 20px;
+    font-weight: 400;
+
+    color: #2267B2;
+}
+
+.contact-intro {
+    margin: 0 0 27px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #2267B2;
+}
+
+
+/* =========================================================
+   CONTACT ITEMS
+   ========================================================= */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin-bottom: 19px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #cbf55d;
+
+    border-radius: 50%;
+
+    color: #2267B2;
+    font-size: 14px;
+}
+
+.contact-item h3 {
+    margin: 0 0 4px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    color: #2267B2;
+}
+
+.contact-item p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+
+    color: #2267B2;
+}
+
+
+/* =========================================================
+   FORM BOX
+   ========================================================= */
+
+.contact-form-box {
+    padding: 30px;
+
+    background: #fffef7;
+
+    border: 1px solid #dce7e8;
+    border-radius: 6px;
+}
+
+.form-description {
+    margin: 0 0 24px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #2267B2;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    color: #2267B2;
+}
+
+.form-group label span {
+    color: #e96d68;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 13px;
+
+    border: 1px solid #dce7e8;
+    border-radius: 4px;
+
+    background: #fffef7;
+
+    outline: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+
+    color: #2267B2;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    height: 42px;
+}
+
+.form-group textarea {
+    min-height: 125px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #1C60B8;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2267B2;
+
+    box-shadow: 0 0 0 2px rgba(156, 201, 197, 0.15);
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.contact-submit {
+    width: 100%;
+    height: 43px;
+
+    margin-top: 2px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #2267B2;
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contact-submit i {
+    margin-left: 7px;
+}
+
+.contact-submit:hover {
+    background: #CBF55D;
+}
+
+.contact-submit:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.contact-success {
+    display: none;
+
+    margin: 15px 0 0;
+    padding: 11px 13px;
+
+    border-radius: 4px;
+
+    background: #eef8f5;
+
+    color: #1C60B8;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.contact-success.show {
+    display: block;
+}
+
+.contact-success i {
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   SUPPORT
+   ========================================================= */
+
+.contact-support {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 150px;
+
+    margin-top: 30px;
+    padding: 30px 45px;
+
+    box-sizing: border-box;
+
+    background: #E8F7F4;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+.support-decoration {
+    width: 75px;
+    height: 75px;
+
+    margin-right: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #cbf55d;
+
+    color: #1C60B8;
+
+    font-size: 26px;
+}
+
+.support-content h2 {
+    margin: 0 0 8px;
+
+    font-family: "Potta One", cursive;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #1C60B8;
+}
+
+.support-content p {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+
+    color: #1C60B8;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.contact-location {
+    margin-top: 40px;
+}
+
+.location-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+.location-title span {
+    width: 45px;
+    height: 1px;
+
+    background: #dce7e8;
+}
+
+.location-title h2 {
+    margin: 0;
+
+    font-family: "Potta One", cursive;
+    font-size: 19px;
+    font-weight: 400;
+
+    color: #1C60B8;
+}
+
+.location-box {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px 30px;
+
+    box-sizing: border-box;
+
+    background: #fffef7;
+
+    border: 1px solid #dce7e8;
+    border-radius: 6px;
+}
+
+.location-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef8f5;
+
+    color: #1C60B8
+
+    font-size: 21px;
+}
+
+.location-box h3 {
+    margin: 0 0 7px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #1C60B8;
+}
+
+.location-box p {
+    margin: 2px 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+
+    color: #1C60B8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-main {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form-box {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding: 22px 16px 50px;
+    }
+
+    .contact-heading h1 {
+        font-size: 24px;
+    }
+
+    .contact-heading p {
+        font-size: 11px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-support {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 28px 22px;
+    }
+
+    .support-decoration {
+        margin-right: 0;
+        margin-bottom: 17px;
+    }
+
+    .location-box {
+        padding: 20px;
+    }
+
+}

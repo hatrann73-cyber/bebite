@@ -1,0 +1,1021 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #F7F9E4;
+    color: #1C60B8;
+}
+
+button,
+select {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-bar {
+    background: #FFFDF8;
+    border-bottom: 1px solid #E4E8C9;
+}
+
+.location-container {
+    width: 94%;
+    max-width: 1450px;
+
+    height: 38px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 11px;
+    color: #5790C9;
+}
+
+.location-button {
+    background: white;
+
+    border: 1px solid #A9C6DE;
+
+    padding: 6px 12px;
+
+    color: #5790C9;
+
+    cursor: pointer;
+}
+
+.location-button i {
+    margin-right: 5px;
+}
+
+.close-location {
+    border: 0;
+    background: transparent;
+
+    color: #1C60B8;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   CATEGORY BAR
+===================================================== */
+
+.category-bar {
+    height: 35px;
+
+    background: #E8FAAE;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    overflow-x: auto;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #1C60B8;
+}
+
+.category-bar a {
+    white-space: nowrap;
+    padding: 0 15px;
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.breadcrumb {
+    width: 94%;
+    max-width: 1450px;
+
+    margin: 15px auto;
+
+    display: flex;
+    gap: 8px;
+
+    color: #79A4CD;
+
+    font-size: 10px;
+}
+
+.breadcrumb i {
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page-container {
+    width: 94%;
+    max-width: 1450px;
+
+    margin: auto;
+}
+
+.page-title,
+.section-title {
+    font-family: "Potta One", cursive;
+
+    color: #1C60B8;
+
+    font-weight: 400;
+}
+
+.page-title {
+    font-size: 38px;
+
+    margin: 25px 0 35px;
+}
+
+
+/* =====================================================
+   PRODUCTS LAYOUT
+===================================================== */
+
+.products-layout {
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    gap: 35px;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.filter-sidebar {
+    width: 100%;
+}
+
+.filter-group {
+    border-bottom: 1px solid #A9C6DE;
+
+    margin-bottom: 2px;
+}
+
+.filter-title {
+    width: 100%;
+
+    border: 0;
+    background: transparent;
+
+    padding: 12px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #1C60B8;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.filter-title i {
+    font-size: 10px;
+}
+
+.filter-content {
+    display: none;
+
+    padding: 5px 0 15px;
+}
+
+.filter-group.open .filter-content {
+    display: block;
+}
+
+.filter-content label {
+    display: block;
+
+    margin: 9px 0;
+
+    font-size: 11px;
+
+    color: #5790C9;
+
+    cursor: pointer;
+}
+
+.filter-content input {
+    margin-right: 7px;
+
+    accent-color: #CBF55D;
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.product-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+#sortSelect {
+    padding: 9px 15px;
+
+    border: 1px solid #A9C6DE;
+
+    background: #FFFDF8;
+
+    color: #5790C9;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   PRODUCT GRID
+===================================================== */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 25px;
+    row-gap: 45px;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+.product-card {
+    position: relative;
+
+    min-width: 0;
+}
+
+.product-badge {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    padding: 6px 10px;
+
+    background: #CBF55D;
+
+    color: #1C60B8;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    z-index: 2;
+}
+
+.product-image {
+    width: 100%;
+    height: 235px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+}
+
+.product-image img {
+    width: 75%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.25s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-category {
+    font-size: 9px;
+
+    color: #5790C9;
+
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #1C60B8;
+
+    margin-bottom: 8px;
+
+    line-height: 1.35;
+}
+
+.product-description {
+    height: 32px;
+
+    overflow: hidden;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    color: #78A0C7;
+
+    margin-bottom: 7px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.product-age {
+    background: #CBF55D;
+
+    color: #1C60B8;
+
+    padding: 4px 8px;
+
+    font-size: 8px;
+}
+
+.product-price {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #1C60B8;
+}
+
+.add-cart-btn {
+    width: 100%;
+
+    height: 30px;
+
+    border: 0;
+
+    background: #CBF55D;
+
+    color: #1C60B8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.add-cart-btn:hover {
+    background: #B9E943;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 55px 0 90px;
+}
+
+.pagination button {
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid #A9C6DE;
+
+    background: #FFFDF8;
+
+    color: #5790C9;
+
+    cursor: pointer;
+
+    font-size: 10px;
+}
+
+.pagination button.active {
+    background: #CBF55D;
+
+    border-color: #CBF55D;
+
+    color: #1C60B8;
+}
+
+
+/* =====================================================
+   PERSONALIZED
+===================================================== */
+
+.personalized-section {
+    margin-bottom: 70px;
+}
+
+.section-title {
+    font-size: 34px;
+
+    margin-bottom: 5px;
+}
+
+.personalized-subtitle {
+    color: #79A4CD;
+
+    font-size: 11px;
+
+    margin-bottom: 30px;
+}
+
+.personalized-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   BACK TOP
+===================================================== */
+
+.back-top {
+    display: flex;
+    justify-content: center;
+
+    margin: 50px 0;
+}
+
+.back-top button {
+    padding: 12px 20px;
+
+    border: 1px solid #A9C6DE;
+
+    background: #FFFDF8;
+
+    color: #1C60B8;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.back-top i {
+    margin-right: 6px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: relative;
+
+    background-color: #FEFEF3;
+    border-top: 1px solid rgba(28, 96, 184, 0.08);
+
+    min-height: 320px;
+
+    overflow: visible;
+
+    color: #CBF55D;
+}
+
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
+    position: relative;
+    z-index: 3;
+
+    width: min(1200px, 94%);
+    min-height: 320px;
+
+    margin: 0 auto;
+
+    padding: 25px 0 130px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    column-gap: 80px;
+}
+
+/* =========================
+   COMPANY
+========================= */
+
+/* Tên công ty */
+.footer-company h3 {
+    margin: 0 0 8px;
+
+    font-family: "Potta One", cursive;
+    font-size: 15px;
+    line-height: 1;
+
+    font-weight: 200;
+    color: #2267B2;
+}
+
+
+/* Thông tin công ty */
+.footer-company p {
+    margin: 0 0 4px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    font-weight: 500;
+    color: #2267B2;
+}
+
+.footer-logo {
+    width: 138px;
+    height: auto;
+
+    display: block;
+
+    margin-left: -42px;
+    margin-bottom: 5px;
+}
+
+.footer-company h3 {
+    margin: 0 0 8px;
+
+    font-size: 15px;
+    line-height: 1.3;
+
+    font-weight: 700;
+    letter-spacing: 0.2px;
+
+    color: #2872b9;
+}
+.footer-column a,
+.footer-bottom-links a {
+    color: #2267B2;
+    font-weight: 600;
+}
+.footer .footer-column a,
+.footer .footer-bottom-links a {
+    color: #2267B2 !important;
+    font-weight: 500 !important;
+}
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.footer-right {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 15px;
+}
+
+
+/* =========================
+   MAIN MENU
+========================= */
+
+.footer-main-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 55px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column a {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #4b8bc4;
+    text-decoration: none;
+
+    font-size: 9.5px;
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #2872b9;
+}
+
+
+/* =========================
+   BOTTOM LINKS
+========================= */
+
+.footer-bottom-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 38px;
+
+    margin-top: 13px;
+}
+
+.footer-bottom-links a {
+    color: #4b8bc4;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #2872b9;
+}
+
+
+/* =========================
+   VEGETABLE DECORATION
+========================= */
+
+.footer-decoration {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 135px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.footer-decoration img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+/* =========================================================
+   15. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar-container {
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-menu a {
+        font-size: 9px;
+    }
+
+    .login-link {
+        display: none;
+    }
+
+    .product-item {
+        width: 150px;
+    }
+
+    .product-item img {
+        height: 180px;
+    }
+
+    .quality-item,
+    .quality-item.reverse {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quality-content {
+        padding: 25px;
+    }
+
+    .footer-container {
+        gap: 40px;
+    }
+}
+
+/* =====================================================
+   ADDRESS PICKER
+===================================================== */
+body.modal-open { overflow: hidden; }
+
+.location-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 48%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.location-button span { overflow: hidden; text-overflow: ellipsis; }
+
+.location-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+}
+.location-modal.show { display: flex; }
+.location-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 54, 87, .35);
+    backdrop-filter: blur(2px);
+}
+.location-dialog {
+    position: relative;
+    width: min(560px, calc(100% - 32px));
+    background: #FFFDF8;
+    border: 1px solid #DCE6C2;
+    border-radius: 12px;
+    box-shadow: 0 20px 55px rgba(28, 96, 184, .18);
+    padding: 26px;
+    color: #1C60B8;
+}
+.location-dialog-header { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:22px; }
+.location-eyebrow { font-size:9px; font-weight:700; letter-spacing:.12em; color:#79A4CD; margin-bottom:5px; }
+.location-dialog h2 { font-family:"Potta One", cursive; font-weight:400; font-size:25px; line-height:1.2; }
+.location-dialog-close { border:0; background:transparent; color:#1C60B8; font-size:28px; cursor:pointer; line-height:1; }
+.location-fields { display:grid; gap:13px; }
+.location-fields label { display:grid; gap:6px; font-size:10px; font-weight:700; color:#1C60B8; }
+.location-fields select {
+    width:100%; height:42px; border:1px solid #A9C6DE; border-radius:5px; background:#fff; color:#5790C9; padding:0 11px; outline:none;
+}
+.location-fields select:focus { border-color:#1C60B8; box-shadow:0 0 0 2px rgba(28,96,184,.08); }
+.location-fields select:disabled { background:#F2F5E8; cursor:not-allowed; }
+.location-preview { margin:18px 0; padding:12px; background:#F5F8E7; border-left:3px solid #CBF55D; color:#5790C9; font-size:10px; line-height:1.5; }
+.location-dialog-actions { display:flex; justify-content:flex-end; gap:10px; }
+.location-dialog-actions button { height:38px; padding:0 16px; border-radius:4px; cursor:pointer; font-size:10px; font-weight:700; }
+.location-cancel { border:1px solid #A9C6DE; background:#fff; color:#5790C9; }
+.location-confirm { border:1px solid #CBF55D; background:#CBF55D; color:#1C60B8; }
+.location-confirm:disabled { opacity:.45; cursor:not-allowed; }
+.empty-products { grid-column:1/-1; padding:50px 0; text-align:center; color:#79A4CD; }
+
+@media (max-width: 700px) {
+    .location-container { height:auto; min-height:48px; gap:8px; padding:6px 0; }
+    .location-container > span { font-size:9px; line-height:1.3; }
+    .location-button { max-width:48%; padding:6px 8px; font-size:9px; }
+    .products-layout { grid-template-columns:1fr; }
+    .filter-sidebar { display:grid; grid-template-columns:1fr 1fr; gap:0 15px; }
+    .filter-group:last-child { grid-column:1/-1; }
+    .product-grid { grid-template-columns:repeat(2,1fr); gap:30px 15px; }
+    .personalized-grid { grid-template-columns:repeat(2,1fr); }
+    .product-image { height:190px; }
+    .location-dialog { padding:20px; }
+}
+
+/* =========================================
+   LOCATION BAR - BEBITE GIAO HÀNG TOÀN QUỐC
+========================================= */
+
+.location-bar-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    color: #1C60B8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.location-bar-message > i {
+    color: #1C60B8;
+    font-size: 15px;
+}
+
+.location-bar-message small {
+    color: #1C60B8;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+/* MÔ TẢ TRONG POPUP */
+
+.location-modal-description {
+    margin: 8px 0 0;
+    color: #1C60B8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* NÚT CHỌN ĐỊA CHỈ */
+
+.location-button {
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.location-button:hover {
+    border-color: #1C60B8;
+}
+
+/* HIỂN THỊ ĐỊA CHỈ ĐÃ CHỌN */
+
+#selectedLocationText {
+    overflow-wrap: anywhere;
+}
+
+/* ĐIỆN THOẠI */
+
+@media (max-width: 600px) {
+    .location-bar-message {
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    .location-bar-message small {
+        flex-basis: 100%;
+        padding-left: 21px;
+        line-height: 1.5;
+    }
+
+    .location-modal-description {
+        font-size: 11px;
+    }
+}
+
+/* Thời gian giao hàng */
+#deliveryEstimate {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 9px 3%;
+
+    background: #F8F9F1;
+    border-bottom: 1px solid #EAEEDF;
+
+    color: #1C60B8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Thanh danh mục sản phẩm */
+#deliveryEstimate + .category-bar,
+#deliveryEstimate + .product-category-bar {
+    margin-top: 0;
+}
+
+/* =========================================
+   POPUP CHỌN ĐỊA CHỈ - HIỂN THỊ TRÊN HEADER
+========================================= */
+
+/* Lớp nền phủ toàn màn hình */
+#locationModal {
+position: fixed !important;
+    inset: 0 !important;
+    z-index: 99999 !important;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-y: auto;
+
+    background: rgba(24, 38, 52, 0.45);
+}
+
+/* Chỉ hiển thị popup khi được mở */
+#locationModal.show {
+    display: flex;
+}
+
+/* Khung nội dung popup */
+#locationModal .modal-content,
+#locationModal .location-modal-content {
+    position: relative;
+    z-index: 100000;
+
+    width: 100%;
+    max-width: 520px;
+    max-height: calc(100vh - 40px);
+
+    margin: auto;
+    overflow-y: auto;
+}
+
+/* Không để popup bị tràn trên điện thoại */
+@media (max-width: 600px) {
+    #locationModal {
+        align-items: center;
+        padding: 14px;
+    }
+
+    #locationModal .modal-content,
+    #locationModal .location-modal-content {
+        max-height: calc(100vh - 28px);
+    }
+}
+
+#locationModalClose {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 100002;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+
+    color: #526174;
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#locationModalClose:hover {
+    background: #F0F4F8;
+    color: #1C60B8;
+}

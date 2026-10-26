@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bébite - Đồ ăn dặm cho bé</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Original+Surfer&family=Potta+One&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="bebite.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+<link rel="stylesheet" href="components/components.css">
+</head>
+
+<body>
+<div id="bebite-header"></div>
+   <!-- =========================
+     BÉBITE SURVEY POPUP
+========================= -->
+
+<div class="welcome-overlay" id="welcomePopup">
+
+    <div class="welcome-popup">
+
+        <!-- NÚT X -->
+        <button
+            type="button"
+            class="welcome-close"
+            id="welcomeClose"
+            aria-label="Đóng"
+        >
+            &times;
+        </button>
+
+
+        <!-- =========================
+             INTRO
+        ========================== -->
+
+        <div class="survey-screen" id="surveyIntro">
+<img
+    src="assets/images/logo/logomau.png"
+    alt="Bébite"
+    class="welcome-logo"
+>
+            <p class="welcome-small-title">
+                CÁ NHÂN HÓA TRẢI NGHIỆM
+            </p>
+
+            <h2>
+                SẴN SÀNG ĐỒNG HÀNH<br>
+                CÙNG BÉ!
+            </h2>
+
+            <p class="welcome-description">
+                Bébite sẽ hỏi một vài thông tin để mang đến
+                những gợi ý phù hợp hơn với hành trình ăn dặm của bé.
+            </p>
+
+            <div class="survey-actions">
+
+                <button
+                    type="button"
+                    class="welcome-button"
+                    id="startSurvey"
+                >
+                    BẮT ĐẦU KHẢO SÁT
+                </button>
+
+                <button
+                    type="button"
+                    class="survey-later"
+                    id="surveyLater"
+                >
+                    ĐỂ SAU
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             QUESTIONS
+        ========================== -->
+
+        <div class="survey-screen is-hidden" id="surveyQuestions">
+
+            <div class="survey-progress">
+                <span id="surveyStep">01</span>
+                <span>/ 04</span>
+            </div>
+
+            <h2 id="questionTitle">
+                BÉ ĐANG BAO NHIÊU THÁNG TUỔI?
+            </h2>
+
+            <p
+                class="question-description"
+                id="questionDescription"
+            >
+                Hãy chọn thông tin phù hợp nhất với bé.
+            </p>
+
+<div
+    class="question-options"
+    id="questionOptions"
+>
+</div>
+
+<button
+    type="button"
+    class="survey-back"
+    id="surveyBack"
+>
+    ← Câu trước
+</button>
+
+        </div>
+
+
+        <!-- =========================
+             FINAL
+        ========================== -->
+
+        <div
+            class="survey-screen is-hidden"
+            id="surveyResult"
+        >
+
+            <p class="welcome-small-title">
+                CÁ NHÂN HÓA TRẢI NGHIỆM
+            </p>
+
+            <h2>
+                SẴN SÀNG ĐỒNG HÀNH<br>
+                CÙNG BÉ!
+            </h2>
+
+            <p class="welcome-description">
+                Bébite đã có thêm một chút thông tin để mang đến
+                những gợi ý phù hợp hơn với hành trình ăn dặm của bé.
+            </p>
+
+            <button
+                type="button"
+                class="welcome-button"
+                id="exploreButton"
+            >
+                BẮT ĐẦU KHÁM PHÁ
+            </button>
+
+            <p class="profile-question">
+                Bạn có muốn lưu hồ sơ của bé để lần sau
+                nhận gợi ý nhanh hơn không?
+            </p>
+
+            <button
+                type="button"
+                class="profile-agree"
+                id="profileAgree"
+            >
+                ĐỒNG Ý
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+         MAIN
+    ====================================================== -->
+    <main>
+
+        <!-- =================================================
+             HERO (ĐÃ THÊM NÚT CTA FLOATING TINH TẾ)
+        ================================================== -->
+        <section class="hero-section">
+            <div class="hero-image">
+                <img
+                    src="assets/images/banners/home-hero.png"
+                    alt="Sản phẩm và nguyên liệu tự nhiên của Bébite"
+                >
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <div class="section-container">
+                <div class="intro-logo">
+                    <img src="assets/images/logo/logonen.png" alt="">
+                </div>
+
+                <h2 class="section-title">
+                    Our Belief
+                </h2>
+
+                <p class="intro-text">
+                    Với Bébite, chúng tôi tin rằng mỗi bữa ăn dặm của bé đều là một khởi đầu tuyệt vời để khám phá thế giới. Chúng tôi ở đây để mang lại những điều tự nhiên nhất trên hành trình phát triển của con yêu.
+                </p>
+                <p class="intro-highlight">
+                    <a href="pages/login.html">Đăng nhập</a>
+                    <span> / </span>
+                    <a href="pages/register.html">Đăng ký</a>
+                    <span> →</span>
+                </p>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             FEATURED PRODUCTS (ĐÃ CẬP NHẬT SKU CHUẨN)
+        ================================================== -->
+        <section class="featured-products">
+            <div class="section-container">
+                <h2 class="section-title product-title">
+                    SẢN PHẨM NỔI BẬT
+                </h2>
+
+                <div class="showcase-wrapper">
+                    <div class="green-layer-bg"></div>
+
+                    <div class="product-showcase" id="productShowcase">
+                        <!-- Product 01: Sữa chua uống -->
+
+<div class="product-item">
+                            <a href="pages/product-detail.html?sku=TCNAVOBANA90G">
+                                <img src="assets/images/products/TRAICAYNGHIENVICHUOIBO_01.png" alt="Trái cây nghiền vị chuối bơ">
+                            </a>
+                        </div>
+
+                        <!-- Product 02: Trái cây nghiền Bơ Chuối -->
+                                    <div class="product-item">
+                            <a href="pages/product-detail.html?sku=SCU200ML">
+                                <img src="assets/images/products/SUACHUAUONG_01.png" alt="Sữa chua uống">
+                            </a>
+                        </div>
+
+                        <!-- Product 03: Bánh ăn dặm Vị Xoài -->
+                        <div class="product-item">
+                            <a href="pages/product-detail.html?sku=BADVXOAI40G">
+                                <img src="assets/images/products/BADXOAI_01.png" alt="Bánh ăn dặm vị xoài">
+                            </a>
+                        </div>
+
+                        <!-- Product 04: Đậu Hà Lan -->
+                        <div class="product-item">
+                            <a href="pages/product-detail.html?sku=DHALAN70G">
+                                <img src="assets/images/products/HDAUHALAN70G_01.png" alt="Đậu hà lan">
+                            </a>
+                        </div>
+
+                        <!-- Product 05: Dầu ăn dặm Cá Hồi -->
+                        <div class="product-item">
+                            <a href="pages/product-detail.html?sku=DADCAHOI150ML">
+                                <img src="assets/images/products/DADCAHOI150_01.png" alt="Dầu ăn dặm cá hồi 150ml">
+                            </a>
+                        </div>
+
+                        <!-- Product 06: Bánh quy vị kiwi -->
+                        <div class="product-item">
+                            <a href="pages/product-detail.html?sku=BQVKIWI35G">
+                                <img src="assets/images/products/BQKIWI35G_01.png" alt="Bánh quy vị kiwi">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="custom-scrollbar-wrapper">
+                        <div class="custom-scrollbar-track" id="scrollTrack">
+                            <div class="custom-scrollbar-thumb" id="scrollThumb"></div>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <p>
+                            Từ những bữa ăn dặm đầu tiên đến những món ăn vặt nhỏ xinh, Bébite
+                            đồng hành cùng bé trong hành trình khám phá thế giới dinh dưỡng.
+                        </p>
+                        <a href="pages/products.html" class="text-link">
+                            Xem tất cả sản phẩm
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+        <section class="statistics">
+            <div class="statistics-container">
+                <div class="stat-item">
+                    <strong>25+</strong>
+                    <span>Danh mục<br>sản phẩm</span>
+                </div>
+
+                <div class="stat-item">
+                    <strong>3000+</strong>
+                    <span>Khách hàng<br>tin tưởng</span>
+                </div>
+
+                <div class="stat-item">
+                    <strong>500+</strong>
+                    <span>Phản hồi<br>tích cực</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             KHỐI PHẢN HỒI THỰC TẾ TỪ KHÁCH HÀNG (CUSTOMER REVIEWS)
+        ================================================== -->
+        <section class="testimonials-section">
+            <div class="section-container">
+                <h2 class="section-title">
+                    GÓC CHIA SẺ TỪ BA MẸ
+                </h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Bé nhà mình mới 7 tháng rất kén ăn, đổi qua dùng cháo yến mạch với bánh dặm que của Bébite trộm vía bé tự nhón ăn ngon lành mà không hề bị hóc."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Mẹ Mai Anh</strong>
+                            <span>Bé Bo (8 tháng - TP.HCM)</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card highlight-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Thích nhất là tiêu chí 3 Không và vị nguyên bản thơm nhạt của nông sản, dầu olive và dầu cá hồi cho vào cháo không hề bị tanh nồng chút nào."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Mẹ Thanh Thảo</strong>
+                            <span>Bé Miu (11 tháng - Bình Dương)</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Đặt hàng giao nhanh đóng gói cẩn thận. Bao bì đẹp mắt, hướng dẫn sử dụng chi tiết rất an tâm cho ba mẹ lần đầu có con ăn dặm."
+                        </p>
+                        <div class="testimonial-author">
+                            <strong>Bố Tuấn Nam</strong>
+                            <span>Bé Bắp (1 tuổi - Đà Nẵng)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             QUALITY PROMISE
+        ================================================== -->
+        <section class="quality-section">
+            <div class="section-container">
+                <h2 class="section-title">
+                    LỜI HỨA VỮNG VÀNG VỀ CHẤT LƯỢNG
+                </h2>
+
+                <div class="quality-item">
+                    <div class="quality-image">
+                        <img src="assets/images/banners/MH2.jpg" alt="Nguyên liệu tự nhiên">
+                    </div>
+                    <div class="quality-content">
+                        <h3>LÀNH MẠNH VÀ AN TOÀN</h3>
+                        <p>
+                            Chúng tôi tin rằng chiếc bụng nhỏ êm ru chính là nền tảng để con vui khỏe và khám phá thế giới mỗi ngày.
+                            Vì thế, Bébite luôn ưu tiên các công thức sánh mịn màng, dồi dào chất xơ hòa tan tự nhiên giúp đường ruột non nớt của bé nhẹ tênh, hấp thu trọn vẹn từng muỗng ngọt lành. Mọi nguyên liệu đều được kiểm định an toàn nghiêm ngặt trước khi đến với con yêu.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="quality-item reverse">
+                    <div class="quality-content">
+                        <h3>TỰ NHIÊN & MINH BẠCH</h3>
+                        <p>
+                            Chúng tôi tin rằng sự an tâm của ba mẹ bắt đầu từ sự trung thực và nguồn gốc thuần khiết nhất.
+                            Bébite kiên định với cam kết 3 Không: không thêm đường mía, không muối và không chất bảo quản. Từng sản phẩm gửi gắm đến bé là sự nâng niu trọn vẹn từ hương vị tự nhiên của nông sản sạch, minh bạch rõ ràng trong từng thành phần công bố.
+                        </p>
+                    </div>
+                    <div class="quality-image">
+                        <img src="assets/images/banners/MH3.jpg" alt="Bébite - Tự nhiên và minh bạch">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             SCIENTIFIC JOURNEY BANNER
+        ================================================== -->
+        <section class="journey-banner">
+            <img src="assets/images/banners/HMH9.png" alt="Hành trình ăn dặm khoa học">
+        </section>
+
+
+        <!-- =================================================
+             DAILY NUTRITION
+        ================================================== -->
+        <section class="daily-nutrition">
+            <div class="section-container">
+                <h2 class="section-title">
+                    Dinh Dưỡng Tốt<br>
+                    Bé Khỏe Mỗi Ngày
+                </h2>
+
+                <div class="nutrition-gallery">
+                    <img src="assets/images/banners/latla.png" class="nutrition-greenery" alt="Lát lá">
+
+                    <div class="nutrition-image image-01">
+                        <img src="assets/images/banners/dauhalan.png" alt="Đậu Hà Lan">
+                    </div>
+                    <div class="nutrition-image image-02">
+                        <img src="assets/images/banners/MH8.jpg" alt="Bé cầm muỗng">
+                    </div>
+                    <div class="nutrition-image image-03">
+                        <img src="assets/images/banners/MH1.png" alt="Bé ăn dặm">
+                    </div>
+                    <div class="nutrition-image image-04">
+                        <img src="assets/images/banners/MHHOME.jpg" alt="Cá hồi">
+                    </div>
+                    <div class="nutrition-image image-05">
+                        <img src="assets/images/banners/quabo.jpg" alt="Quả bơ">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             OUR STORY
+        ================================================== -->
+        <section class="our-story">
+            <div class="story-container">
+                <img src="assets/images/banners/thungo.png" alt="Bébite" class="story-image">
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             FAQ
+        ================================================== -->
+        <section class="faq-section">
+            <div class="section-container">
+                <h2 class="section-title">
+                    CÂU HỎI THƯỜNG GẶP ?
+                </h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bé từ 6 tháng mới bắt đầu ăn dặm nên dùng những sản phẩm nào của Bébite?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Ở mốc 6 tháng, hệ tiêu hóa của con mới làm quen với thức ăn đặc. Ba mẹ nên ưu tiên:
+                                (1) Cháo ăn dặm yến mạch & các loại hạt dinh dưỡng nấu nhuyễn.
+                                (2) Trái cây nghiền Bơ Chuối, Xoài Cát Chu mịn mượt.
+                                (3) Thêm 1/2 thìa cà phê Dầu ăn dặm sau khi nấu chín.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bé ăn bánh ăn dặm, bánh gạo Bébite có bị hóc không?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Hoàn toàn an toàn khi dùng cho bé từ 6 tháng trở lên. Bánh ăn dặm và bánh gạo nướng Bébite có kết cấu xốp mịn đặc biệt, tự tan nhanh trong miệng chỉ sau vài giây tiếp xúc với nước bọt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bên mình có các sản phẩm dành cho bé dị ứng đạm bò / sữa không?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Dạ ba mẹ vào trang Sản Phẩm và tích chọn mục "Dành cho bé dị ứng đạm bò", hệ thống sẽ tự động lọc ra các món hoàn toàn không chứa sữa bò.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Sản phẩm Bébite có thêm gia vị đường, muối hay chất bảo quản không?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Bébite cam kết tiêu chuẩn 3 KHÔNG khắt khe: Không thêm đường mía/muối tinh luyện; Không sử dụng chất bảo quản; Không chứa phẩm màu hay hương liệu nhân tạo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Thời gian nhận hàng dự kiến là bao lâu?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Khu vực nội thành (TP.HCM): Giao trong vòng 1 – 2 ngày làm việc. Khu vực các tỉnh/thành phố khác: Đơn hàng được giao tận nơi từ 2 – 4 ngày làm việc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="back-to-top">
+                    ↑ Lên đầu trang
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <!-- =====================================================
+         SHARED FOOTER
+    ====================================================== -->
+    <div id="bebite-footer"></div>
+
+
+    <!-- =====================================================
+         MAIN JAVASCRIPT
+    ====================================================== -->
+    <script src="bebite.js"></script>
+
+    <!-- SHARED HEADER + FOOTER -->
+    <script src="components/components.js"></script>
+
+</body>
+</html>

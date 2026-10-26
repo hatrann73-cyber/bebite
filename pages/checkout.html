@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thanh toán | BéBite</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="../bebite.css">
+    <link rel="stylesheet" href="../components/components.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="bebite-header"></div>
+
+
+    <main class="checkout-page">
+
+        <!-- BREADCRUMB -->
+        <div class="checkout-breadcrumb">
+
+            <a href="../index.html" data-bebite-home>
+                TRANG CHỦ
+            </a>
+
+            <span>/</span>
+
+            <a href="cart.html">
+                GIỎ HÀNG
+            </a>
+
+            <span>/</span>
+
+            <span>THANH TOÁN</span>
+
+        </div>
+
+
+        <!-- TITLE -->
+        <section class="checkout-heading">
+
+            <h1>THANH TOÁN</h1>
+
+            <p>
+                Hoàn tất thông tin để đặt hàng cho bé
+            </p>
+
+        </section>
+
+
+        <!-- CONTENT -->
+        <section class="checkout-content">
+
+
+            <!-- =====================================
+                 LEFT
+            ====================================== -->
+
+            <div class="checkout-left">
+
+
+                <!-- =====================================
+                     01 - THÔNG TIN GIAO HÀNG
+                ====================================== -->
+
+                <div class="checkout-box">
+
+                    <div class="checkout-box-title">
+
+                        <span class="checkout-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                THÔNG TIN GIAO HÀNG
+                            </h2>
+
+                            <p>
+                                Vui lòng nhập chính xác thông tin nhận hàng
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="checkoutForm">
+
+
+                        <!-- HỌ TÊN + SĐT -->
+
+                        <div class="checkout-form-row">
+
+                            <div class="checkout-field">
+
+                                <label for="fullName">
+                                    HỌ VÀ TÊN <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    placeholder="Nhập họ và tên"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="checkout-field">
+
+                                <label for="phone">
+                                    SỐ ĐIỆN THOẠI <span>*</span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Nhập số điện thoại"
+                                    autocomplete="tel"
+                                    inputmode="numeric"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="checkout-field">
+
+                            <label for="email">
+                                EMAIL
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Nhập email của bạn"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+
+                        <!-- ĐỊA CHỈ -->
+
+                        <div class="checkout-field">
+
+                            <label for="address">
+                                ĐỊA CHỈ NHẬN HÀNG <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="address"
+                                name="address"
+                                placeholder="Số nhà, tên đường..."
+                                autocomplete="street-address"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- TỈNH + HUYỆN -->
+
+                        <div class="checkout-form-row">
+
+
+                            <!-- TỈNH / THÀNH PHỐ -->
+
+                            <div class="checkout-field">
+
+                                <label for="city">
+                                    TỈNH / THÀNH PHỐ <span>*</span>
+                                </label>
+
+                                <div class="checkout-select-wrap">
+
+                                    <select
+                                        id="city"
+                                        name="city"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Chọn tỉnh / thành phố
+                                        </option>
+
+                                    </select>
+
+                                    <i class="fa-solid fa-chevron-down"></i>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- QUẬN / HUYỆN -->
+
+                            <div class="checkout-field">
+
+                                <label for="district">
+                                    QUẬN / HUYỆN <span>*</span>
+                                </label>
+
+                                <div class="checkout-select-wrap">
+
+                                    <select
+                                        id="district"
+                                        name="district"
+                                        required
+                                        disabled
+                                    >
+
+                                        <option value="">
+                                            Chọn quận / huyện
+                                        </option>
+
+                                    </select>
+
+                                    <i class="fa-solid fa-chevron-down"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PHƯỜNG / XÃ -->
+
+                        <div class="checkout-field">
+
+                            <label for="ward">
+                                PHƯỜNG / XÃ <span>*</span>
+                            </label>
+
+                            <div class="checkout-select-wrap">
+
+                                <select
+                                    id="ward"
+                                    name="ward"
+                                    required
+                                    disabled
+                                >
+
+                                    <option value="">
+                                        Chọn phường / xã
+                                    </option>
+
+                                </select>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GHI CHÚ -->
+
+                        <div class="checkout-field">
+
+                            <label for="note">
+                                GHI CHÚ ĐƠN HÀNG
+                            </label>
+
+                            <textarea
+                                id="note"
+                                name="note"
+                                rows="4"
+                                placeholder="Ví dụ: Giao hàng giờ hành chính..."
+                            ></textarea>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     02 - PHƯƠNG THỨC GIAO HÀNG
+                ====================================== -->
+
+                <div class="checkout-box">
+
+                    <div class="checkout-box-title">
+
+                        <span class="checkout-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                PHƯƠNG THỨC GIAO HÀNG
+                            </h2>
+
+                            <p>
+                                Chọn phương thức giao hàng phù hợp
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkout-options">
+
+
+                        <!-- STANDARD -->
+
+                        <label class="checkout-option active">
+
+                            <input
+                                type="radio"
+                                name="shipping"
+                                value="standard"
+                                data-price="20000"
+                                checked
+                            >
+
+                            <span class="checkout-radio"></span>
+
+                            <span class="checkout-option-content">
+
+                                <strong>
+                                    Giao hàng tiêu chuẩn
+                                </strong>
+
+                                <small>
+                                    Giao hàng từ 2 - 5 ngày
+                                </small>
+
+                            </span>
+
+                            <span class="checkout-option-price">
+                                20.000đ
+                            </span>
+
+                        </label>
+
+
+                        <!-- EXPRESS -->
+
+                        <label class="checkout-option">
+
+                            <input
+                                type="radio"
+                                name="shipping"
+                                value="express"
+                                data-price="35000"
+                            >
+
+                            <span class="checkout-radio"></span>
+
+                            <span class="checkout-option-content">
+
+                                <strong>
+                                    Giao hàng nhanh
+                                </strong>
+
+                                <small>
+                                    Ưu tiên xử lý, giao từ 1 - 2 ngày
+                                </small>
+
+                            </span>
+
+                            <span class="checkout-option-price">
+                                35.000đ
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     03 - THANH TOÁN
+                ====================================== -->
+
+                <div class="checkout-box">
+
+                    <div class="checkout-box-title">
+
+                        <span class="checkout-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                PHƯƠNG THỨC THANH TOÁN
+                            </h2>
+
+                            <p>
+                                Chọn phương thức thanh toán
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkout-options">
+
+
+                        <!-- COD -->
+
+                        <label class="checkout-option active">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="cod"
+                                checked
+                            >
+
+                            <span class="checkout-radio"></span>
+
+                            <span class="checkout-option-content">
+
+                                <strong>
+                                    Thanh toán khi nhận hàng
+                                </strong>
+
+                                <small>
+                                    Thanh toán bằng tiền mặt khi nhận hàng
+                                </small>
+
+                            </span>
+
+                            <i class="fa-solid fa-money-bill-wave checkout-option-icon"></i>
+
+                        </label>
+
+
+
+                        <!-- BANK -->
+
+                        <label class="checkout-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="bank"
+                            >
+
+                            <span class="checkout-radio"></span>
+
+                            <span class="checkout-option-content">
+
+                                <strong>
+                                    Chuyển khoản ngân hàng
+                                </strong>
+
+                                <small>
+                                    Chuyển khoản trước khi nhận hàng
+                                </small>
+
+                            </span>
+
+                            <i class="fa-solid fa-building-columns checkout-option-icon"></i>
+
+                        </label>
+
+
+                    </div>
+
+
+                    <!-- BANK INFO -->
+
+                    <div
+                        id="bankPaymentInfo"
+                        class="checkout-bank-info"
+                        hidden
+                    >
+
+                        <div class="checkout-bank-heading">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            <span>
+                                THÔNG TIN CHUYỂN KHOẢN
+                            </span>
+
+                        </div>
+
+
+                        <div class="checkout-bank-content">
+
+                            <div class="checkout-bank-details">
+
+                                <div>
+                                    <span>Ngân hàng</span>
+                                    <strong>MB BANK</strong>
+                                </div>
+
+                                <div>
+                                    <span>Số tài khoản</span>
+
+                                    <strong>
+                                        0923456789
+                                    </strong>
+                                </div>
+
+                                <div>
+                                    <span>Chủ tài khoản</span>
+
+                                    <strong>
+                                        Cong Ty TNHH BEBITE Viet Nam
+                                    </strong>
+                                </div>
+
+                                <div>
+                                    <span>Nội dung chuyển khoản</span>
+
+                                    <strong id="bankTransferContent">
+                                        BEBITE THANH TOAN
+                                    </strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="checkout-bank-qr">
+
+                                <div class="checkout-qr-placeholder">
+
+                                    <i class="fa-solid fa-qrcode"></i>
+
+                                    <span>
+                                        QR
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Quét mã để chuyển khoản
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 RIGHT
+            ====================================== -->
+
+            <aside class="checkout-right">
+
+                <div class="checkout-summary">
+
+                    <h2>
+                        ĐƠN HÀNG CỦA BẠN
+                    </h2>
+
+
+                    <!-- ITEMS -->
+
+                    <div
+                        id="checkoutItems"
+                        class="checkout-items"
+                    ></div>
+
+
+                    <!-- SUBTOTAL -->
+
+                    <div class="checkout-summary-line">
+
+                        <span>
+                            Tạm tính
+                        </span>
+
+                        <strong id="checkoutSubtotal">
+                            0đ
+                        </strong>
+
+                    </div>
+
+
+                    <!-- SHIPPING -->
+
+                    <div class="checkout-summary-line">
+
+                        <span>
+                            Phí vận chuyển
+                        </span>
+
+                        <strong id="checkoutShipping">
+                            20.000đ
+                        </strong>
+
+                    </div>
+
+
+                    <div class="checkout-summary-divider"></div>
+
+
+<!-- MÃ GIẢM GIÁ BÉBITE -->
+<div class="checkout-voucher">
+    <label for="discountCode">Mã giảm giá</label>
+    <div class="checkout-voucher-row">
+        <input
+            type="text"
+            id="discountCode"
+            placeholder="Nhập mã BEBITE5"
+        >
+        <button type="button" id="applyDiscount">
+            Áp dụng
+        </button>
+    </div>
+    <p id="discountMessage"></p>
+    <div class="checkout-discount-row">
+        <span>Giảm giá</span>
+        <strong id="checkoutDiscount">0đ</strong>
+    </div>
+</div>
+
+                    <!-- TOTAL -->
+
+                    <div class="checkout-summary-total">
+
+                        <span>
+                            TỔNG CỘNG
+                        </span>
+
+                        <strong id="checkoutTotal">
+                            0đ
+                        </strong>
+
+                    </div>
+
+
+                    <!-- ORDER -->
+
+                    <button
+                        type="submit"
+                        form="checkoutForm"
+                        class="checkout-order-btn"
+                        id="placeOrderBtn"
+                    >
+                        ĐẶT HÀNG
+                    </button>
+
+
+                    <a
+                        href="cart.html"
+                        class="checkout-back-cart"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        QUAY LẠI GIỎ HÀNG
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <div id="bebite-footer"></div>
+
+
+    <script src="checkout.js"></script>
+    <script src="../components/components.js"></script>
+
+</body>
+
+</html>

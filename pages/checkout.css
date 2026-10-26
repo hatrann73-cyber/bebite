@@ -1,0 +1,982 @@
+/* =========================================
+   CHECKOUT PAGE
+========================================= */
+
+.checkout-page {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 30px 70px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.checkout-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 24px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: #8b9da5;
+}
+
+.checkout-breadcrumb a {
+    color: #1c60b8;
+    text-decoration: none;
+}
+
+.checkout-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.checkout-heading {
+    margin-bottom: 30px;
+}
+
+.checkout-heading h1 {
+    margin: 0 0 7px;
+
+    font-family: "Potta One", cursive;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #1c60b8;
+}
+
+.checkout-heading p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #71838b;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.checkout-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 28px;
+    align-items: start;
+}
+
+
+/* =========================================
+   LEFT BOX
+========================================= */
+
+.checkout-left {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.checkout-box {
+    padding: 24px 25px;
+    background: #fffef7;
+    border: 1px solid #dce7e8;
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   BOX TITLE
+========================================= */
+
+.checkout-box-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.checkout-number {
+    width: 27px;
+    height: 27px;
+    flex: 0 0 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #cbf55d;
+    border-radius: 50%;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    color: #1c60b8;
+}
+
+.checkout-box-title h2 {
+    margin: 0 0 4px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1c60b8;
+}
+
+.checkout-box-title p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #87979d;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.checkout-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.checkout-field {
+    margin-bottom: 17px;
+}
+
+.checkout-field:last-child {
+    margin-bottom: 0;
+}
+
+.checkout-field label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    color: #1c60b8;
+}
+
+.checkout-field label span {
+    color: #d96b6b;
+}
+
+.checkout-field input,
+.checkout-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    border: 1px solid #dce7e8;
+    border-radius: 3px;
+
+    background: #fffef7;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #1c60b8;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.checkout-field input {
+    height: 39px;
+}
+
+.checkout-field textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+.checkout-field input::placeholder,
+.checkout-field textarea::placeholder {
+    color: #a8b5b9;
+}
+
+.checkout-field input:focus,
+.checkout-field textarea:focus {
+    border-color: #83a5c1;
+    box-shadow: 0 0 0 2px rgba(131, 165, 193, 0.10);
+}
+
+
+/* =========================================
+   OPTIONS
+========================================= */
+
+.checkout-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    min-height: 58px;
+    padding: 11px 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dce7e8;
+    border-radius: 4px;
+
+    background: #fffef7;
+
+    cursor: pointer;
+}
+
+.checkout-option:hover {
+    border-color: #b9d0d5;
+}
+
+.checkout-option.active {
+    border-color: #83a5c1;
+    background: #eef8f5;
+}
+
+.checkout-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkout-radio {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 15px;
+
+    border: 1px solid #b8c9ce;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+.checkout-option.active .checkout-radio {
+    border: 4px solid #1c60b8;
+}
+
+.checkout-option-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.checkout-option-content strong {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #1c60b8;
+}
+
+.checkout-option-content small {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #7c8e94;
+}
+
+.checkout-option-price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    color: #1c60b8;
+}
+
+
+/* =========================================
+   RIGHT SUMMARY
+========================================= */
+
+.checkout-right {
+    position: sticky;
+    top: 92px;
+}
+
+.checkout-summary {
+    padding: 24px 23px 21px;
+
+    background: #E8F7F4;
+    border-radius: 6px;
+}
+
+.checkout-summary h2 {
+    margin: 0 0 19px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1c60b8;
+}
+
+
+/* =========================================
+   CHECKOUT ITEMS
+========================================= */
+
+.checkout-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkout-item-image {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+}
+
+.checkout-item-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    background: transparent;
+}
+
+.checkout-item-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.checkout-item-name {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    color: #1c60b8;
+}
+
+.checkout-item-quantity {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #809197;
+}
+
+.checkout-item-price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    color: #1c60b8;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   SUMMARY LINES
+========================================= */
+
+.checkout-summary-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    color: #71838b;
+}
+
+.checkout-summary-line strong {
+    font-size: 10px;
+    font-weight: 700;
+    color: #1c60b8;
+}
+
+.checkout-summary-divider {
+    height: 1px;
+    margin: 14px 0;
+
+    background: rgba(28, 96, 184, 0.14);
+}
+
+.checkout-summary-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 19px;
+}
+
+.checkout-summary-total span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    color: #1c60b8;
+}
+
+.checkout-summary-total strong {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #1c60b8;
+}
+
+
+/* =========================================
+   ORDER BUTTON
+========================================= */
+
+.checkout-order-btn {
+    width: 100%;
+    height: 43px;
+
+    border: none;
+    border-radius: 3px;
+
+    background: #1c60b8;
+    color: #fffef7;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.checkout-order-btn:hover {
+    background: #174f99;
+}
+
+.checkout-order-btn:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   BACK TO CART
+========================================= */
+
+.checkout-back-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    margin-top: 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #1c60b8;
+    text-decoration: none;
+}
+
+.checkout-back-cart:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   EMPTY CHECKOUT
+========================================= */
+
+.checkout-empty {
+    padding: 35px 15px;
+
+    text-align: center;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.checkout-empty i {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    color: #83a5c1;
+}
+
+.checkout-empty p {
+    margin: 0;
+
+    font-size: 10px;
+    font-weight: 600;
+    color: #71838b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-right {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .checkout-page {
+        padding: 22px 15px 50px;
+    }
+
+    .checkout-heading h1 {
+        font-size: 24px;
+    }
+
+    .checkout-box {
+        padding: 20px 17px;
+    }
+
+    .checkout-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .checkout-summary {
+        padding: 21px 18px;
+    }
+
+}
+/* =========================================
+   SELECT ĐỊA CHỈ
+========================================= */
+
+.checkout-select-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.checkout-select-wrap select {
+    width: 100%;
+    height: 39px;
+
+    box-sizing: border-box;
+
+    padding: 0 36px 0 12px;
+
+    border: 1px solid #dce7e8;
+    border-radius: 3px;
+
+    background: #fffef7;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+
+    color: #1c60b8;
+
+    outline: none;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.checkout-select-wrap select:focus {
+    border-color: #83a5c1;
+
+    box-shadow:
+        0 0 0 2px rgba(131, 165, 193, 0.10);
+}
+
+.checkout-select-wrap select:disabled {
+    background: #f4f7f5;
+
+    color: #a8b5b9;
+
+    cursor: not-allowed;
+}
+
+.checkout-select-wrap i {
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    font-size: 10px;
+
+    color: #83a5c1;
+}
+
+
+/* =========================================
+   PAYMENT ICON
+========================================= */
+
+.checkout-option-icon {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #83a5c1;
+
+    transition: color 0.2s ease;
+}
+
+.checkout-option.active .checkout-option-icon {
+    color: #1c60b8;
+}
+
+
+/* =========================================
+   BANK PAYMENT
+========================================= */
+
+.checkout-bank-info {
+    margin-top: 13px;
+
+    padding: 16px;
+
+    border: 1px dashed #83a5c1;
+    border-radius: 4px;
+
+    background: #f7fbf9;
+}
+
+.checkout-bank-heading {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 14px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+
+    color: #1c60b8;
+}
+
+.checkout-bank-heading i {
+    font-size: 10px;
+}
+
+
+.checkout-bank-content {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.checkout-bank-details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+
+    flex: 1;
+}
+
+.checkout-bank-details div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.checkout-bank-details span {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #829399;
+}
+
+.checkout-bank-details strong {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #1c60b8;
+}
+
+
+/* =========================================
+   QR
+========================================= */
+
+.checkout-bank-qr {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.checkout-qr-placeholder {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    border: 1px solid #dce7e8;
+
+    border-radius: 3px;
+
+    background: #fffef7;
+
+    color: #1c60b8;
+}
+
+.checkout-qr-placeholder i {
+    font-size: 31px;
+}
+
+.checkout-qr-placeholder span {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.checkout-bank-qr small {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #829399;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   SHIPPING ACTIVE PRICE
+========================================= */
+
+.checkout-option-price {
+    min-width: 55px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   DISABLED SELECT TEXT
+========================================= */
+
+.checkout-select-wrap select option {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+}
+
+.checkout-select-wrap select option:disabled {
+    color: #a8b5b9;
+}
+
+
+/* =========================================
+   RESPONSIVE BANK
+========================================= */
+
+@media (max-width: 600px) {
+
+    .checkout-bank-content {
+        flex-direction: column;
+    }
+
+    .checkout-bank-qr {
+        align-self: flex-start;
+    }
+
+}
+
+/* =========================================
+   MÃ GIẢM GIÁ - BEBITE
+========================================= */
+
+.checkout-voucher {
+    margin: 18px 0 14px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.checkout-voucher > label {
+    display: block;
+    margin-bottom: 9px;
+    color: #1C60B8;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.checkout-voucher-row {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+}
+
+.checkout-voucher-row input {
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #D5E2E9;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #1C60B8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.checkout-voucher-row input:focus {
+    border-color: #1C60B8;
+    box-shadow: 0 0 0 3px rgba(28, 96, 184, 0.1);
+}
+
+.checkout-voucher-row input::placeholder {
+    color: #9AAAB8;
+}
+
+.checkout-voucher-row button {
+    flex-shrink: 0;
+    min-width: 88px;
+    height: 40px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 7px;
+    background: #1C60B8;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.checkout-voucher-row button:hover {
+    background: #174F96;
+}
+
+.checkout-voucher-row button:active {
+    transform: scale(0.98);
+}
+
+#discountMessage {
+    margin: 7px 0 10px;
+    font-size: 11px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.checkout-discount-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 10px 0 14px;
+    color: #183F70;
+    font-size: 12px;
+}
+
+.checkout-discount-row strong {
+    color: #1C60B8;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Màn hình nhỏ */
+@media (max-width: 480px) {
+    .checkout-voucher {
+        margin-top: 15px;
+    }
+
+    .checkout-voucher-row {
+        gap: 6px;
+    }
+
+    .checkout-voucher-row input {
+        font-size: 11px;
+    }
+
+    .checkout-voucher-row button {
+        min-width: 78px;
+        padding: 0 10px;
+        font-size: 10px;
+    }
+}

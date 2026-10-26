@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chính sách | Bébite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../bebite.css">
+    <link rel="stylesheet" href="../components/components.css">
+
+    <style>
+
+        /* =====================================================
+           BÉBITE - POLICY PAGE
+           STYLE THEO GIAO DIỆN MẪU
+        ===================================================== */
+
+        :root {
+            --policy-blue: #1C60B8;
+            --policy-blue-light: #A9E1F2;
+            --policy-cream: #FFFFF1;
+            --policy-lime: #CBF55D;
+            --policy-light-blue: #C3EBF9;
+            --policy-light-yellow: #F7FEDB;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--policy-cream);
+        }
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        .policy-page {
+            min-height: 100vh;
+            background: var(--policy-cream);
+
+            font-family: "Montserrat", sans-serif;
+            color: var(--policy-blue);
+        }
+
+        /* =====================================================
+           BREADCRUMB
+        ===================================================== */
+
+        .policy-breadcrumb {
+            width: 100%;
+            max-width: 1180px;
+
+            margin: 0 auto;
+            padding: 10px 20px 4px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 9px;
+
+            color: #1C60B8;
+        }
+
+        .policy-breadcrumb a {
+            color: var(--policy-blue);
+            text-decoration: none;
+        }
+
+        .policy-breadcrumb span {
+            margin: 0 4px;
+        }
+
+        /* =====================================================
+           MAIN LAYOUT
+        ===================================================== */
+
+        .policy-layout {
+            width: 100%;
+            max-width: 1180px;
+
+            margin: 0 auto;
+            padding: 8px 20px 70px;
+
+            display: grid;
+            grid-template-columns: 205px minmax(0, 1fr);
+
+            column-gap: 45px;
+
+            align-items: start;
+        }
+
+        /* =====================================================
+           LEFT SIDEBAR
+        ===================================================== */
+
+        .policy-sidebar {
+            position: sticky;
+            top: 85px;
+
+            padding-top: 5px;
+        }
+
+        .policy-sidebar h1 {
+            margin: 0 0 15px;
+
+            color: var(--policy-blue);
+
+            font-family: "Potta One", cursive;
+            font-size: 23px;
+            
+        }
+
+        .policy-sidebar-nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .policy-sidebar-nav a {
+            padding: 5px 0;
+
+            color: var(--policy-blue);
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 9px;
+            line-height: 1.45;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+        }
+
+        .policy-sidebar-nav a:hover {
+            color: #5594b5;
+            transform: translateX(3px);
+        }
+
+        .policy-sidebar-nav a.active {
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           CONTENT
+        ===================================================== */
+
+        .policy-content {
+            min-width: 0;
+        }
+
+        .policy-content h2.main-title {
+            margin: 0 0 12px;
+
+            color: var(--policy-blue);
+
+            font-family: "Potta One", cursive;
+            font-size: 21px;
+            font-weight: 400px;
+        }
+
+        .policy-intro {
+            margin-bottom: 22px;
+
+            color: #1C60B8;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .policy-intro strong {
+            color: var(--policy-blue);
+        }
+
+        /* =====================================================
+           EFFECTIVE DATE
+        ===================================================== */
+
+        .policy-effective {
+            margin-bottom: 18px;
+
+            padding: 8px 11px;
+
+            background: var(--policy-light-yellow);
+
+            border-left: 3px solid var(--policy-lime);
+
+            color: #1C60B8;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 9px;
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .policy-section {
+            margin-bottom: 30px;
+            scroll-margin-top: 95px;
+        }
+
+        .policy-section-title {
+            margin: 0 0 8px;
+
+            color: var(--policy-blue);
+
+            font-family: "Potta One", cursive;
+            font-size: 11px;
+        }
+
+        .policy-section-subtitle {
+            margin: 17px 0 8px;
+
+            color: var(--policy-blue);
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .policy-section p {
+            margin: 0 0 8px;
+
+            color: #1C60B8;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .policy-section ul {
+            margin: 6px 0 12px;
+            padding-left: 17px;
+        }
+
+        .policy-section li {
+            margin-bottom: 4px;
+
+            color: #1C60B8;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+        .policy-section strong {
+            color: var(--policy-blue);
+        }
+
+        /* =====================================================
+           PROCESS TABLE
+        ===================================================== */
+
+        .policy-table-wrap {
+            width: 100%;
+            overflow-x: auto;
+
+            margin-top: 12px;
+        }
+
+        .policy-table {
+            width: 100%;
+
+            border-collapse: collapse;
+            table-layout: fixed;
+
+            color: var(--policy-blue);
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+        }
+
+        .policy-table th,
+        .policy-table td {
+            border: 1px solid #a8cfdc;
+            vertical-align: top;
+        }
+
+        .policy-table th {
+            padding: 7px 5px;
+
+            background: var(--policy-light-blue);
+
+            color: var(--policy-blue);
+
+            font-size: 10px;
+            font-weight: 700;
+
+            text-align: left;
+            line-height: 1.45;
+        }
+
+        .policy-table td {
+            padding: 7px 5px;
+
+            color: #1C60B8;
+
+            background: rgba(255,255,255,0.18);
+
+            line-height: 1.65;
+        }
+
+        .policy-table tr:nth-child(even) td {
+            background: rgba(255,255,255,0.28);
+        }
+
+        .policy-table td:first-child {
+            color: var(--policy-blue);
+            font-weight: 700;
+        }
+
+        .policy-table td strong {
+            color: var(--policy-blue);
+        }
+
+        /* column widths */
+
+        .policy-table th:nth-child(1),
+        .policy-table td:nth-child(1) {
+            width: 14%;
+        }
+
+        .policy-table th:nth-child(2),
+        .policy-table td:nth-child(2) {
+            width: 18%;
+        }
+
+        .policy-table th:nth-child(3),
+        .policy-table td:nth-child(3) {
+            width: 30%;
+        }
+
+        .policy-table th:nth-child(4),
+        .policy-table td:nth-child(4) {
+            width: 15%;
+        }
+
+        .policy-table th:nth-child(5),
+        .policy-table td:nth-child(5) {
+            width: 23%;
+        }
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .policy-contact-list {
+            margin-top: 8px;
+        }
+
+        .policy-contact-item {
+            margin-bottom: 5px;
+
+            color: #1C60B8;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+        .policy-contact-item strong {
+            color: var(--policy-blue);
+        }
+
+        /* =====================================================
+           GROUP LIST
+        ===================================================== */
+
+        .policy-group-list {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 5px 20px;
+
+            margin-top: 10px;
+        }
+
+        .policy-group-item {
+            padding: 6px 8px;
+
+            border-left: 2px solid var(--policy-blue-light);
+
+            color: #1C60B8;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+            line-height: 1.65;
+        }
+
+        .policy-group-item strong {
+            color: var(--policy-blue);
+        }
+
+        /* =====================================================
+           PRIORITY TABLE
+        ===================================================== */
+
+        .priority-table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 10px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+        }
+
+        .priority-table th,
+        .priority-table td {
+            border: 1px solid #a8cfdc;
+
+            padding: 7px 6px;
+
+            vertical-align: top;
+
+            line-height: 1.65;
+        }
+
+        .priority-table th {
+            background: var(--policy-light-blue);
+
+            color: var(--policy-blue);
+
+            font-weight: 700;
+
+            text-align: left;
+        }
+
+        .priority-table td {
+            color: #1C60B8;
+        }
+
+        .priority-table td:first-child {
+            width: 13%;
+
+            color: var(--policy-blue);
+            font-weight: 700;
+        }
+
+        .priority-table td:nth-child(2) {
+            width: 27%;
+        }
+
+        .priority-table td:nth-child(3) {
+            width: 19%;
+        }
+
+        .priority-table td:nth-child(4) {
+            width: 41%;
+        }
+
+        /* =====================================================
+           PRINCIPLES
+        ===================================================== */
+
+        .policy-principles {
+            margin-top: 10px;
+        }
+
+        .policy-principle {
+            margin-bottom: 10px;
+        }
+
+        .policy-principle strong {
+            color: var(--policy-blue);
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 10px;
+        }
+
+        .policy-principle p {
+            display: inline;
+
+            margin: 0;
+
+            font-size: 10px;
+        }
+
+        /* =====================================================
+           NOTE
+        ===================================================== */
+
+        .policy-note {
+            margin-top: 15px;
+            padding: 10px 12px;
+
+            background: var(--policy-light-yellow);
+
+            border-left: 3px solid var(--policy-lime);
+        }
+
+        .policy-note p {
+            margin: 0;
+
+            color: #1C60B8;
+
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .policy-layout {
+                grid-template-columns: 170px minmax(0, 1fr);
+                column-gap: 25px;
+            }
+
+            .policy-sidebar h1 {
+                font-size: 20px;
+            }
+
+            .policy-content h2.main-title {
+                font-size: 19px;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .policy-layout {
+                display: block;
+
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .policy-sidebar {
+                position: static;
+
+                margin-bottom: 25px;
+
+                padding-bottom: 15px;
+
+                border-bottom: 1px solid #d6e8ed;
+            }
+
+            .policy-sidebar h1 {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+
+            .policy-sidebar-nav {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2px 15px;
+            }
+
+            .policy-sidebar-nav a {
+                font-size: 8px;
+            }
+
+            .policy-content h2.main-title {
+                font-size: 18px;
+            }
+
+            .policy-table {
+                min-width: 720px;
+            }
+
+            .priority-table {
+                min-width: 650px;
+            }
+
+            .policy-group-list {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-breadcrumb {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <div id="bebite-header"></div>
+
+
+    <main class="policy-page">
+
+        <!-- BREADCRUMB -->
+        <div class="policy-breadcrumb">
+
+            <a href="../index.html">
+                Trang chủ
+            </a>
+
+            <span>›</span>
+
+            <span>
+                Chính sách
+            </span>
+
+        </div>
+
+
+        <div class="policy-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside class="policy-sidebar">
+
+                <h1>
+                    Chính Sách
+                </h1>
+
+                <nav class="policy-sidebar-nav">
+
+                    <a
+                        href="#quy-trinh"
+                        class="active"
+                    >
+                        Quy trình xử lý khiếu nại
+                    </a>
+
+                    <a href="#khach-hang">
+                        Khách hàng thông thường
+                    </a>
+
+                    <a href="#kenh-tiep-nhan">
+                        Kênh tiếp nhận
+                    </a>
+
+                    <a href="#de-ton-thuong">
+                        Người tiêu dùng dễ bị tổn thương
+                    </a>
+
+                    <a href="#uu-tien">
+                        Thứ tự ưu tiên
+                    </a>
+
+                    <a href="#nguyen-tac">
+                        Nguyên tắc chăm sóc
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- =================================================
+                 MAIN CONTENT
+            ================================================== -->
+
+            <article class="policy-content">
+
+
+                <h2 class="main-title">
+                    Quy Trình Tiếp Nhận Và Giải Quyết
+                    Phản Ánh, Yêu Cầu, Khiếu Nại
+                    Của Người Tiêu Dùng
+                </h2>
+
+
+                <div class="policy-intro">
+
+                    Quy trình giải quyết khiếu nại tại
+                    <strong>Bébite</strong> bao gồm các bước:
+                    Tiếp nhận thông tin phản ánh/khiếu nại,
+                    xác minh vấn đề, tìm hiểu nguyên nhân,
+                    đề xuất giải pháp, thực hiện giải pháp,
+                    theo dõi kết quả và đánh giá mức độ hài lòng
+                    của khách hàng.
+
+                </div>
+
+
+                <div class="policy-effective">
+
+                    <strong>Thời điểm hiệu lực:</strong>
+                    Từ ngày 01/07/2024
+                    <em>
+                        (cập nhật theo Luật Bảo vệ quyền lợi người tiêu dùng
+                        số 19/2023/QH15).
+                    </em>
+
+                </div>
+
+
+                <!-- =============================================
+                     1. KHÁCH HÀNG THÔNG THƯỜNG
+                ============================================== -->
+
+                <section
+                    class="policy-section"
+                    id="khach-hang"
+                >
+
+                    <h3 class="policy-section-title">
+                        1. ĐỐI VỚI KHÁCH HÀNG THÔNG THƯỜNG
+                    </h3>
+
+                    <p>
+                        Bébite có trách nhiệm phản hồi và thông báo bằng văn bản
+                        (email/tin nhắn) về việc tiếp nhận khiếu nại của khách hàng
+                        trong thời hạn <strong>tối đa 03 ngày làm việc</strong>
+                        kể từ ngày nhận được thông tin.
+                    </p>
+
+                    <h4 class="policy-section-subtitle">
+                        1.1. Các bước và thời gian thực hiện
+                    </h4>
+
+
+                    <div
+                        class="policy-table-wrap"
+                        id="quy-trinh"
+                    >
+
+                        <table class="policy-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Bước
+                                    </th>
+
+                                    <th>
+                                        Người thực hiện
+                                    </th>
+
+                                    <th>
+                                        Việc cần làm
+                                    </th>
+
+                                    <th>
+                                        Thời gian xử lý
+                                    </th>
+
+                                    <th>
+                                        Kết quả từng bước
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        1. Tiếp nhận khiếu nại
+                                    </td>
+
+                                    <td>
+                                        BP Xử lý Khiếu nại (CSKH)
+                                    </td>
+
+                                    <td>
+                                        • Ghi nhận đầy đủ thông tin sự việc,
+                                        phân loại vấn đề (chất lượng sản phẩm,
+                                        giao hàng, thái độ phục vụ...).<br><br>
+
+                                        • Gửi email/tin nhắn xác nhận đã nhận thông tin.
+                                    </td>
+
+                                    <td>
+                                        <strong>1 giờ</strong>
+                                    </td>
+
+                                    <td>
+                                        • Biên bản ghi nhận nội dung khiếu nại.<br><br>
+                                        • Phân loại tính chất vấn đề.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        2. Xác thực vấn đề
+                                    </td>
+
+                                    <td>
+                                        BP Xử lý Khiếu nại phối hợp
+                                        Kho/Vận hành/QC
+                                    </td>
+
+                                    <td>
+                                        • Kiểm tra mã lô sản phẩm (Batch No),
+                                        hình ảnh/video sản phẩm lỗi,
+                                        hành trình đơn hàng.<br><br>
+
+                                        • Xác định nguyên nhân lỗi và bộ phận
+                                        chịu trách nhiệm.
+                                    </td>
+
+                                    <td>
+                                        <strong>12 giờ</strong>
+                                    </td>
+
+                                    <td>
+                                        • Báo cáo nguyên nhân gốc rễ.<br><br>
+                                        • Xác định cá nhân/đơn vị phụ trách.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        3. Đưa ra giải pháp
+                                    </td>
+
+                                    <td>
+                                        BP Xử lý Khiếu nại
+                                    </td>
+
+                                    <td>
+                                        • Đề xuất phương án bồi thường,
+                                        đổi mới sản phẩm hoặc hoàn tiền.<br><br>
+
+                                        • Đưa ra biện pháp khắc phục
+                                        quy trình nội bộ.
+                                    </td>
+
+                                    <td>
+                                        <strong>4 giờ</strong>
+                                    </td>
+
+                                    <td>
+                                        • Phương án giải quyết cụ thể.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        4. Xem xét giải pháp
+                                    </td>
+
+                                    <td>
+                                        Trưởng bộ phận CSKH
+                                    </td>
+
+                                    <td>
+                                        • Rà soát tính hợp lý và phê duyệt
+                                        phương án bồi hoàn/xử lý.
+                                    </td>
+
+                                    <td>
+                                        <strong>4 giờ</strong>
+                                    </td>
+
+                                    <td>
+                                        • Quyết định xử lý được duyệt.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        5. Phản hồi khách hàng
+                                    </td>
+
+                                    <td>
+                                        BP Xử lý Khiếu nại
+                                    </td>
+
+                                    <td>
+                                        • Liên hệ trực tiếp với khách hàng
+                                        để thông báo hướng giải quyết,
+                                        đảm bảo khách hàng đồng thuận.
+                                    </td>
+
+                                    <td>
+                                        <strong>4 giờ</strong>
+                                    </td>
+
+                                    <td>
+                                        • Xác nhận đồng thuận từ khách hàng.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        6. Theo dõi thực hiện
+                                    </td>
+
+                                    <td>
+                                        BP Xử lý Khiếu nại
+                                    </td>
+
+                                    <td>
+                                        • Đôn đốc giao hàng đổi mới hoặc
+                                        hoàn tiền; gọi điện chăm sóc lại
+                                        sau 1–2 ngày.
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Trong vòng 03 ngày làm việc
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        • Đơn hàng/tiền bồi hoàn hoàn tất,
+                                        khách hàng hài lòng.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- KÊNH TIẾP NHẬN -->
+
+                    <h4
+                        class="policy-section-subtitle"
+                        id="kenh-tiep-nhan"
+                    >
+                        1.2. Kênh tiếp nhận phản ánh & khiếu nại
+                    </h4>
+
+
+                    <div class="policy-contact-list">
+
+                        <div class="policy-contact-item">
+                            • <strong>Hotline CSKH:</strong>
+                            034 454 7765
+                            (08:00 – 20:00 các ngày trong tuần).
+                        </div>
+
+                        <div class="policy-contact-item">
+                            • <strong>Email tiếp nhận:</strong>
+                            bebitevn@bebite.com.vn
+                        </div>
+
+                        <div class="policy-contact-item">
+                            • <strong>Website:</strong>
+                            bebite.vn (mục Liên hệ).
+                        </div>
+
+                        <div class="policy-contact-item">
+                            • <strong>Mạng xã hội chính thức:</strong>
+                            Fanpage Bébite - Ăn Dặm Cùng Con,
+                            Instagram Bébite Vietnam.
+                        </div>
+
+                        <div class="policy-contact-item">
+                            • <strong>Gian hàng TMĐT chính hãng:</strong>
+                            Kênh chat trực tiếp tại Shopee Mall,
+                            TikTok Shop.
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     2. NGƯỜI TIÊU DÙNG DỄ BỊ TỔN THƯƠNG
+                ============================================== -->
+
+                <section
+                    class="policy-section"
+                    id="de-ton-thuong"
+                >
+
+                    <h3 class="policy-section-title">
+                        2. ĐỐI VỚI NGƯỜI TIÊU DÙNG DỄ BỊ TỔN THƯƠNG
+                    </h3>
+
+                    <p>
+                        <em>
+                            (Căn cứ theo Điều 8, Luật Bảo vệ quyền lợi người tiêu dùng
+                            số 19/2023/QH15)
+                        </em>
+                    </p>
+
+                    <p>
+                        Do đặc thù Bébite phục vụ trực tiếp cho mẹ và bé,
+                        chúng tôi chú trọng đặc biệt vào chính sách bảo vệ
+                        các nhóm khách hàng:
+                    </p>
+
+
+                    <div class="policy-group-list">
+
+                        <div class="policy-group-item">
+                            <strong>Nhóm 1:</strong>
+                            Người từ đủ 60 tuổi trở lên
+                            (ông/bà mua đồ cho cháu).
+                        </div>
+
+                        <div class="policy-group-item">
+                            <strong>Nhóm 2:</strong>
+                            Người khuyết tật.
+                        </div>
+
+                        <div class="policy-group-item">
+                            <strong>Nhóm 3:</strong>
+                            Trẻ em dưới 16 tuổi.
+                        </div>
+
+                        <div class="policy-group-item">
+                            <strong>Nhóm 4:</strong>
+                            Người dân tộc thiểu số; người sinh sống
+                            tại vùng sâu, vùng xa, hải đảo,
+                            khu vực đặc biệt khó khăn.
+                        </div>
+
+                        <div class="policy-group-item">
+                            <strong>Nhóm 5:</strong>
+                            Phụ nữ đang mang thai hoặc mẹ đang
+                            nuôi con dưới 36 tháng tuổi.
+                        </div>
+
+                        <div class="policy-group-item">
+                            <strong>Nhóm 6:</strong>
+                            Người bị bệnh hiểm nghèo.
+                        </div>
+
+                        <div class="policy-group-item">
+                            <strong>Nhóm 7:</strong>
+                            Thành viên thuộc hộ nghèo, cận nghèo.
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRIORITY -->
+
+                    <h4
+                        class="policy-section-subtitle"
+                        id="uu-tien"
+                    >
+                        2.1. Thứ tự ưu tiên và thời gian giải quyết
+                    </h4>
+
+
+                    <div class="policy-table-wrap">
+
+                        <table class="priority-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Thứ tự
+                                    </th>
+
+                                    <th>
+                                        Nhóm đối tượng
+                                    </th>
+
+                                    <th>
+                                        Thời hạn giải quyết
+                                    </th>
+
+                                    <th>
+                                        Biện pháp và phương thức
+                                        hỗ trợ đặc biệt
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Ưu tiên 1
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Nhóm 6 (Bệnh hiểm nghèo)
+                                        </strong>
+                                        & các trường hợp liên quan trực tiếp
+                                        đến sức khỏe khẩn cấp của bé.
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Trong vòng 24 giờ
+                                        </strong>
+                                        kể từ khi nhận tin.
+                                    </td>
+
+                                    <td>
+                                        • Kích hoạt chế độ khẩn cấp.<br>
+                                        • Kiểm tra chuyên sâu chất lượng
+                                        lô hàng, kết nối đội ngũ tư vấn
+                                        y tế/dinh dưỡng ngay nếu cần.<br><br>
+                                        • Cam kết bồi hoàn/xử lý dứt điểm
+                                        không chờ thủ tục phức tạp.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Ưu tiên 2
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Nhóm 5
+                                        </strong>
+                                        (Phụ nữ mang thai,
+                                        mẹ nuôi con &lt; 36 tháng)
+                                        & Nhóm 1, 2, 3.
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Không quá 02 ngày làm việc
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        • Nhân viên CSKH dùng ngôn từ
+                                        nhẹ nhàng, ân cần, giải thích
+                                        cặn kẽ.<br><br>
+
+                                        • Đơn giản hóa tối đa thủ tục giấy tờ,
+                                        ưu tiên đổi hàng tận nhà ngay
+                                        trong ngày.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Ưu tiên 3
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Nhóm 4 & Nhóm 7
+                                        </strong>
+                                        (Vùng sâu xa, hộ nghèo).
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Không quá 03 ngày làm việc
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        • Hỗ trợ cước phí hoàn hàng
+                                        hoặc đổi trả miễn phí.<br><br>
+
+                                        • Giải thích bằng hình ảnh/tin nhắn
+                                        thoại nếu gặp khó khăn về đọc viết.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Khác
+                                    </td>
+
+                                    <td>
+                                        Khách hàng thông thường.
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Tối đa 03 ngày làm việc
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        • Quy trình xử lý minh bạch tiêu chuẩn.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- PRINCIPLES -->
+
+                    <h4
+                        class="policy-section-subtitle"
+                        id="nguyen-tac"
+                    >
+                        2.2. Nguyên tắc chăm sóc đặc biệt
+                    </h4>
+
+
+                    <div class="policy-principles">
+
+                        <div class="policy-principle">
+
+                            <strong>
+                                • Rõ ràng, trực quan:
+                            </strong>
+
+                            <p>
+                                Hướng dẫn bằng hình ảnh minh họa,
+                                tin nhắn thoại nếu khách hàng gặp khó khăn
+                                trong thao tác công nghệ hoặc chữ viết.
+                            </p>
+
+                        </div>
+
+
+                        <div class="policy-principle">
+
+                            <strong>
+                                • Không phân biệt đối xử:
+                            </strong>
+
+                            <p>
+                                Tuyệt đối không từ chối giải quyết bất kỳ
+                                yêu cầu chính đáng nào do khác biệt về
+                                vùng miền, tiếng nói hay tập quán.
+                            </p>
+
+                        </div>
+
+
+                        <div class="policy-principle">
+
+                            <strong>
+                                • Bồi thường thỏa đáng:
+                            </strong>
+
+                            <p>
+                                Cam kết bồi thường theo đúng luật định
+                                nếu phát sinh sự cố làm chậm trễ hoặc gây
+                                ảnh hưởng tiêu cực đến sức khỏe và trải nghiệm
+                                của mẹ và bé.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div class="policy-note">
+
+                    <p>
+                        Quy trình giải quyết khiếu nại tại Bébite được xây dựng
+                        nhằm tiếp nhận đầy đủ phản ánh, xác minh vấn đề,
+                        đưa ra giải pháp phù hợp, thực hiện xử lý và theo dõi
+                        kết quả sau khi giải quyết.
+                    </p>
+
+                </div>
+
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <div id="bebite-footer"></div>
+
+
+    <script src="../components/components.js"></script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const sidebarLinks =
+                document.querySelectorAll(
+                    ".policy-sidebar-nav a"
+                );
+
+            sidebarLinks.forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    sidebarLinks.forEach(function (item) {
+                        item.classList.remove("active");
+                    });
+
+                    this.classList.add("active");
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

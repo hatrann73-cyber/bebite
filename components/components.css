@@ -1,0 +1,573 @@
+/* =====================================================
+   BÉBITE SHARED COMPONENTS
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --blue: #1C60B8;
+    --blue-hover: #2872B9;
+
+    --lime: #CBF55D;
+
+    --cream: #FFFDF8;
+
+    --border: #E4E8C9;
+
+    --footer-text: #4B8BC4;
+
+    --footer-hover: #2872B9;
+
+    --font-body: "Montserrat", sans-serif;
+
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+
+    height: 38px;
+
+    background: var(--lime);
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    font-family: var(--font-body);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: var(--blue);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+}
+
+
+.top-item {
+
+    padding: 0 15px;
+
+}
+
+
+/* =====================================================
+   MAIN HEADER
+===================================================== */
+
+.main-header {
+    height: 72px;
+
+    background: var(--cream);
+
+    border-top: 4px solid var(--lime);
+
+    border-bottom: 1px solid var(--border);
+
+    position: -webkit-sticky;
+    position: sticky;
+
+    top: 0;
+
+    z-index: 9999;
+}
+
+.header-container {
+
+    width: 94%;
+
+    max-width: 1450px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    width: 150px;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo img {
+
+    width: 98px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+}
+
+
+/* =====================================================
+   MAIN MENU
+===================================================== */
+
+.main-nav {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 48px;
+
+}
+
+
+.main-nav a {
+
+    color: var(--blue);
+
+    font-family: var(--font-body);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.main-nav a:hover {
+
+    color: var(--blue-hover);
+
+}
+
+
+/* =====================================================
+   RIGHT HEADER
+===================================================== */
+
+.header-right {
+
+    width: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 24px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.login-link {
+
+    color: var(--blue);
+
+    font-family: var(--font-body);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.login-link:hover {
+
+    color: var(--blue-hover);
+
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.cart-link {
+
+    min-width: 90px;
+
+    height: 35px;
+
+    padding: 0 13px;
+
+    background: var(--lime);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    color: var(--blue);
+
+    font-family: var(--font-body);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+    transition: background 0.2s ease;
+
+}
+
+
+.cart-link i {
+
+    font-size: 12px;
+
+}
+
+
+.cart-link:hover {
+
+    background: #B9E943;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    position: relative;
+
+    background: var(--cream);
+
+    min-height: 310px;
+
+    padding: 48px 0 135px;
+
+    overflow: hidden;
+
+}
+
+
+.footer-container {
+
+    width: 90%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    position: relative;
+
+    z-index: 3;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    position: relative;
+    background-color: #FEFEF3;
+    border-top: 1px solid rgba(28, 96, 184, 0.08);
+
+    min-height: 0;
+
+    overflow: hidden;
+    color: #CBF55D;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+===================================================== */
+
+.footer-container {
+    position: relative;
+    z-index: 3;
+
+    width: min(1200px, 94%);
+
+    margin: 0 auto;
+
+    padding: 28px 0 90px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: 1.35fr 1fr;
+
+    column-gap: 80px;
+}
+
+
+/* =====================================================
+   COMPANY
+===================================================== */
+
+.footer-company h3 {
+    margin: 0 0 8px;
+
+    font-family: "Potta One", cursive;
+
+    font-size: 15px;
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    color: #2872b9;
+}
+
+.footer-company p {
+    margin: 0 0 4px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    font-weight: 500;
+
+    color: #2267B2;
+}
+
+
+/* LOGO FOOTER */
+
+.footer-logo {
+    width: 90px;
+    height: auto;
+
+    display: block;
+
+    margin-left: -8px;
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   RIGHT
+===================================================== */
+
+.footer-right {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 15px;
+}
+
+
+/* =====================================================
+   MAIN LINKS
+===================================================== */
+
+.footer-main-links {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 55px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column a {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #2267B2;
+
+    text-decoration: none;
+
+    font-size: 9.5px;
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #2872b9;
+}
+
+
+/* =====================================================
+   BOTTOM LINKS
+===================================================== */
+
+.footer-bottom-links {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 38px;
+
+    margin-top: 13px;
+}
+
+.footer-bottom-links a {
+    color: #2267B2;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #2872b9;
+}
+
+
+/* =====================================================
+   DECORATION
+===================================================== */
+
+.footer-decoration {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 135px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.footer-decoration img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        gap: 40px;
+        padding-bottom: 145px;
+    }
+
+}
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #1C60B8;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* Hover đổi màu theo thương hiệu */
+.social-btn.facebook:hover {
+    background-color: #1877f2;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.social-btn.tiktok:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+

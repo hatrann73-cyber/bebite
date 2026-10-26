@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm thử API Admin Bébite</title>
+</head>
+<body>
+    <h2>Kiểm thử API Admin Bébite</h2>
+
+    <button id="testConnection">Kiểm tra kết nối API</button>
+    <button id="testAdmin">Kiểm tra quyền Admin</button>
+
+    <pre id="result">Chưa kiểm tra.</pre>
+
+    <script>
+        const result = document.getElementById("result");
+
+        document.getElementById("testConnection").onclick = async () => {
+            result.textContent = "Đang kiểm tra...";
+
+            try {
+                const response = await fetch("/api/products");
+                const data = await response.json();
+
+                result.textContent =
+                    "HTTP: " + response.status + "\n" +
+                    JSON.stringify(data, null, 2);
+            } catch (error) {
+                result.textContent = "Lỗi kết nối: " + error.message;
+            }
+        };
+
+        document.getElementById("testAdmin").onclick = async () => {
+            const token = localStorage.getItem("bebiteToken");
+
+            if (!token) {
+                result.textContent =
+                    "Không tìm thấy token. Hãy đăng nhập Bébite trước.";
+                return;
+            }
+
+            try {
+                const response = await fetch("/api/admin/products", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer " + token
+                    },
+                    body: JSON.stringify({})
+                });
+
+                const data = await response.json();
+
+                result.textContent =
+                    "HTTP: " + response.status + "\n" +
+                    JSON.stringify(data, null, 2);
+            } catch (error) {
+                result.textContent = "Lỗi kiểm tra: " + error.message;
+            }
+        };
+    </script>
+</body>
+</html>

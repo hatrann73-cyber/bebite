@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chi tiết sản phẩm - Bébite</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS TRANG SẢN PHẨM CŨ -->
+    <link rel="stylesheet" href="products.css">
+
+    <!-- CSS CHI TIẾT -->
+    <link rel="stylesheet" href="product-detail.css">
+    <link rel="stylesheet" href="../components/components.css">
+</head>
+
+
+<body>
+    <div id="bebite-header"></div>
+
+  <!-- =================================================
+         LOCATION BAR
+    ================================================== -->
+
+    <div class="location-bar">
+
+        <div class="location-container">
+
+            <span>
+                Chọn khu vực giao hàng để xem sản phẩm khả dụng
+                và đảm bảo nhận hàng chính xác nhất
+            </span>
+
+            <button class="location-button" id="locationButton" type="button" aria-haspopup="dialog" aria-controls="locationModal">
+                <i class="fa-regular fa-map"></i>
+                <span id="selectedLocationText">Chọn địa chỉ của bạn</span>
+            </button>
+
+            <button class="close-location" id="closeLocationBar" type="button" aria-label="Đóng thanh địa chỉ">
+                ×
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- LOCATION MODAL -->
+    <div class="location-modal" id="locationModal" aria-hidden="true">
+        <div class="location-overlay" data-close-location></div>
+        <section class="location-dialog" role="dialog" aria-modal="true" aria-labelledby="locationModalTitle">
+            <div class="location-dialog-header">
+                <div>
+                    <p class="location-eyebrow">ĐỊA CHỈ GIAO HÀNG</p>
+                    <h2 id="locationModalTitle">Chọn địa chỉ của bạn</h2>
+                </div>
+                <button class="location-dialog-close" id="locationModalClose" type="button" aria-label="Đóng">&times;</button>
+            </div>
+
+            <div class="location-fields">
+                <label>
+                    Tỉnh / Thành phố
+                    <select id="provinceSelect">
+                        <option value="">Đang tải...</option>
+                    </select>
+                </label>
+                <label>
+                    Quận / Huyện
+                    <select id="districtSelect" disabled>
+                        <option value="">Chọn tỉnh / thành phố trước</option>
+                    </select>
+                </label>
+                <label>
+                    Phường / Xã
+                    <select id="wardSelect" disabled>
+                        <option value="">Chọn quận / huyện trước</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="location-preview" id="locationPreview">Vui lòng chọn đầy đủ địa chỉ để tiếp tục.</div>
+
+            <div class="location-dialog-actions">
+                <button class="location-cancel" id="locationCancel" type="button">Hủy</button>
+                <button class="location-confirm" id="locationConfirm" type="button" disabled>Xác nhận địa chỉ</button>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- =================================================
+         CATEGORY BAR
+    ================================================== -->
+
+    <div class="category-bar" id="categoryBar">
+
+        <a href="#" class="category-filter active" data-category="all">Tất cả</a>
+        <a href="#" class="category-filter" data-category="Sữa bột">Sữa bột</a>
+        <a href="#" class="category-filter" data-category="Các loại hạt">Các loại hạt</a>
+        <a href="#" class="category-filter" data-category="Bánh ăn dặm">Bánh ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Bánh hũ">Bánh hũ</a>
+        <a href="#" class="category-filter" data-category="Bánh quy ăn dặm">Bánh quy ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Dầu ăn dặm">Dầu ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Trái cây nghiền">Trái cây nghiền</a>
+        <a href="#" class="category-filter" data-category="Sữa chua uống">Sữa chua uống</a>
+        <a href="#" class="category-filter" data-category="Bánh gạo">Bánh gạo</a>
+        <a href="#" class="category-filter" data-category="Cháo ăn dặm">Cháo ăn dặm</a>
+        <a href="#" class="category-filter" data-category="Dầu massage">Dầu massage</a>
+
+    </div>
+
+
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
+
+<main>
+
+    <div class="product-breadcrumb">
+
+        <a href="../index.html">
+            Trang chủ
+        </a>
+
+        <span>›</span>
+
+        <a href="products.html">
+            Sản phẩm
+        </a>
+
+        <span>›</span>
+
+        <span id="breadcrumbProduct">
+            Chi tiết sản phẩm
+        </span>
+
+    </div>
+
+ <!-- =================================================
+         PRODUCT DETAIL
+    ================================================== -->
+
+    <section class="product-detail">
+
+
+        <!-- =========================
+             LEFT - IMAGE
+        ========================== -->
+
+        <div class="product-gallery">
+
+
+            <div class="product-main-image">
+
+                <button
+                    class="image-arrow image-prev"
+                    id="prevImage"
+                    type="button"
+                >
+                    ‹
+                </button>
+
+
+                <img
+                    id="mainProductImage"
+                    src=""
+                    alt="Sản phẩm"
+                >
+
+
+                <button
+                    class="image-arrow image-next"
+                    id="nextImage"
+                    type="button"
+                >
+                    ›
+                </button>
+
+            </div>
+
+
+            <div
+                class="product-thumbnails"
+                id="thumbList"
+            >
+                <!-- JS thêm ảnh -->
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             RIGHT - INFO
+        ========================== -->
+
+        <div class="product-info">
+            <div
+                class="product-category"
+                id="productCategory"
+            >
+                Sữa bột
+            </div>
+
+
+            <h1
+                class="product-title"
+                id="productTitle"
+            >
+                Chi tiết sản phẩm
+            </h1>
+
+
+            <div class="product-rating">
+
+                <span class="stars" id="productRatingStars">
+                    ★★★★★
+                </span>
+
+                <span id="productRatingValue">
+                    4.9
+                </span>
+
+                <span id="productReviewCount">
+                    15 đánh giá
+                </span>
+
+            </div>
+
+
+            <p
+                class="product-description"
+                id="productDescription"
+            >
+                Chắt lọc từ nguồn nguyên liệu chọn lọc thanh khiết, sữa bột là nguồn dinh dưỡng chuẩn cân bằng cho bé từ 6 tháng tuổi. Giàu Canxi và Vitamin D thiết yếu, sữa sở hữu hương vị thanh nhạt mát lành tự nhiên. Vỗ về tiêu hóa, vững bước đầu đời.
+            </p>
+
+
+
+            <!-- SIZE -->
+
+            <div class="product-size">
+
+                <span>
+                    Quy cách
+                </span>
+
+                <strong id="productSize">
+                    1 hộp - 900g
+                </strong>
+
+            </div>
+<div class="product-meta">
+
+    <div class="meta-item">
+        <span>Độ tuổi</span>
+        <strong id="productAge">--</strong>
+    </div>
+
+    <div class="meta-item">
+        <span>Quy cách</span>
+        <strong id="productSizeMeta">--</strong>
+    </div>
+
+    <div class="meta-item">
+        <span>Mã sản phẩm</span>
+        <strong id="productSku">--</strong>
+    </div>
+
+</div>
+
+
+            <!-- VARIANTS -->
+<div class="product-variants" id="productVariants"></div>
+
+            <!-- BUY -->
+
+            <div class="product-buy">
+
+
+                <div class="quantity-box">
+
+                    <button
+                        type="button"
+                        id="minusBtn"
+                    >
+                        −
+                    </button>
+
+                    <input
+                        type="text"
+                        id="quantityInput"
+                        value="1"
+                        readonly
+                    >
+
+                    <button
+                        type="button"
+                        id="plusBtn"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    class="product-price"
+                    id="productPrice"
+                >
+                    149.000đ
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="add-cart-detail"
+                    id="addCartBtn"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Thêm vào giỏ hàng
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ACCORDION -->
+
+<!-- THÀNH PHẦN -->
+<div class="product-accordion">
+    <button class="accordion-title">
+        THÀNH PHẦN
+        <span>+</span>
+    </button>
+
+    <div class="accordion-content" id="productIngredients">
+        Thông tin thành phần đang được cập nhật.
+    </div>
+</div>
+
+
+<!-- HƯỚNG DẪN SỬ DỤNG -->
+<div class="product-accordion">
+    <button class="accordion-title">
+        HƯỚNG DẪN SỬ DỤNG
+        <span>+</span>
+    </button>
+
+    <div class="accordion-content" id="productUsage">
+        Thông tin hướng dẫn sử dụng đang được cập nhật.
+    </div>
+</div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PRODUCT FEATURES
+    ================================================== -->
+
+    <section class="product-features">
+
+        <div class="features-overlay">
+
+
+            <div class="feature-logo">
+
+                <img
+                    src="../assets/images/logo/logomau.png"
+                    alt="Bébite"
+                >
+
+            </div>
+
+
+
+ <div class="feature-columns">
+
+    <div>
+        <span>Dòng sản phẩm</span>
+        <strong id="featureCategory">—</strong>
+    </div>
+
+    <div>
+        <span>Hương vị</span>
+        <strong id="featureFlavor">—</strong>
+    </div>
+
+    <div>
+        <span>Dinh dưỡng</span>
+        <strong id="featureNutrition">—</strong>
+    </div>
+
+    <div>
+        <span>Quy cách</span>
+        <strong id="featureSize">—</strong>
+    </div>
+
+    <div>
+        <span></span>
+        <strong></strong>
+    </div>
+
+    <div>
+        <span>Sản xuất</span>
+        <strong id="featureOrigin">—</strong>
+    </div>
+
+</div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUALITY
+    ================================================== -->
+
+    <section class="product-quality">
+
+
+        <div class="quality-item">
+
+            <img
+                src="../assets/images/banners/khonghoachat.png"
+                alt="Không phẩm màu, hóa chất"
+            >
+
+            <p>
+                Không phẩm màu, hóa chất
+            </p>
+
+        </div>
+
+
+
+        <div class="quality-item">
+
+            <img
+                src="../assets/images/banners/khongchatbaoquan.png"
+                alt="Không chất bảo quản"
+            >
+
+            <p>
+                Không chất bảo quản
+            </p>
+
+        </div>
+
+
+
+        <div class="quality-item">
+
+            <img
+                src="../assets/images/banners/100%25TN.png"
+                alt="100% sản phẩm thiên nhiên"
+            >
+
+            <p>
+                100% sản phẩm thiên nhiên
+            </p>
+
+        </div>
+
+
+    </section>
+
+<!-- =================================================
+         RELATED / PERSONALIZED PRODUCTS
+    ================================================== -->
+    <section class="related-products">
+        <h2 class="section-title">
+            DÀNH RIÊNG CHO BẠN
+        </h2>
+
+        <div class="related-grid" id="relatedGrid">
+            <!-- JS tự đổ sản phẩm cá nhân hóa hoặc ngẫu nhiên -->
+        </div>
+    </section>
+
+    <div id="toast" class="product-toast" role="status" aria-live="polite"></div>
+
+</main>
+
+<!-- =====================================================
+     LOCATION MODAL
+===================================================== -->
+
+<div
+    class="location-modal"
+    id="locationModal"
+>
+
+
+    <div
+        class="location-overlay"
+        id="locationOverlay"
+    ></div>
+
+
+    <div class="location-dialog">
+
+        <!-- giữ phần modal địa chỉ của products.html
+             nếu bạn đang dùng JS địa chỉ -->
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JS
+===================================================== -->
+
+<!-- ================================
+     SHARED FOOTER
+================================= -->
+<div id="bebite-footer"></div>
+
+
+<!-- ================================
+     PAGE JS
+================================= -->
+<script src="products.js"></script>
+<script src="product-detail.js"></script>
+
+
+<!-- ================================
+     SHARED HEADER + FOOTER
+================================= -->
+<script src="../components/components.js"></script>
+
+</body>
+</html>

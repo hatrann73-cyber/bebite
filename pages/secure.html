@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Thông báo về Quyền riêng tư | Bébite
+    </title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- BÉBITE CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../bebite.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../components/components.css"
+    >
+
+
+    <style>
+
+.secure-page {
+
+            --blue-light: #A9E1F2;
+
+            --blue-main: #1C60B8;
+
+            --cream: #FFFFF1;
+
+            --lime: #CBF55D;
+
+            --cyan-light: #C3EBF9;
+
+            --yellow-light: #F7FEDB;
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background: #FFFFF1;
+
+        }
+
+
+        /* =====================================================
+           MAIN PAGE
+        ===================================================== */
+
+        .secure-page {
+
+            min-height: 100vh;
+
+            background: #FFFFF1;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+        }
+
+
+        /* =====================================================
+           BREADCRUMB
+        ===================================================== */
+
+        .secure-breadcrumb {
+
+            width: 100%;
+
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            padding: 10px 20px 4px;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            line-height: 1.5;
+
+        }
+
+
+        .secure-breadcrumb a {
+
+            color: var(--blue-main);
+
+            text-decoration: none;
+
+        }
+
+
+        .secure-breadcrumb span {
+
+            margin: 0 4px;
+
+        }
+
+
+        /* =====================================================
+           MAIN LAYOUT
+        ===================================================== */
+
+        .secure-layout {
+
+            width: 100%;
+
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            padding: 8px 20px 70px;
+
+            display: grid;
+
+            grid-template-columns: 205px minmax(0, 1fr);
+
+            column-gap: 45px;
+
+            align-items: start;
+
+        }
+
+
+        /* =====================================================
+           SIDEBAR
+        ===================================================== */
+
+        .secure-sidebar {
+
+            position: sticky;
+
+            top: 85px;
+
+            padding-top: 5px;
+
+        }
+
+
+        .secure-sidebar h1 {
+
+            margin: 0 0 15px;
+
+            color: var(--blue-main);
+
+            font-family: "Potta One", cursive;
+
+            font-size: 23px;
+
+            font-weight: 400 !important;
+
+            line-height: 1.25;
+
+        }
+
+
+        .secure-sidebar-nav {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        .secure-sidebar-nav a {
+
+            padding: 5px 0;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            line-height: 1.5;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+
+        }
+
+
+        .secure-sidebar-nav a:hover {
+
+            color: var(--blue-main);
+
+            transform: translateX(3px);
+
+        }
+
+
+        .secure-sidebar-nav a.active {
+
+            color: var(--blue-main);
+
+            font-weight: 600;
+
+        }
+
+
+        /* =====================================================
+           CONTENT
+        ===================================================== */
+
+        .secure-content {
+
+            min-width: 0;
+
+        }
+
+
+        /* =====================================================
+           MAIN TITLE
+        ===================================================== */
+
+        .secure-content h2.main-title {
+
+            margin: 0 0 8px;
+
+            color: var(--blue-main);
+
+            font-family: "Potta One", cursive;
+
+            font-size: 21px;
+
+            font-weight: 400 !important;
+
+            line-height: 1.4;
+
+        }
+
+
+        /* =====================================================
+           EFFECTIVE DATE
+        ===================================================== */
+
+        .secure-effective-date {
+
+            margin-bottom: 18px;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .secure-intro {
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .secure-intro p {
+
+            margin: 0 0 10px;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            line-height: 1.85;
+
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .secure-section {
+
+            margin-bottom: 32px;
+
+            scroll-margin-top: 95px;
+
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+        .secure-section-title {
+
+            margin: 0 0 10px;
+
+            color: var(--blue-main);
+
+            font-family: "Potta One", cursive;
+
+            font-size: 12px;
+
+            font-weight: 400 !important;
+
+            line-height: 1.55;
+
+        }
+
+
+        /* =====================================================
+           NORMAL TEXT
+        ===================================================== */
+
+        .secure-section p {
+
+            margin: 0 0 10px;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            line-height: 1.85;
+
+        }
+
+
+        /* =====================================================
+           LIST
+        ===================================================== */
+
+        .secure-section ul {
+
+            margin: 8px 0 15px;
+
+            padding-left: 19px;
+
+        }
+
+
+        .secure-section li {
+
+            margin-bottom: 7px;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            line-height: 1.8;
+
+        }
+
+
+        .secure-section li strong {
+
+            color: var(--blue-main);
+
+            font-weight: 600;
+
+        }
+
+
+        /* =====================================================
+           IMPORTANT INFORMATION BOX
+        ===================================================== */
+
+        .secure-note {
+
+            margin: 12px 0 18px;
+
+            padding: 10px 12px;
+
+            background: var(--yellow-light);
+
+            border-left: 3px solid var(--lime);
+
+        }
+
+
+        .secure-note p {
+
+            margin: 0;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           TABLE OF CONTENTS
+        ===================================================== */
+
+        .secure-overview {
+
+            margin: 12px 0 25px;
+
+            padding: 13px 15px;
+
+            background: #F7FEDB;
+
+        }
+
+
+        .secure-overview-title {
+
+            margin: 0 0 8px;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            line-height: 1.5;
+
+        }
+
+
+        .secure-overview ol {
+
+            margin: 0;
+
+            padding-left: 19px;
+
+        }
+
+
+        .secure-overview li {
+
+            margin-bottom: 4px;
+
+            color: var(--blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 400;
+
+            line-height: 1.7;
+
+        }
+
+
+        .secure-overview a {
+
+            color: var(--blue-main);
+
+            text-decoration: none;
+
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .secure-contact {
+
+            margin-top: 10px;
+
+            padding: 13px 15px;
+
+            background: var(--gray-light);
+
+            border-left: 3px solid var(--blue-light);
+
+        }
+
+
+        .secure-contact p {
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .secure-contact-list {
+
+            margin: 0 !important;
+
+            padding-left: 18px !important;
+
+        }
+
+
+        .secure-contact-list li {
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* =====================================================
+           BACK TO TOP
+        ===================================================== */
+
+        .secure-top-button {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 38px;
+
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: var(--blue-main);
+
+            color: var(--cream);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: 0.25s;
+
+            z-index: 1000;
+
+        }
+
+
+        .secure-top-button.show {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+        .secure-top-button:hover {
+
+            background: var(--blue-main);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .secure-layout {
+
+                grid-template-columns: 170px minmax(0, 1fr);
+
+                column-gap: 25px;
+
+            }
+
+
+            .secure-sidebar h1 {
+
+                font-size: 20px;
+
+            }
+
+
+            .secure-content h2.main-title {
+
+                font-size: 19px;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .secure-layout {
+
+                display: block;
+
+                padding-left: 18px;
+
+                padding-right: 18px;
+
+            }
+
+
+            .secure-sidebar {
+
+                position: static;
+
+                margin-bottom: 25px;
+
+                padding-bottom: 15px;
+
+                border-bottom: 1px solid var(--blue-light);
+
+            }
+
+
+            .secure-sidebar h1 {
+
+                margin-bottom: 8px;
+
+                font-size: 20px;
+
+            }
+
+
+            .secure-sidebar-nav {
+
+                display: grid;
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 2px 15px;
+
+            }
+
+
+            .secure-sidebar-nav a {
+
+                font-size: 11px;
+
+            }
+
+
+            .secure-content h2.main-title {
+
+                font-size: 18px;
+
+            }
+
+
+            .secure-breadcrumb {
+
+                padding-left: 18px;
+
+                padding-right: 18px;
+
+            }
+
+
+            .secure-top-button {
+
+                right: 15px;
+
+                bottom: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <div id="bebite-header"></div>
+
+
+    <!-- =====================================================
+         PAGE
+    ===================================================== -->
+
+    <main class="secure-page">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="secure-breadcrumb">
+
+            <a href="../index.html">
+                Trang chủ
+            </a>
+
+            <span>›</span>
+
+            <span>
+                Quyền riêng tư
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN LAYOUT
+        ================================================== -->
+
+        <div class="secure-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside class="secure-sidebar">
+
+
+                <h1>
+                    Chính Sách
+                </h1>
+
+
+                <nav class="secure-sidebar-nav">
+
+
+                    <a
+                        href="#pham-vi"
+                        class="active"
+                    >
+                        Phạm vi thông báo
+                    </a>
+
+
+                    <a href="#nguon-thu-thap">
+                        Nguồn thu thập dữ liệu
+                    </a>
+
+
+                    <a href="#du-lieu">
+                        Dữ liệu cá nhân
+                    </a>
+
+
+                    <a href="#tre-em">
+                        Dữ liệu trẻ em & gia đình
+                    </a>
+
+
+                    <a href="#cookie">
+                        Cookie & công nghệ
+                    </a>
+
+
+                    <a href="#muc-dich">
+                        Mục đích sử dụng
+                    </a>
+
+
+                    <a href="#quyen">
+                        Quyền của bạn
+                    </a>
+
+
+                    <a href="#tiep-thi">
+                        Tiếp thị & cá nhân hóa
+                    </a>
+
+
+                    <a href="#lien-he">
+                        Liên hệ
+                    </a>
+
+
+                </nav>
+
+
+            </aside>
+
+
+            <!-- =================================================
+                 CONTENT
+            ================================================== -->
+
+            <article class="secure-content">
+
+
+                <!-- MAIN TITLE -->
+
+                <h2 class="main-title">
+
+                    Thông báo về Quyền riêng tư
+                    của BéBite
+
+                </h2>
+
+
+                <div class="secure-effective-date">
+
+                    Ngày có hiệu lực: 01/06/2026
+
+                </div>
+
+
+                <!-- =================================================
+                     PHẠM VI
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="pham-vi"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        PHẠM VI CỦA THÔNG BÁO NÀY
+
+                    </h3>
+
+
+                    <div class="secure-intro">
+
+
+                        <p>
+
+                            Vui lòng đọc kỹ thông báo về quyền riêng tư
+                            này (“Thông báo”) để hiểu rõ các chính sách,
+                            tiêu chuẩn thực hành và cách thức chúng tôi
+                            xử lý Dữ liệu Cá nhân của bạn. Thông báo này
+                            áp dụng đối với các cá nhân tương tác với các
+                            dịch vụ của Bébite với tư cách người tiêu dùng
+                            (“bạn”).
+
+                        </p>
+
+
+                        <p>
+
+                            Thông báo này giải thích cách Bébite
+                            (“Bébite”, “Chúng tôi”) thu thập, sử dụng
+                            và tiết lộ Dữ liệu Cá nhân của bạn. Thông báo
+                            này cũng hướng dẫn cách thức bạn có thể truy
+                            cập, cập nhật Dữ liệu Cá nhân của mình và đưa
+                            ra quyết định về cách dữ liệu được sử dụng.
+
+                        </p>
+
+
+                        <p>
+
+                            Thông báo này bao gồm các hoạt động thu thập
+                            dữ liệu trực tuyến và ngoại tuyến của chúng tôi,
+                            bao gồm Dữ liệu Cá nhân được thu thập thông qua
+                            các kênh như website thương mại điện tử Bébite,
+                            ứng dụng di động, các gian hàng chính hãng trên
+                            sàn thương mại điện tử, mạng xã hội, Dịch vụ
+                            Chăm sóc Khách hàng, cửa hàng bán lẻ và các sự
+                            kiện dành cho mẹ & bé.
+
+                        </p>
+
+
+                        <p>
+
+                            Nếu bạn không cung cấp Dữ liệu Cá nhân cần thiết
+                            khi được yêu cầu, chúng tôi có thể không thể
+                            cung cấp trọn vẹn sản phẩm, dịch vụ hoặc xử lý
+                            đơn giao hàng cho bạn.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- OVERVIEW -->
+
+                    <div class="secure-overview">
+
+
+                        <div class="secure-overview-title">
+
+                            Thông báo này cung cấp thông tin quan trọng
+                            về các vấn đề:
+
+                        </div>
+
+
+                        <ol>
+
+
+                            <li>
+                                <a href="#nguon-thu-thap">
+                                    NGUỒN THU THẬP DỮ LIỆU CÁ NHÂN
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#du-lieu">
+                                    DỮ LIỆU CÁ NHÂN VỀ BẠN ĐƯỢC THU THẬP
+                                    VÀ CÁCH THU THẬP
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#tre-em">
+                                    DỮ LIỆU LIÊN QUAN ĐẾN TRẺ EM
+                                    VÀ GIA ĐÌNH
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#cookie">
+                                    COOKIE, CÔNG NGHỆ THEO DÕI
+                                    VÀ TỆP LOG
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#muc-dich">
+                                    MỤC ĐÍCH SỬ DỤNG DỮ LIỆU CÁ NHÂN
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#quyen">
+                                    QUYỀN CỦA BẠN ĐỐI VỚI DỮ LIỆU
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#tiep-thi">
+                                    TÙY CHỌN TIẾP THỊ VÀ CÁ NHÂN HÓA
+                                </a>
+                            </li>
+
+
+                        </ol>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     1. NGUỒN THU THẬP
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="nguon-thu-thap"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        1. NGUỒN THU THẬP DỮ LIỆU CÁ NHÂN
+
+                    </h3>
+
+
+                    <p>
+
+                        Chúng tôi thu thập Dữ liệu Cá nhân từ bạn
+                        thông qua các nguồn:
+
+                    </p>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Website & Gian hàng trực tuyến:
+                            </strong>
+
+                            Các website chính thức của Bébite và
+                            gian hàng trực tuyến trên sàn TMĐT.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Tương tác trực tiếp & Đơn hàng:
+                            </strong>
+
+                            Thông tin bạn điền khi đặt mua sản phẩm
+                            ăn dặm, đăng ký nhận tư vấn thực đơn,
+                            đăng ký nhận mẫu thử hoặc tham gia chương
+                            trình khách hàng thân thiết.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Email, Tin nhắn, Hotline:
+                            </strong>
+
+                            Các cuộc trò chuyện, tin nhắn tư vấn
+                            dinh dưỡng hoặc hỗ trợ đơn hàng.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Sự kiện & Hội thảo:
+                            </strong>
+
+                            Các buổi workshop tiền sản, hội chợ
+                            mẹ & bé, sự kiện dùng thử sản phẩm.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Mạng xã hội:
+                            </strong>
+
+                            Các kênh Facebook Fanpage, TikTok Shop,
+                            Instagram khi bạn tương tác hoặc để lại
+                            bình luận, tin nhắn.
+
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     2. DỮ LIỆU CÁ NHÂN
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="du-lieu"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        2. DỮ LIỆU CÁ NHÂN ĐƯỢC THU THẬP
+                        VÀ CÁCH THU THẬP
+
+                    </h3>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Thông tin liên lạc & Giao hàng:
+                            </strong>
+
+                            Họ tên ba/mẹ, số điện thoại,
+                            địa chỉ nhận hàng, địa chỉ email.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Thông tin tài khoản:
+                            </strong>
+
+                            Tên đăng nhập, mật khẩu mã hóa,
+                            lịch sử mua hàng, điểm tích lũy.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Thông tin gia đình & Giai đoạn
+                                ăn dặm (Không bắt buộc):
+                            </strong>
+
+                            Tháng tuổi của bé, giai đoạn ăn dặm,
+                            sở thích khẩu vị hoặc tình trạng dị ứng
+                            thực phẩm mà bạn chủ động chia sẻ để nhận
+                            tư vấn sản phẩm phù hợp.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Thông tin kỹ thuật:
+                            </strong>
+
+                            Địa chỉ IP, trình duyệt web, thời gian
+                            truy cập, hành vi click và tìm kiếm sản
+                            phẩm trên website Bébite.
+
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     3. TRẺ EM
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="tre-em"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        3. DỮ LIỆU LIÊN QUAN ĐẾN TRẺ EM
+                        VÀ GIA ĐÌNH
+
+                    </h3>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            Bébite cung cấp các sản phẩm dành cho
+                            trẻ sơ sinh và trẻ nhỏ, nhưng chúng tôi
+                            không trực tiếp thu thập thông tin cá nhân
+                            từ trẻ em.
+
+                        </li>
+
+
+                        <li>
+
+                            Mọi thông tin liên quan đến bé
+                            (như số tháng tuổi, dị ứng thực phẩm)
+                            chỉ được thu thập trực tiếp từ ba mẹ hoặc
+                            người giám hộ hợp pháp khi ba mẹ tự nguyện
+                            cung cấp nhằm mục đích lựa chọn sản phẩm
+                            dinh dưỡng phù hợp nhất cho bé.
+
+                        </li>
+
+
+                        <li>
+
+                            Chúng tôi cam kết không sử dụng dữ liệu
+                            của trẻ nhỏ cho bất kỳ mục đích quảng cáo
+                            định hướng hành vi trực tiếp nào đến trẻ em.
+
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     4. COOKIE
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="cookie"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        4. COOKIE, CÔNG NGHỆ THEO DÕI
+                        VÀ TỆP LOG
+
+                    </h3>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Cookie:
+                            </strong>
+
+                            Giúp ghi nhớ giỏ hàng, lưu trạng thái
+                            đăng nhập và gợi ý các dòng sản phẩm
+                            ăn dặm/chăm sóc phù hợp với độ tuổi
+                            của bé mà bạn quan tâm.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Tệp Log & Web Beacons:
+                            </strong>
+
+                            Thu thập dữ liệu kỹ thuật ẩn danh nhằm
+                            kiểm tra lỗi trang, nâng cao tốc độ tải
+                            trang và đảm bảo an toàn thanh toán
+                            trực tuyến.
+
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     5. MỤC ĐÍCH
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="muc-dich"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        5. MỤC ĐÍCH SỬ DỤNG DỮ LIỆU CÁ NHÂN
+
+                    </h3>
+
+
+                    <p>
+
+                        Chúng tôi xử lý Dữ liệu Cá nhân của bạn
+                        cho các mục đích:
+
+                    </p>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Xử lý và vận chuyển đơn hàng:
+                            </strong>
+
+                            Tiếp nhận đơn, đóng gói, giao đồ ăn dặm
+                            và sản phẩm chăm sóc bé đến đúng địa chỉ,
+                            phát hành hóa đơn và xử lý thanh toán.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Dịch vụ khách hàng & Tư vấn dinh dưỡng:
+                            </strong>
+
+                            Giải đáp thắc mắc về thành phần món ăn,
+                            cách chế biến, lưu ý dị ứng, hoặc xử lý
+                            đổi trả/khiếu nại sản phẩm.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Cá nhân hóa trải nghiệm:
+                            </strong>
+
+                            Gợi ý thực đơn ăn dặm, cẩm nang nuôi con
+                            và sản phẩm phù hợp với từng độ tuổi của bé.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Thông báo ưu đãi:
+                            </strong>
+
+                            Gửi thông tin về chương trình quà tặng,
+                            giảm giá, mã miễn phí vận chuyển
+                            (khi bạn đồng ý nhận thông tin).
+
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     6. QUYỀN
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="quyen"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        6. QUYỀN CỦA BẠN ĐỐI VỚI DỮ LIỆU
+
+                    </h3>
+
+
+                    <p>
+
+                        Bạn có toàn quyền kiểm soát thông tin cá nhân
+                        của mình khi sử dụng dịch vụ tại Bébite:
+
+                    </p>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Quyền truy cập và chỉnh sửa:
+                            </strong>
+
+                            Bạn có thể xem lại, cập nhật hoặc điều chỉnh
+                            thông tin cá nhân, địa chỉ nhận hàng và số
+                            điện thoại bất kỳ lúc nào trực tiếp trong
+                            trang tài khoản của mình.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Quyền yêu cầu xóa bỏ dữ liệu:
+                            </strong>
+
+                            Bạn có quyền yêu cầu Bébite xóa thông tin
+                            tài khoản hoặc dữ liệu cá nhân đã lưu trữ
+                            khi không còn nhu cầu mua sắm.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Quyền rút lại sự đồng ý:
+                            </strong>
+
+                            Bạn có thể thu hồi quyền xử lý dữ liệu
+                            hoặc phản đối việc sử dụng thông tin vào
+                            mục đích nghiên cứu, khảo sát thói quen
+                            tiêu dùng.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Cách thức thực hiện:
+                            </strong>
+
+                            Tự thao tác trong mục
+                            "Cài đặt tài khoản" trên website hoặc gửi
+                            yêu cầu đến email hỗ trợ:
+                            bebitevn@bebite.com.vn
+
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     7. TIẾP THỊ
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="tiep-thi"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        7. TÙY CHỌN TIẾP THỊ VÀ CÁ NHÂN HÓA
+
+                    </h3>
+
+
+                    <p>
+
+                        Chúng tôi tôn trọng trải nghiệm riêng tư và
+                        quyền quyết định của bạn đối với các thông điệp
+                        truyền thông:
+
+                    </p>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Tùy chỉnh thông báo khuyến mại:
+                            </strong>
+
+                            Bạn có thể chủ động bật/tắt nhận bản tin
+                            về ưu đãi, mã giảm giá hoặc cẩm nang ăn dặm
+                            qua Email/SMS bằng cách nhấn vào đường link
+                            "Hủy đăng ký" ở cuối mỗi thư điện tử hoặc
+                            bỏ tích chọn nhận tin trong hồ sơ cá nhân.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Cá nhân hóa nội dung cho bé:
+                            </strong>
+
+                            Việc cung cấp thông tin về độ tuổi của bé,
+                            sở thích khẩu vị hay lưu ý dị ứng là hoàn
+                            toàn tự nguyện. Bạn có thể thay đổi hoặc
+                            xóa bỏ các thông tin này bất kỳ lúc nào
+                            nếu không muốn tiếp tục nhận gợi ý thực
+                            đơn cá nhân hóa.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Thông báo hệ thống bắt buộc:
+                            </strong>
+
+                            Kể cả khi bạn từ chối nhận tin tiếp thị,
+                            Bébite vẫn sẽ gửi các thông báo vận hành
+                            quan trọng như xác nhận đặt hàng thành công,
+                            cập nhật mã vận đơn hoặc cảnh báo an toàn
+                            tài khoản.
+
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     CONTACT
+                ================================================== -->
+
+                <section
+                    class="secure-section"
+                    id="lien-he"
+                >
+
+
+                    <h3 class="secure-section-title">
+
+                        THÔNG TIN LIÊN HỆ HỖ TRỢ VỀ QUYỀN RIÊNG TƯ
+
+                    </h3>
+
+
+                    <div class="secure-contact">
+
+
+                        <p>
+
+                            Mọi thắc mắc, đóng góp ý kiến hoặc yêu cầu
+                            hỗ trợ về quyền riêng tư, vui lòng liên hệ:
+
+                        </p>
+
+
+                        <ul class="secure-contact-list">
+
+
+                            <li>
+
+                                <strong>
+                                    Công ty cổ phần Bébite Việt Nam.
+                                </strong>
+
+                            </li>
+
+
+                            <li>
+
+                                <strong>
+                                    Email hỗ trợ:
+                                </strong>
+
+                                bebitevn@bebite.com.vn
+                                (hoặc hotline hỗ trợ khách hàng
+                                của Bébite)
+
+                            </li>
+
+
+                            <li>
+
+                                <strong>
+                                    Địa chỉ văn phòng:
+                                </strong>
+
+                                TP. Hồ Chí Minh, Việt Nam.
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ===================================================== -->
+
+    <button
+        class="secure-top-button"
+        id="secureTopButton"
+        type="button"
+        aria-label="Lên đầu trang"
+    >
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <div id="bebite-footer"></div>
+
+
+    <!-- COMPONENTS -->
+
+    <script src="../components/components.js"></script>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* ==========================================
+                   SIDEBAR ACTIVE
+                ========================================== */
+
+                const links =
+                    document.querySelectorAll(
+                        ".secure-sidebar-nav a"
+                    );
+
+
+                links.forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            links.forEach(function (item) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            });
+
+
+                            this.classList.add(
+                                "active"
+                            );
+
+                        }
+                    );
+
+                });
+
+
+                /* ==========================================
+                   ACTIVE SECTION KHI SCROLL
+                ========================================== */
+
+                const sections =
+                    document.querySelectorAll(
+                        ".secure-section"
+                    );
+
+
+                const observer =
+                    new IntersectionObserver(
+                        function (entries) {
+
+                            entries.forEach(
+                                function (entry) {
+
+                                    if (
+                                        entry.isIntersecting
+                                    ) {
+
+                                        links.forEach(
+                                            function (link) {
+
+                                                link.classList.remove(
+                                                    "active"
+                                                );
+
+
+                                                if (
+                                                    link.getAttribute(
+                                                        "href"
+                                                    ) ===
+                                                    "#" +
+                                                    entry.target.id
+                                                ) {
+
+                                                    link.classList.add(
+                                                        "active"
+                                                    );
+
+                                                }
+
+                                            }
+                                        );
+
+                                    }
+
+                                }
+                            );
+
+                        },
+                        {
+                            rootMargin:
+                                "-100px 0px -65% 0px"
+                        }
+                    );
+
+
+                sections.forEach(
+                    function (section) {
+
+                        observer.observe(section);
+
+                    }
+                );
+
+
+                /* ==========================================
+                   BACK TO TOP
+                ========================================== */
+
+                const topButton =
+                    document.getElementById(
+                        "secureTopButton"
+                    );
+
+
+                window.addEventListener(
+                    "scroll",
+                    function () {
+
+                        if (
+                            window.scrollY > 350
+                        ) {
+
+                            topButton.classList.add(
+                                "show"
+                            );
+
+                        } else {
+
+                            topButton.classList.remove(
+                                "show"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                topButton.addEventListener(
+                    "click",
+                    function () {
+
+                        window.scrollTo({
+
+                            top: 0,
+
+                            behavior: "smooth"
+
+                        });
+
+                    }
+                );
+
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

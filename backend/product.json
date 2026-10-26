@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Sữa bột cho bé từ 6 tháng +",
+    "category": "Sữa bột",
+    "price": 149000,
+    "image": "/assets/images/products/SBMILK6MONTH_01.png",
+    "description": "Chắt lọc từ nguồn nguyên liệu chọn lọc thanh khiết, sữa bột là nguồn dinh dưỡng chuẩn cân bằng cho bé từ 6 tháng tuổi. Giàu Canxi và Vitamin D thiết yếu, sữa sở hữu hương vị thanh nhạt mát lành tự nhiên. Vỗ về tiêu hóa, vững bước đầu đời.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Sữa bột cho bé từ 1 tuổi +",
+    "category": "Sữa bột",
+    "price": 149000,
+    "image": "/assets/images/products/SBMILK1YEAR_01.png",
+    "description": "Đồng hành cùng giai đoạn bé hiếu động khám phá thế giới, sữa công thức tiếp thêm năng lượng dồi dào với hàm lượng Canxi, D3 và K2 tối ưu. Hương vị thơm lành ngọt dịu, nâng bước tầm vóc và chắp cánh trí tuệ vượt trội.",
+    "age": ">= 1 tuổi",
+    "stock": 0
+  },
+  {
+    "name": "Hạt yến mạch",
+    "category": "Các loại hạt",
+    "price": 59000,
+    "image": "/assets/images/products/HYENMACH70G_01.png",
+    "description": "Thu trọn tinh túy từ những cánh đồng yến mạch ngập nắng, từng hạt cán dẹt giữ vẹn nguyên lớp cám giàu chất xơ beta-glucan và vitamin nhóm B.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Đậu Hà Lan",
+    "category": "Các loại hạt",
+    "price": 69000,
+    "image": "/assets/images/products/HDAUHALAN70G_01.png",
+    "description": "Món quà thuần khiết từ thiên nhiên với vị ngọt thanh tự nhiên và màu xanh mướt mát lành.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Hạt Kê Nếp",
+    "category": "Các loại hạt",
+    "price": 59000,
+    "image": "/assets/images/products/HKETNEP70G_01.png",
+    "description": "Mang trọn sắc vàng óng ả và hương thơm dẻo bùi đặc trưng, từng hạt kê nếp được chắt lọc kỹ lưỡng, giàu vi khoáng tự nhiên.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Đậu gà Argentina",
+    "category": "Các loại hạt",
+    "price": 69000,
+    "image": "/assets/images/products/DGAARGENTINA70G_01.png",
+    "description": "Đậu gà Argentina giàu dinh dưỡng, có vị bùi béo tự nhiên, phù hợp để chế biến các món ăn dặm thơm ngon và đa dạng cho bé.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Hạt diêm mạch",
+    "category": "Các loại hạt",
+    "price": 69000,
+    "image": "/assets/images/products/HDIEMMACH70G_01.png",
+    "description": "Được mệnh danh là \"hạt vàng\" của mẹ thiên nhiên, diêm mạch hữu cơ mang trọn bộ 9 axit amin thiết yếu mà không chứa gluten.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh ăn dặm vị trái cây - Vị Dâu",
+    "category": "Bánh ăn dặm",
+    "price": 180000,
+    "image": "/assets/images/products/BADDAU_01.png",
+    "description": "Sắc hồng ngọt ngào cùng hương dâu tây căng mọng hòa quyện trên nền bánh que giòn xốp tan nhanh.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh ăn dặm vị trái cây - Vị Xoài",
+    "category": "Bánh ăn dặm",
+    "price": 180000,
+    "image": "/assets/images/products/BADXOAI_01.png",
+    "description": "Mang trọn vị ngọt ngào và năng lượng ấm áp từ vùng xoài nhiệt đới, bánh ăn dặm xốp nhẹ tan ngay trên đầu lưỡi.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh ăn dặm vị trái cây - Vị Chuối",
+    "category": "Bánh ăn dặm",
+    "price": 180000,
+    "image": "/assets/images/products/BADCHUOI_01.png",
+    "description": "Vị chuối chín thơm ngậy hòa cùng bột gạo hữu cơ mềm xốp, dịu dàng tan biến trong khoang miệng non nớt.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh hũ vị việt quất",
+    "category": "Bánh hũ",
+    "price": 89000,
+    "image": "/assets/images/products/BANHHUVIETQUAT_01.png",
+    "description": "Sắc tím và vị chua ngọt tinh tế của việt quất tự nhiên đọng lại trong từng miếng bánh giòn tan.",
+    "age": ">= 8 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh hũ vị chuối",
+    "category": "Bánh hũ",
+    "price": 89000,
+    "image": "/assets/images/products/BANHHUCHUOI_01.png",
+    "description": "Thơm lừng hương chuối ngọt ngào quen thuộc, từng mẩu bánh xốp mịn tan chảy dịu êm chạm vào nướu nhỏ.",
+    "age": ">= 8 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh quy vị việt quất",
+    "category": "Bánh quy ăn dặm",
+    "price": 59000,
+    "image": "/assets/images/products/BANHQUYVIETQUAT_01.png",
+    "description": "Hương bơ lạt thơm lừng quyện cùng những nốt chua thanh rạng rỡ của việt quất.",
+    "age": ">= 10 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh quy vị khoai lang",
+    "category": "Bánh quy ăn dặm",
+    "price": 59000,
+    "image": "/assets/images/products/BANHQUYKHOAILANG_01.png",
+    "description": "Vị ngọt bùi từ những củ khoai lang vàng ruộm đất mẹ, chiếc bánh quy giòn xốp là bữa phụ êm bụng.",
+    "age": ">= 10 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh quy ngô phô mai",
+    "category": "Bánh quy ăn dặm",
+    "price": 59000,
+    "image": "/assets/images/products/BANHQUYNGOPM_01.png",
+    "description": "Là sự kết hợp sánh đôi hoàn hảo giữa ngô non ngọt mát và phô mai Cheddar béo bùi.",
+    "age": ">= 10 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Dầu ăn dặm Olive 50ml",
+    "category": "Dầu ăn dặm",
+    "price": 49000,
+    "image": "/assets/images/products/DADOLIVE50_01.png",
+    "description": "Tinh hoa olive nguyên chất gói trọn trong chai nhỏ 50ml xinh xắn.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Dầu ăn dặm olive 150ml",
+    "category": "Dầu ăn dặm",
+    "price": 139000,
+    "image": "/assets/images/products/DADOLIVE150ML_01.png",
+    "description": "100% dầu olive nguyên chất ép nguội (Extra Virgin).",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Dầu ăn dặm Cá hồi 50ml",
+    "category": "Dầu ăn dặm",
+    "price": 49000,
+    "image": "/assets/images/products/DADCAHOI50_01.png",
+    "description": "Chai mini 50ml tiện lợi bảo toàn tuyệt đối độ tươi mới và hàm lượng DHA tinh khiết.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Dầu ăn dặm Cá hồi 150ml",
+    "category": "Dầu ăn dặm",
+    "price": 139000,
+    "image": "/assets/images/products/DADCAHOI150_01.png",
+    "description": "Chiết xuất tinh khiết từ cá hồi biển sâu, từng giọt dầu đậm đặc Omega-3.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Dầu ăn dặm Gấc 50ml",
+    "category": "Dầu ăn dặm",
+    "price": 49000,
+    "image": "/assets/images/products/DADGAC50_01.png",
+    "description": "Dung tích 50ml nhỏ gọn lưu giữ tinh chất gấc tươi nguyên bản.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Dầu ăn dặm Gấc 150ml",
+    "category": "Dầu ăn dặm",
+    "price": 139000,
+    "image": "/assets/images/products/DADGAC150_01.png",
+    "description": "Sắc đỏ thắm từ màng quả gấc tự nhiên, mang theo nguồn Beta-Caroten và Lycopene dồi dào.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bơ Chuối Nghiền Mịn",
+    "category": "Trái cây nghiền",
+    "price": 59000,
+    "image": "/assets/images/products/TRAICAYNGHIENVICHUOIBO_01.png",
+    "description": "Hòa quyện sánh mịn giữa bơ sáp béo ngậy và chuối ngọt thơm lừng.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Xoài Chín Cát Chu Nghiền Mịn",
+    "category": "Trái cây nghiền",
+    "price": 59000,
+    "image": "/assets/images/products/TRAICAYNGHIENVIXOAI_01.png",
+    "description": "Chắt chiu vị ngọt lành tự nhiên từ những quả xoài chín mọng thơm lừng.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Sữa chua uống",
+    "category": "Sữa chua uống",
+    "price": 79000,
+    "image": "/assets/images/products/SUACHUAUONG_01.png",
+    "description": "Hương vị chua ngọt thanh mát lên men từ dòng sữa tươi lành, mang theo hàng tỷ lợi khuẩn sống Probiotics.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh gạo phô mai mâm xôi",
+    "category": "Bánh gạo",
+    "price": 150000,
+    "image": "/assets/images/products/BANHGAOPMMAMXOI_01.png",
+    "description": "Sự giao thoa giữa vị phô mai béo ngậy và vị chua ngọt tinh nghịch của mâm xôi.",
+    "age": "> 8 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Bánh gạo phô mai việt quất",
+    "category": "Bánh gạo",
+    "price": 150000,
+    "image": "/assets/images/products/BANHGAOVIETQUAT_01.png",
+    "description": "Màu sắc tự nhiên quyện cùng vị thanh dịu ngọt lành của việt quất và phô mai thơm ngậy.",
+    "age": "> 8 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Cháo ăn dặm cá hồi",
+    "category": "Cháo ăn dặm",
+    "price": 129000,
+    "image": "/assets/images/products/CHAOCAHOI_01.png",
+    "description": "Hạt gạo nở mềm sánh mịn hòa cùng vị ngọt thơm béo tự nhiên từ từng thớ cá hồi bổ dưỡng.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Cháo ăn dặm yến mạch",
+    "category": "Cháo ăn dặm",
+    "price": 129000,
+    "image": "/assets/images/products/CHAOYENMACH_01.png",
+    "description": "Hương vị thanh đạm dịu mát nhẹ tênh, giúp xoa dịu đường ruột.",
+    "age": ">= 6 tháng",
+    "stock": 0
+  },
+  {
+    "name": "Dầu massage cho bé",
+    "category": "Dầu massage",
+    "price": 89000,
+    "image": "/assets/images/products/DAUMASSAGE_01.png",
+    "description": "Lớp màng khóa ẩm dịu nhẹ từ thực vật giúp bảo vệ tối ưu hàng rào da mỏng manh của bé.",
+    "age": "Sơ sinh",
+    "stock": 0
+  }
+]

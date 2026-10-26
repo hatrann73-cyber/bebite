@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản trị Bébite</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Original+Surfer&family=Potta+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <a href="../index.html" class="brand">
+                <img
+                    src="../assets/images/logo/logomau.png"
+                    alt="Logo Bébite"
+                    class="brand-logo"
+                >
+            </a>
+
+            <p class="sidebar-label">QUẢN LÝ</p>
+
+            <button
+                id="productsNavBtn"
+                class="nav-item active"
+                type="button"
+            >
+                <span class="nav-icon">▦</span>
+                Sản phẩm
+            </button>
+
+            <button
+                id="ordersNavBtn"
+                class="nav-item"
+                type="button"
+            >
+                <span class="nav-icon">▤</span>
+                Đơn hàng
+            </button>
+
+            <button
+                id="customersNavBtn"
+                class="nav-item"
+                type="button"
+            >
+                <span class="nav-icon">♙</span>
+                Khách hàng
+            </button>
+
+            <div class="sidebar-bottom">
+                <div class="admin-avatar">
+                    <img
+                        src="../assets/images/logo/logomau.png"
+                        alt="Bébite"
+                    >
+                </div>
+
+                <div class="admin-account">
+                    <strong>Quản trị viên</strong>
+                    <span>Bébite Admin</span>
+                </div>
+
+                <button
+                    id="logoutBtn"
+                    class="logout-btn"
+                    type="button"
+                    title="Đăng xuất"
+                >
+                    ↗
+                </button>
+            </div>
+        </aside>
+
+        <!-- NỘI DUNG CHÍNH -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+                <div>
+                    <p class="breadcrumb">Bébite / Quản lý</p>
+                    <h1>Sản phẩm</h1>
+                </div>
+
+                <div class="topbar-tag">
+                    <span class="status-dot"></span>
+                    Khu vực quản trị
+                </div>
+            </header>
+
+            <!-- GIỚI THIỆU -->
+            <section class="welcome-panel">
+                <div class="welcome-content">
+                    <h2>Quản lý sản phẩm dễ dàng hơn.</h2>
+                    <p>
+                        Theo dõi danh mục và thông tin sản phẩm trên website.
+                    </p>
+                </div>
+            </section>
+
+            <!-- THỐNG KÊ SẢN PHẨM -->
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-heading">
+                        <span>Tổng sản phẩm</span>
+                        <span class="stat-icon blue">▦</span>
+                    </div>
+                    <strong id="totalProducts">—</strong>
+                    <p>Sản phẩm trong hệ thống</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-heading">
+                        <span>Còn hàng</span>
+                        <span class="stat-icon green">✓</span>
+                    </div>
+                    <strong id="inStockProducts">—</strong>
+                    <p>Sản phẩm có tồn kho</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-heading">
+                        <span>Hết hàng</span>
+                        <span class="stat-icon orange">!</span>
+                    </div>
+                    <strong id="outOfStockProducts">—</strong>
+                    <p>Sản phẩm cần bổ sung</p>
+                </article>
+            </section>
+
+            <!-- =========================================
+                 PANEL 1: QUẢN LÝ SẢN PHẨM
+            ========================================== -->
+            <section
+                id="productsPanel"
+                class="products-panel"
+            >
+                <div class="panel-heading">
+                    <div>
+                        <h2>Danh sách sản phẩm</h2>
+                        <p>Quản lý thông tin sản phẩm của Bébite</p>
+                    </div>
+
+                    <button
+                        id="addProductBtn"
+                        class="primary-btn"
+                        type="button"
+                    >
+                        <span>＋</span> Thêm sản phẩm
+                    </button>
+                </div>
+
+                <div class="toolbar">
+                    <label class="search-box">
+                        <span>⌕</span>
+                        <input
+                            id="searchProduct"
+                            type="search"
+                            placeholder="Tìm tên sản phẩm..."
+                        >
+                    </label>
+
+                    <select
+                        id="categoryFilter"
+                        aria-label="Lọc danh mục"
+                    >
+                        <option value="">Tất cả danh mục</option>
+                    </select>
+
+                    <button
+                        id="refreshProducts"
+                        class="secondary-btn"
+                        type="button"
+                    >
+                        ↻ Làm mới
+                    </button>
+                </div>
+
+                <div
+                    id="pageMessage"
+                    class="page-message"
+                    role="status"
+                    aria-live="polite"
+                >
+                    Đang chuẩn bị tải danh sách sản phẩm...
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SẢN PHẨM</th>
+                                <th>DANH MỤC</th>
+                                <th>GIÁ BÁN</th>
+                                <th>TỒN KHO</th>
+                                <th>THAO TÁC</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="productTableBody">
+                            <tr>
+                                <td colspan="5" class="empty-cell">
+                                    Đang tải dữ liệu...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-footer">
+                    <span id="productCount">
+                        Đang tải sản phẩm...
+                    </span>
+                </div>
+            </section>
+
+            <!-- =========================================
+                 PANEL 2: QUẢN LÝ ĐƠN HÀNG
+                 LÀ PANEL RIÊNG, KHÔNG CHỨA CUSTOMERS PANEL
+            ========================================== -->
+           
+<!-- PANEL 2: QUẢN LÝ ĐƠN HÀNG -->
+<section
+    id="ordersPanel"
+    class="products-panel"
+    hidden
+    style="
+        background:#FFFFF1;
+        border:1px solid #E1E9D2;
+        border-radius:18px;
+        box-shadow:none;
+        padding:26px;
+        color:#365675;
+        font-family:'Montserrat',sans-serif;
+        font-weight:400;
+    "
+>
+    <!-- TIÊU ĐỀ -->
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:16px;
+        flex-wrap:wrap;
+        margin-bottom:26px;
+    ">
+        <div>
+            <h2 style="
+                margin:0 0 8px;
+                color:#1C60B8;
+                font-family:'Potta One',cursive;
+                font-size:20px;
+                font-weight:400;
+            ">
+                Quản lý đơn hàng
+            </h2>
+
+            <p style="
+                margin:0;
+                color:#7590AE;
+                font-size:12px;
+                font-weight:400;
+                line-height:1.7;
+            ">
+                Theo dõi đơn hàng từ Website Bébite, Shopee và TikTok Shop
+            </p>
+        </div>
+
+        <button
+            id="refreshOrders"
+            type="button"
+            class="secondary-btn"
+            style="
+                padding:12px 16px;
+                background:#F7F9E4;
+                color:#1C60B8;
+                border:1px solid #E1E9D2;
+                border-radius:8px;
+                box-shadow:none;
+                font-family:'Montserrat',sans-serif;
+                font-size:12px;
+                font-weight:500;
+                cursor:pointer;
+            "
+        >
+            ↻ Làm mới
+        </button>
+    </div>
+
+    <!-- TÌM KIẾM VÀ BỘ LỌC -->
+    <div style="
+        display:flex;
+        align-items:center;
+        gap:12px;
+        flex-wrap:wrap;
+        margin-bottom:22px;
+    ">
+        <label
+            class="search-box"
+            style="
+                flex:1 1 280px;
+                min-width:220px;
+                height:42px;
+                box-sizing:border-box;
+                background:#FFFFFF;
+                border:1px solid #E1E9D2;
+                border-radius:7px;
+                box-shadow:none;
+            "
+        >
+            <span style="color:#1C60B8;">⌕</span>
+
+            <input
+                id="searchOrder"
+                type="search"
+                placeholder="Tìm mã đơn hoặc email khách hàng..."
+                style="
+                    width:100%;
+                    color:#365675;
+                    font-family:'Montserrat',sans-serif;
+                    font-size:12px;
+                    font-weight:400;
+                    outline:none;
+                "
+            >
+        </label>
+
+        <select
+            id="orderChannelFilter"
+            aria-label="Lọc kênh bán"
+            style="
+                min-height:42px;
+                padding:0 12px;
+                background:#FFFFFF;
+                border:1px solid #E1E9D2;
+                border-radius:7px;
+                color:#365675;
+                font-family:'Montserrat',sans-serif;
+                font-size:11px;
+                font-weight:400;
+            "
+        >
+            <option value="">Tất cả kênh bán</option>
+            <option value="website">Website Bébite</option>
+            <option value="shopee">Shopee</option>
+            <option value="tiktok_shop">TikTok Shop</option>
+        </select>
+
+        <select
+            id="orderStatusFilter"
+            aria-label="Lọc trạng thái"
+            style="
+                min-height:42px;
+                padding:0 12px;
+                background:#FFFFFF;
+                border:1px solid #E1E9D2;
+                border-radius:7px;
+                color:#365675;
+                font-family:'Montserrat',sans-serif;
+                font-size:11px;
+                font-weight:400;
+            "
+        >
+            <option value="">Tất cả trạng thái</option>
+            <option value="Đã đặt hàng">Đã đặt hàng</option>
+            <option value="Đang xử lý">Đang xử lý</option>
+            <option value="Đang giao">Đang giao</option>
+            <option value="Đã giao">Đã giao</option>
+            <option value="Đã hủy">Đã hủy</option>
+        </select>
+    </div>
+
+    <!-- THÔNG BÁO -->
+    <div
+        id="orderPageMessage"
+        class="page-message"
+        role="status"
+        style="
+            margin-bottom:14px;
+            color:#7590AE;
+            font-family:'Montserrat',sans-serif;
+            font-size:12px;
+            font-weight:400;
+        "
+    >
+        Đang tải đơn hàng...
+    </div>
+
+    <!-- BẢNG ĐƠN HÀNG -->
+    <div style="
+        width:100%;
+        overflow-x:auto;
+        background:#FFFFFF;
+        border:1px solid #E7ECDD;
+        border-radius:11px;
+        box-shadow:none;
+    ">
+        <table style="
+            width:100%;
+            min-width:850px;
+            border-collapse:collapse;
+            text-align:left;
+            font-family:'Montserrat',sans-serif;
+            font-size:12px;
+        ">
+            <thead>
+                <tr style="
+                    background:#F7F9E4;
+                    border-bottom:1px solid #E7ECDD;
+                ">
+                    <th style="padding:17px 14px;color:#58718B;font-size:10px;font-weight:500;white-space:nowrap;">
+                        MÃ ĐƠN / NGÀY ĐẶT
+                    </th>
+                    <th style="padding:17px 14px;color:#58718B;font-size:10px;font-weight:500;white-space:nowrap;">
+                        KHÁCH HÀNG
+                    </th>
+                    <th style="padding:17px 14px;color:#58718B;font-size:10px;font-weight:500;white-space:nowrap;">
+                        KÊNH BÁN
+                    </th>
+                    <th style="padding:17px 14px;color:#58718B;font-size:10px;font-weight:500;white-space:nowrap;">
+                        SẢN PHẨM
+                    </th>
+                    <th style="padding:17px 14px;color:#58718B;font-size:10px;font-weight:500;white-space:nowrap;">
+                        TỔNG TIỀN
+                    </th>
+                    <th style="padding:17px 14px;color:#58718B;font-size:10px;font-weight:500;white-space:nowrap;">
+                        TRẠNG THÁI
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody id="orderTableBody">
+                <tr>
+                    <td
+                        colspan="6"
+                        style="
+                            padding:30px;
+                            text-align:center;
+                            color:#7590AE;
+                            font-size:12px;
+                            font-weight:400;
+                        "
+                    >
+                        Đang tải đơn hàng...
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- TỔNG SỐ ĐƠN -->
+    <div
+        class="table-footer"
+        style="
+            margin-top:16px;
+            color:#7590AE;
+            font-family:'Montserrat',sans-serif;
+            font-size:12px;
+            font-weight:400;
+        "
+    >
+        <span id="orderCount">Đang tải đơn hàng...</span>
+    </div>
+</section>
+
+            <!-- MODAL BABY PROFILE
+                 ĐẶT NGOÀI CẢ 3 PANEL -->
+            <div
+                id="customerDetailModal"
+                style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center; padding:16px;"
+            >
+                <div style="background:#fff; width:100%; max-width:520px; border-radius:16px; padding:24px; box-shadow:0 20px 25px -5px rgba(0,0,0,0.1); position:relative;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #f3f4f6; padding-bottom:12px; margin-bottom:16px;">
+                        <h3 style="margin:0; font-size:18px; font-weight:700; color:#111827;">
+                            Hồ sơ khách hàng
+                        </h3>
+
+                        <button
+                            type="button"
+                            onclick="closeCustomerModal()"
+                            style="border:none; background:none; font-size:24px; cursor:pointer; color:#9ca3af; line-height:1;"
+                            aria-label="Đóng hồ sơ"
+                        >
+                            &times;
+                        </button>
+                    </div>
+
+                    <div id="customer-modal-content"></div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="admin-footer">
+                <span>© Bébite — Hệ thống quản trị</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Câu hỏi thường gặp | Bébite</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- BÉBITE -->
+    <link rel="stylesheet" href="../bebite.css">
+    <link rel="stylesheet" href="../components/components.css">
+
+    <style>
+
+        /* =====================================================
+           FAQ PAGE
+        ===================================================== */
+
+        .faq-page {
+
+            --faq-blue-light: #A9E1F2;
+            --faq-blue-main: #1C60B8;
+            --faq-cream: #F7F9E4;
+            --faq-lime: #CBF55D;
+            --faq-yellow-light: #F7FEDB;
+            --faq-gray-light: #F4F7F5;
+
+            min-height: 100vh;
+
+            background: var(--faq-cream);
+
+            color: var(--faq-blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+        }
+
+
+        /* =====================================================
+           BREADCRUMB
+        ===================================================== */
+
+        .faq-breadcrumb {
+
+            width: 100%;
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            padding: 12px 20px 5px;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+
+        }
+
+        .faq-breadcrumb a {
+
+            color: var(--faq-blue-main);
+
+            text-decoration: none;
+
+        }
+
+        .faq-breadcrumb span {
+
+            margin: 0 4px;
+
+        }
+
+
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
+
+        .faq-container {
+
+            width: 100%;
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            padding: 35px 20px 80px;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .faq-heading {
+
+            text-align: center;
+
+            margin-bottom: 42px;
+
+        }
+
+        .faq-heading h1 {
+
+            margin: 0 0 12px;
+
+            color: var(--faq-blue-main);
+
+            font-family: "Potta One", cursive;
+
+            font-size: 28px;
+
+            font-weight: 400;
+
+            line-height: 1.35;
+
+        }
+
+        .faq-heading p {
+
+            max-width: 570px;
+
+            margin: 0 auto;
+
+            color: var(--faq-blue-main);
+
+            font-size: 12px;
+
+            font-weight: 400;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           CATEGORY
+        ===================================================== */
+
+        .faq-category {
+
+            margin-bottom: 32px;
+
+        }
+
+        .faq-category-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin: 0 0 13px;
+
+            color: var(--faq-blue-main);
+
+            font-family: "Potta One", cursive;
+
+            font-size: 15px;
+
+            font-weight: 400;
+
+        }
+
+        .faq-category-title::before {
+
+            content: "";
+
+            width: 7px;
+
+            height: 7px;
+
+            flex-shrink: 0;
+
+            background: var(--faq-lime);
+
+            border-radius: 50%;
+
+        }
+
+
+        /* =====================================================
+           FAQ ITEM
+        ===================================================== */
+
+        .faq-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+        }
+
+        .faq-item {
+
+            background: #FFFFFF;
+
+            border: 1px solid rgba(28, 96, 184, 0.08);
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+
+        }
+
+        .faq-item:hover {
+
+            border-color: rgba(28, 96, 184, 0.18);
+
+        }
+
+        .faq-item.active {
+
+            border-color: rgba(28, 96, 184, 0.18);
+
+            box-shadow: 0 4px 15px rgba(28, 96, 184, 0.05);
+
+        }
+
+
+        /* =====================================================
+           QUESTION
+        ===================================================== */
+
+        .faq-question {
+
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 16px 18px;
+
+            border: none;
+
+            background: transparent;
+
+            color: var(--faq-blue-main);
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            line-height: 1.5;
+
+            text-align: left;
+
+            cursor: pointer;
+
+        }
+
+        .faq-question:hover {
+
+            color: var(--faq-blue-main);
+
+        }
+
+
+        /* =====================================================
+           PLUS ICON
+        ===================================================== */
+
+        .faq-icon {
+
+            position: relative;
+
+            width: 20px;
+
+            height: 20px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: var(--faq-yellow-light);
+
+        }
+
+        .faq-icon::before,
+        .faq-icon::after {
+
+            content: "";
+
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            width: 8px;
+            height: 1.5px;
+
+            background: var(--faq-blue-main);
+
+            transform: translate(-50%, -50%);
+
+            transition: transform 0.2s ease;
+
+        }
+
+        .faq-icon::after {
+
+            transform:
+                translate(-50%, -50%)
+                rotate(90deg);
+
+        }
+
+        .faq-item.active .faq-icon::after {
+
+            transform:
+                translate(-50%, -50%)
+                rotate(0deg);
+
+        }
+
+
+        /* =====================================================
+           ANSWER
+        ===================================================== */
+
+        .faq-answer {
+
+            display: grid;
+
+            grid-template-rows: 0fr;
+
+            transition: grid-template-rows 0.25s ease;
+
+        }
+
+        .faq-answer-inner {
+
+            overflow: hidden;
+
+        }
+
+.faq-answer-content {
+    padding: 14px 36px 20px;
+
+    color: var(--faq-blue-main);
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+        .faq-item.active .faq-answer {
+
+            grid-template-rows: 1fr;
+
+        }
+
+
+        /* =====================================================
+           HIGHLIGHT
+        ===================================================== */
+
+        .faq-note {
+
+            margin-top: 40px;
+
+            padding: 18px 20px;
+
+            background: var(--faq-yellow-light);
+
+            border-left: 3px solid var(--faq-lime);
+
+            border-radius: 5px;
+
+        }
+
+        .faq-note-title {
+
+            margin-bottom: 5px;
+
+            color: var(--faq-blue-main);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+        }
+
+        .faq-note p {
+
+            margin: 0;
+
+            color: var(--faq-blue-main);
+
+            font-size: 10px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .faq-breadcrumb {
+
+                padding-left: 18px;
+
+                padding-right: 18px;
+
+            }
+
+            .faq-container {
+
+                padding:
+                    25px 18px 60px;
+
+            }
+
+            .faq-heading {
+
+                margin-bottom: 32px;
+
+            }
+
+            .faq-heading h1 {
+
+                font-size: 23px;
+
+            }
+
+            .faq-heading p {
+
+                font-size: 11px;
+
+            }
+
+            .faq-category-title {
+
+                font-size: 14px;
+
+            }
+
+            .faq-question {
+
+                padding: 14px 15px;
+
+                font-size: 11px;
+
+            }
+
+            .faq-answer-content {
+
+                padding:
+                    0 15px 15px;
+
+                font-size: 10px;
+
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <div id="bebite-header"></div>
+
+
+    <!-- =====================================================
+         FAQ
+    ===================================================== -->
+
+    <main class="faq-page">
+
+
+        <!-- BREADCRUMB -->
+
+        <div class="faq-breadcrumb">
+
+            <a href="../index.html">
+                Trang chủ
+            </a>
+
+            <span>›</span>
+
+            <span>
+                Câu hỏi thường gặp
+            </span>
+
+        </div>
+
+
+        <div class="faq-container">
+
+
+            <!-- =================================================
+                 TITLE
+            ================================================== -->
+
+            <div class="faq-heading">
+
+                <h1>
+                    Câu hỏi thường gặp
+                </h1>
+
+                <p>
+                    Những câu hỏi thường gặp về sản phẩm, ăn dặm,
+                    cách đặt hàng và chính sách của Bébite.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 1. SẢN PHẨM
+            ================================================== -->
+
+            <section class="faq-category">
+
+                <h2 class="faq-category-title">
+                    Về sản phẩm
+                </h2>
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Bé từ 6 tháng mới bắt đầu ăn dặm nên dùng những sản phẩm nào của Bébite?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+Ở mốc 6 tháng, hệ tiêu hóa của con mới làm quen với thức ăn đặc. Ba mẹ nên ưu tiên:
+(1) Cháo ăn dặm yến mạch & các loại hạt dinh dưỡng (kê nếp, diêm mạch xay vỡ) nấu nhuyễn, giàu chất xơ hòa tan giúp êm bụng
+(2) Trái cây nghiền Bơ Chuối, Xoài Cát Chu mịn mượt như kem cho bữa phụ
+(3) Thêm 1/2 thìa cà phê Dầu ăn dặm (Olive, Gấc, Cá hồi) sau khi tắt bếp để tăng hấp thu vitamin và bổ não.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Sản phẩm Bébite có thêm gia vị đường, muối hay chất bảo quản không?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Bébite cam kết tiêu chuẩn 3 KHÔNG khắt khe: Không thêm đường mía/muối tinh luyện để bảo vệ thận non nớt của bé; Không sử dụng chất bảo quản (sản phẩm được tiệt trùng và đóng gói bao bì chuyên dụng đạt chuẩn quốc tế); Không chứa phẩm màu hay hương liệu nhân tạo, giữ trọn 100% vị thanh ngọt tự nhiên từ nông sản tươi chín cây.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Bé ăn bánh ăn dặm, bánh gạo Bébite có bị hóc không?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+Hoàn toàn an toàn khi dùng cho bé từ 6 tháng trở lên. Bánh ăn dặm và bánh gạo nướng Bébite có kết cấu xốp mịn đặc biệt, tự tan nhanh trong miệng chỉ sau vài giây tiếp xúc với nước bọt. Thiết kế thanh dài vừa vặn lòng bàn tay còn giúp bé rèn luyện phản xạ cầm nắm và tập nhai an toàn.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Làm sao để bảo quản sản phẩm sau khi mở nắp / túi?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Cách bảo quản có thể khác nhau tùy từng
+                                    loại sản phẩm. Mẹ vui lòng xem hướng dẫn
+                                    bảo quản trên bao bì và sử dụng sản phẩm
+                                    trong thời gian được khuyến nghị sau khi mở.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 2. ĂN DẶM
+            ================================================== -->
+
+            <section class="faq-category">
+
+                <h2 class="faq-category-title">
+                    Ăn dặm cho bé
+                </h2>
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Cách thêm dầu ăn dặm (Cá hồi, Olive, Gấc) vào cháo đúng chuẩn dinh dưỡng?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Để không làm thất thoát Omega-3, DHA và các vitamin nhạy cảm với nhiệt, ba mẹ hãy nấu chín cháo/bột rồi tắt bếp, sau đó mới cho 2.5ml – 5ml (khoảng 1/2 đến 1 thìa cà phê) dầu ăn dặm vào khuấy đều rồi cho bé dùng khi món ăn còn ấm.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Bé bị dị ứng đạm sữa bò có dùng được cháo và trái cây nghiền Bébite không? 
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+Dạ Bébite có các dòng Cháo ăn dặm yến mạch, Hạt dinh dưỡng mộc và Trái cây nghiền Bébite (Bơ Chuối, Xoài Cát Chu) đều có nguồn gốc 100% thuần thực vật, hoàn toàn không chứa sữa bò hay chế phẩm từ sữa động vật, nên an toàn tuyệt đối cho bé có cơ địa dị ứng đạm sữa bò ạ. 
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Nếu bé không thích sản phẩm thì có nên tiếp tục cho ăn?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Mỗi bé có khẩu vị và tốc độ làm quen
+                                    với thức ăn khác nhau. Mẹ có thể thử lại
+                                    vào thời điểm khác hoặc thay đổi cách
+                                    kết hợp món ăn phù hợp với bé.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 3. ĐẶT HÀNG
+            ================================================== -->
+
+            <section class="faq-category">
+
+                <h2 class="faq-category-title">
+                    Đặt hàng & thanh toán
+                </h2>
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Làm thế nào để đặt hàng trên Bébite?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Mẹ chọn sản phẩm muốn mua, thêm vào giỏ hàng,
+                                    kiểm tra thông tin đơn hàng và tiến hành
+                                    thanh toán theo hướng dẫn trên website.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Tôi có thể thay đổi thông tin đơn hàng sau khi đặt không?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Nếu đơn hàng chưa được bàn giao cho đơn vị
+                                    vận chuyển, mẹ có thể liên hệ bộ phận
+                                    Chăm sóc Khách hàng để được hỗ trợ kiểm tra
+                                    và thay đổi thông tin nếu có thể.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Tôi có thể hủy đơn hàng không?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Mẹ có thể yêu cầu hủy đơn trước khi đơn hàng
+                                    được bàn giao cho đơn vị vận chuyển.
+                                    Vui lòng liên hệ Bébite sớm để được hỗ trợ.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 4. VẬN CHUYỂN
+            ================================================== -->
+
+            <section class="faq-category">
+
+                <h2 class="faq-category-title">
+                    Vận chuyển
+                </h2>
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Bao lâu thì tôi nhận được hàng?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Thời gian giao hàng phụ thuộc vào khu vực
+                                    nhận hàng và đơn vị vận chuyển. Sau khi
+                                    đơn hàng được xác nhận, Bébite sẽ cập nhật
+                                    thông tin giao hàng để mẹ thuận tiện theo dõi.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Bébite có hỗ trợ miễn phí vận chuyển không?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Bébite có áp dụng các chương trình hỗ trợ
+                                    phí vận chuyển tùy theo giá trị đơn hàng
+                                    và từng chương trình khuyến mãi.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                        >
+
+                            <span>
+                                Tôi cần làm gì nếu sản phẩm bị hư hỏng khi nhận hàng?
+                            </span>
+
+                            <span class="faq-icon"></span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <div class="faq-answer-inner">
+
+                                <div class="faq-answer-content">
+
+                                    Mẹ vui lòng kiểm tra tình trạng kiện hàng
+                                    khi nhận. Nếu sản phẩm bị móp méo, hư hỏng,
+                                    hở niêm phong hoặc giao sai sản phẩm, hãy
+                                    liên hệ Bébite và cung cấp hình ảnh hoặc
+                                    video để được hỗ trợ.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONTACT NOTE
+            ================================================== -->
+
+            <div class="faq-note">
+
+                <div class="faq-note-title">
+                    Chưa tìm thấy câu trả lời?
+                </div>
+
+                <p>
+                    Nếu mẹ vẫn còn thắc mắc, hãy liên hệ với Bébite.
+                    Đội ngũ của chúng mình luôn sẵn sàng hỗ trợ mẹ
+                    lựa chọn sản phẩm phù hợp cho bé.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <div id="bebite-footer"></div>
+
+
+    <!-- COMPONENTS -->
+    <script src="../components/components.js"></script>
+
+
+    <!-- =====================================================
+         FAQ SCRIPT
+    ===================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const faqItems =
+                document.querySelectorAll(".faq-item");
+
+
+            faqItems.forEach(function (item) {
+
+                const question =
+                    item.querySelector(".faq-question");
+
+
+                question.addEventListener("click", function () {
+
+                    const isActive =
+                        item.classList.contains("active");
+
+
+                    /* Đóng tất cả */
+
+                    faqItems.forEach(function (otherItem) {
+
+                        otherItem.classList.remove("active");
+
+                    });
+
+
+                    /* Mở item được chọn */
+
+                    if (!isActive) {
+
+                        item.classList.add("active");
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

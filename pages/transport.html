@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chính sách Vận Chuyển | Bébite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../bebite.css">
+    <link rel="stylesheet" href="../components/components.css">
+
+    <style>
+.transport-page {
+    --transport-blue-light: #A9E1F2;
+    --transport-blue-main: #1C60B8;
+    --transport-cream: #FFFFF1;
+    --transport-lime: #CBF55D;
+    --transport-cyan-light: #C3EBF9;
+    --transport-yellow-light: #F7FEDB;
+}
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.transport-page {
+    min-height: 100vh;
+
+    background: #FFFFF1;
+
+    color: #1C60B8;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.transport-breadcrumb {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 10px 20px 4px;
+
+    color: #1C60B8;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+.transport-breadcrumb a {
+    color: #1C60B8;
+
+    text-decoration: none;
+}
+
+.transport-breadcrumb span {
+    margin: 0 4px;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.transport-layout {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 8px 20px 70px;
+
+    display: grid;
+
+    grid-template-columns: 205px minmax(0, 1fr);
+
+    column-gap: 45px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.transport-sidebar {
+    position: sticky;
+    top: 85px;
+
+    padding-top: 5px;
+}
+
+.transport-sidebar h1 {
+    margin: 0 0 15px;
+
+    color: #1C60B8;
+
+    font-family: "Potta One", cursive;
+
+    font-size: 23px;
+
+    font-weight: 400 !important;
+
+    line-height: 1.25;
+}
+
+.transport-sidebar-nav {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.transport-sidebar-nav a {
+    padding: 5px 0;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.transport-sidebar-nav a:hover {
+    color: var(--blue-main);
+
+    transform: translateX(3px);
+}
+
+.transport-sidebar-nav a.active {
+    color: var(--blue-main);
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.transport-content {
+    min-width: 0;
+}
+
+
+/* MAIN TITLE */
+
+.transport-content h2.main-title {
+    margin: 0 0 12px;
+
+    color: var(--blue-main);
+
+    font-family: "Potta One", cursive;
+
+    font-size: 21px;
+
+    font-weight: 400 !important;
+
+    line-height: 1.35;
+}
+
+
+/* =====================================================
+   INTRO / SUB TEXT
+===================================================== */
+
+.transport-intro {
+    margin-bottom: 22px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+.transport-intro strong {
+    color: var(--blue-main);
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.transport-section {
+    margin-bottom: 30px;
+
+    scroll-margin-top: 95px;
+}
+
+
+/* SECTION TITLE - POTTA ONE */
+
+.transport-section-title {
+    margin: 0 0 9px;
+
+    color: var(--blue-main);
+
+    font-family: "Potta One", cursive;
+
+    font-size: 12px;
+
+    font-weight: 400 !important;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   NORMAL TEXT
+===================================================== */
+
+.transport-section p {
+    margin: 0 0 9px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.transport-section ul {
+    margin: 7px 0 13px;
+
+    padding-left: 18px;
+}
+
+.transport-section li {
+    margin-bottom: 5px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+.transport-section li strong {
+    color: var(--blue-main);
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.transport-subtitle {
+    margin: 18px 0 8px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.transport-note {
+    margin: 10px 0 15px;
+
+    padding: 9px 11px;
+
+    background: var(--yellow-light);
+
+    border-left: 3px solid var(--lime);
+}
+
+.transport-note p {
+    margin: 0;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   SHIPPING TABLE
+===================================================== */
+
+.transport-table-wrap {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-top: 10px;
+}
+
+.transport-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    color: #CBF55D;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+}
+
+.transport-table th,
+.transport-table td {
+    border: 1px solid var(--blue-light);
+
+    padding: 8px 7px;
+
+    vertical-align: top;
+
+    line-height: 1.65;
+}
+
+.transport-table th {
+    background: #CBF55D;
+
+    color: #1C60B8;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-align: left;
+}
+
+.transport-table td {
+    background: #F7FEDB;
+
+    color: #1C60B8;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+.transport-table td strong {
+    color: var(--blue-main);
+
+    font-weight: 600;
+}
+
+.transport-table tr:nth-child(even) td {
+    background: var(--cream);
+}
+
+
+/* =====================================================
+   CANCEL ORDER
+===================================================== */
+
+.cancel-block {
+    margin-top: 10px;
+}
+
+.cancel-title {
+    margin: 15px 0 7px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+.cancel-list {
+    margin: 5px 0 0;
+
+    padding-left: 20px;
+}
+
+.cancel-list > li {
+    margin-bottom: 8px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+}
+
+.cancel-list ul {
+    margin-top: 5px;
+
+    padding-left: 18px;
+}
+
+.cancel-list ul li {
+    margin-bottom: 4px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.transport-contact {
+    margin-top: 10px;
+}
+
+.transport-contact-item {
+    margin-bottom: 6px;
+
+    color: var(--blue-main);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+.transport-contact-item strong {
+    color: var(--blue-main);
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .transport-layout {
+        grid-template-columns: 170px minmax(0, 1fr);
+
+        column-gap: 25px;
+    }
+
+    .transport-sidebar h1 {
+        font-size: 20px;
+    }
+
+    .transport-content h2.main-title {
+        font-size: 19px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .transport-layout {
+        display: block;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .transport-sidebar {
+        position: static;
+
+        margin-bottom: 25px;
+
+        padding-bottom: 15px;
+
+        border-bottom: 1px solid var(--blue-light);
+    }
+
+    .transport-sidebar h1 {
+        margin-bottom: 8px;
+
+        font-size: 20px;
+    }
+
+    .transport-sidebar-nav {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 2px 15px;
+    }
+
+    .transport-sidebar-nav a {
+        font-size: 11px;
+    }
+
+    .transport-content h2.main-title {
+        font-size: 18px;
+    }
+
+    .transport-table {
+        min-width: 550px;
+    }
+
+    .transport-breadcrumb {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <div id="bebite-header"></div>
+
+
+    <main class="transport-page">
+
+        <!-- BREADCRUMB -->
+
+        <div class="transport-breadcrumb">
+
+            <a href="../index.html">
+                Trang chủ
+            </a>
+
+            <span>›</span>
+
+            <span>
+                Chính sách vận chuyển
+            </span>
+
+        </div>
+
+
+        <div class="transport-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside class="transport-sidebar">
+
+                <h1>
+                    Chính Sách
+                </h1>
+
+                <nav class="transport-sidebar-nav">
+
+                    <a
+                        href="#dat-hang"
+                        class="active"
+                    >
+                        Hướng dẫn đặt hàng
+                    </a>
+
+                    <a href="#xac-nhan">
+                        Xác nhận giao hàng
+                    </a>
+
+                    <a href="#thoi-gian">
+                        Thời gian giao hàng
+                    </a>
+
+                    <a href="#phi-van-chuyen">
+                        Phí vận chuyển
+                    </a>
+
+                    <a href="#huy-don">
+                        Chính sách hủy đơn
+                    </a>
+
+                    <a href="#lien-he">
+                        Thông tin liên hệ
+                    </a>
+
+                </nav>
+
+            </aside>
+
+
+            <!-- =================================================
+                 CONTENT
+            ================================================== -->
+
+            <article class="transport-content">
+
+
+                <h2 class="main-title">
+                    Chính Sách Vận Chuyển
+                </h2>
+
+
+                <div class="transport-intro">
+
+                    Bébite xây dựng chính sách vận chuyển nhằm đảm bảo
+                    đơn hàng được giao đến khách hàng đúng quy trình,
+                    thuận tiện và giữ trọn chất lượng sản phẩm trong
+                    suốt quá trình vận chuyển.
+
+                </div>
+
+
+                <!-- =================================================
+                     1. HƯỚNG DẪN ĐẶT HÀNG
+                ================================================== -->
+
+                <section
+                    class="transport-section"
+                    id="dat-hang"
+                >
+
+                    <h3 class="transport-section-title">
+                        Hướng dẫn đặt hàng
+                    </h3>
+
+
+                    <p>
+                        Quý khách có thể đặt hàng trực tuyến dễ dàng qua
+                        website chính thức <strong>bebite.vn</strong>
+                        hoặc ứng dụng di động Bébite. Sau khi đặt hàng
+                        thành công, hệ thống sẽ gửi email hoặc tin nhắn
+                        xác nhận chi tiết đơn hàng đến quý khách.
+                    </p>
+
+
+                    <p>
+                        Nhằm bảo đảm chất lượng vệ sinh an toàn thực phẩm
+                        cũng như giữ trọn vẹn kết cấu của các sản phẩm
+                        ăn dặm (puree hoa quả tươi, bột cháo dinh dưỡng)
+                        và các sản phẩm chăm sóc bé dạng lỏng
+                        (dầu massage), đơn hàng trực tuyến được áp dụng
+                        các điều kiện tiêu chuẩn sau:
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            <strong>Khối lượng kiện hàng:</strong>
+                            Dưới 8kg/đơn hàng.
+                        </li>
+
+                        <li>
+                            <strong>Kích thước kiện hàng:</strong>
+                            Mỗi chiều không vượt quá 35cm.
+                        </li>
+
+                        <li>
+                            <strong>
+                                Lưu ý đối với sản phẩm nhạy cảm nhiệt độ /
+                                hạn sử dụng ngắn:
+                            </strong>
+
+                            Một số sản phẩm dạng tươi sống,
+                            sữa chua hoa quả tươi cần bảo quản lạnh
+                            hoặc đơn hàng có số lượng vượt chuẩn quy định
+                            sẽ áp dụng giao nhanh hỏa tốc nội thành
+                            qua đối tác vận chuyển chuyên biệt.
+                        </li>
+
+                    </ul>
+
+
+                    <p>
+                        Nếu quý khách có nhu cầu đặt hàng số lượng lớn
+                        (sỉ hoặc combo theo tháng), vui lòng liên hệ
+                        trực tiếp Fanpage/Zalo Official của Bébite để
+                        được hỗ trợ đóng gói và vận chuyển riêng biệt.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================================
+                     2. XÁC NHẬN GIAO HÀNG
+                ================================================== -->
+
+                <section
+                    class="transport-section"
+                    id="xac-nhan"
+                >
+
+                    <h3 class="transport-section-title">
+                        Xác nhận giao hàng
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            <strong>
+                                Xác nhận đơn hàng:
+                            </strong>
+
+                            Bộ phận Chăm sóc Khách hàng của Bébite
+                            có thể liên hệ qua điện thoại để xác nhận
+                            lại địa chỉ và thời gian nhận hàng thuận tiện
+                            nhất cho mẹ và bé trước khi xuất kho.
+                        </li>
+
+                        <li>
+                            <strong>
+                                Thời gian làm việc:
+                            </strong>
+
+                            Bộ phận giao hàng hoạt động từ Thứ Hai
+                            đến hết Thứ Bảy (08:00 – 21:00),
+                            không giao hàng vào Chủ Nhật và các ngày
+                            Lễ/Tết.
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- =================================================
+                     3. THỜI GIAN GIAO HÀNG
+                ================================================== -->
+
+                <section
+                    class="transport-section"
+                    id="thoi-gian"
+                >
+
+                    <h3 class="transport-section-title">
+                        Thời gian giao hàng
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            <strong>
+                                Khu vực nội thành
+                                (gần trung tâm/kho hàng):
+                            </strong>
+
+                            Giao trong vòng 1 – 2 ngày làm việc
+                            (hỗ trợ dịch vụ giao hỏa tốc 2–4 giờ
+                            nếu quý khách có nhu cầu gấp).
+                        </li>
+
+
+                        <li>
+                            <strong>
+                                Khu vực các tỉnh/thành phố khác:
+                            </strong>
+
+                            Đơn hàng được bàn giao cho đối tác vận chuyển
+                            trong 24 giờ; thời gian giao hàng tận nơi
+                            từ 2 – 4 ngày làm việc tiếp theo tùy địa phương.
+                        </li>
+
+
+                        <li>
+                            <strong>
+                                Trường hợp sản phẩm quý khách đặt tạm hết
+                                tại kho gần nhất:
+                            </strong>
+
+                            Bébite xin phép điều chuyển từ kho khác
+                            và thời gian giao hàng có thể kéo dài thêm
+                            từ 1 – 2 ngày. Chúng tôi sẽ thông báo trước
+                            để quý khách chủ động kế hoạch ăn dặm của bé.
+                        </li>
+
+                    </ul>
+
+
+                    <div class="transport-note">
+
+                        <p>
+                            Thời gian giao hàng có thể thay đổi tùy theo
+                            tình trạng đơn hàng, địa phương nhận hàng
+                            và điều kiện vận chuyển thực tế.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     4. PHÍ VẬN CHUYỂN
+                ================================================== -->
+
+                <section
+                    class="transport-section"
+                    id="phi-van-chuyen"
+                >
+
+                    <h3 class="transport-section-title">
+                        Phí vận chuyển
+                    </h3>
+
+
+                    <p>
+                        Bébite áp dụng chính sách ưu đãi phí vận chuyển
+                        minh bạch:
+                    </p>
+
+
+                    <div class="transport-table-wrap">
+
+                        <table class="transport-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Giá trị đơn hàng
+                                    </th>
+
+                                    <th>
+                                        Phí vận chuyển
+                                    </th>
+
+                                    <th>
+                                        Điều kiện
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Từ 300.000 VNĐ trở lên
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            Miễn phí vận chuyển
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Freeship toàn quốc.
+                                        Giá trị tính sau khuyến mãi.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Từ 129.000 VNĐ đến dưới
+                                        300.000 VNĐ
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            15.000 VNĐ/đơn hàng
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Phí vận chuyển tiêu chuẩn.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Dưới 129.000 VNĐ
+                                    </td>
+
+                                    <td>
+                                        <strong>
+                                            19.000 VNĐ/đơn hàng
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        Phí vận chuyển tiêu chuẩn.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     5. HỦY ĐƠN
+                ================================================== -->
+
+                <section
+                    class="transport-section"
+                    id="huy-don"
+                >
+
+                    <h3 class="transport-section-title">
+                        Chính sách Hủy đơn hàng
+                    </h3>
+
+
+                    <p>
+                        Bébite hỗ trợ hủy đơn hàng trong các trường hợp sau:
+                    </p>
+
+
+                    <div class="cancel-block">
+
+
+                        <h4 class="cancel-title">
+                            1. Từ phía Bébite
+                        </h4>
+
+
+                        <ul class="cancel-list">
+
+                            <li>
+
+                                Nhân viên giao hàng hoặc CSKH không thể
+                                liên hệ với quý khách qua số điện thoại
+                                đặt hàng sau 3 lần gọi; đơn hàng sẽ được
+                                tự động hủy trên hệ thống và gửi email
+                                thông báo.
+
+                            </li>
+
+
+                            <li>
+
+                                Hệ thống phát hiện dấu hiệu gian lận
+                                khuyến mãi hoặc tài khoản ảo đặt đơn
+                                không hợp lệ.
+
+                            </li>
+
+                        </ul>
+
+
+                        <h4 class="cancel-title">
+                            2. Từ phía khách hàng
+                        </h4>
+
+
+                        <ul class="cancel-list">
+
+                            <li>
+
+                                Quý khách có quyền yêu cầu hủy giao dịch
+                                bất cứ lúc nào trước khi đơn hàng được
+                                bàn giao cho đơn vị vận chuyển bằng cách
+                                liên hệ Hotline/Email CSKH.
+
+                            </li>
+
+
+                            <li>
+
+                                Trường hợp hàng đã giao đến nơi nhưng
+                                sản phẩm bị lỗi móp méo, hở van niêm phong
+                                túi nhôm hoặc giao nhầm mã, quý khách
+                                hoàn toàn có quyền từ chối nhận hàng
+                                theo quy định của Chính sách Đổi trả
+                                & Hoàn tiền Bébite.
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     6. LIÊN HỆ
+                ================================================== -->
+
+                <section
+                    class="transport-section"
+                    id="lien-he"
+                >
+
+                    <h3 class="transport-section-title">
+                        Thông tin liên hệ hỗ trợ
+                    </h3>
+
+
+                    <p>
+                        Mọi thắc mắc liên quan đến tra cứu đơn hàng
+                        hoặc tiến độ vận chuyển, quý khách vui lòng
+                        liên hệ:
+                    </p>
+
+
+                    <div class="transport-contact">
+
+                        <div class="transport-contact-item">
+
+                            <strong>
+                                • Hotline hỗ trợ:
+                            </strong>
+
+                            034 454 7765
+                            (Hỗ trợ từ 08:00 – 20:00
+                            Thứ 2 đến Thứ 7)
+
+                        </div>
+
+
+                        <div class="transport-contact-item">
+
+                            <strong>
+                                • Email:
+                            </strong>
+
+                            bebitevn@bebite.com.vn
+
+                        </div>
+
+
+                        <div class="transport-contact-item">
+
+                            <strong>
+                                • Website:
+                            </strong>
+
+                            bebite.vn
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <div id="bebite-footer"></div>
+
+
+    <script src="../components/components.js"></script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const links =
+                document.querySelectorAll(
+                    ".transport-sidebar-nav a"
+                );
+
+            links.forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    links.forEach(function (item) {
+                        item.classList.remove("active");
+                    });
+
+                    this.classList.add("active");
+
+                });
+
+            });
+
+
+            /* TỰ ĐỘNG ĐỔI ACTIVE KHI CUỘN */
+
+            const sections =
+                document.querySelectorAll(
+                    ".transport-section"
+                );
+
+            const observer =
+                new IntersectionObserver(
+                    function (entries) {
+
+                        entries.forEach(function (entry) {
+
+                            if (entry.isIntersecting) {
+
+                                links.forEach(function (link) {
+
+                                    link.classList.remove("active");
+
+                                    if (
+                                        link.getAttribute("href") ===
+                                        "#" + entry.target.id
+                                    ) {
+                                        link.classList.add("active");
+                                    }
+
+                                });
+
+                            }
+
+                        });
+
+                    },
+                    {
+                        rootMargin: "-100px 0px -65% 0px"
+                    }
+                );
+
+
+            sections.forEach(function (section) {
+
+                observer.observe(section);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

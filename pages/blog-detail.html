@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bài viết - BéBite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Potta+One&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../bebite.css">
+    <link rel="stylesheet" href="../components/components.css">
+    <link rel="stylesheet" href="blog-detail.css">
+</head>
+
+<body>
+
+    <div id="bebite-header"></div>
+
+    <main class="blog-detail-page">
+
+        <div class="blog-detail-breadcrumb">
+            <a href="blog.html">Tin tức</a>
+            <span>›</span>
+            <span id="detailCategory">Bài viết</span>
+        </div>
+
+        <article class="blog-detail">
+
+            <!-- CATEGORY + DATE -->
+            <div class="detail-top">
+                <span
+                    class="detail-category"
+                    id="detailCategoryTop"
+                ></span>
+
+                <span
+                    class="detail-date"
+                    id="detailDate"
+                ></span>
+            </div>
+
+            <!-- TITLE -->
+            <h1 id="detailTitle"></h1>
+
+            <!-- INTRO -->
+            <p
+                class="detail-intro"
+                id="detailIntro"
+            ></p>
+
+            <div class="detail-divider"></div>
+
+            <!-- IMAGE -->
+            <div class="detail-image-slot">
+
+                <img
+                    id="detailImage"
+                    src=""
+                    alt=""
+                >
+
+                <div
+                    class="detail-image-placeholder"
+                    id="detailImagePlaceholder"
+                >
+                    HÌNH ẢNH BÀI VIẾT
+                </div>
+
+            </div>
+
+            <!-- CONTENT -->
+            <div
+                class="detail-content"
+                id="detailContent"
+            ></div>
+
+            <!-- BACK -->
+            <div class="detail-bottom">
+
+                <a
+                    href="blog.html"
+                    class="detail-back"
+                >
+                    ← QUAY LẠI BLOG
+                </a>
+
+            </div>
+
+        </article>
+
+    </main>
+
+    <div id="bebite-footer"></div>
+
+    <script src="../components/components.js"></script>
+    <script src="blog-detail.js"></script>
+
+</body>
+</html>
