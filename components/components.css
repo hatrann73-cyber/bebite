@@ -571,3 +571,316 @@
     transform: translateY(-2px);
 }
 
+/* =====================================================
+   BÉBITE - RESPONSIVE HEADER & FOOTER
+   Dán ở CUỐI file CSS hiện tại
+===================================================== */
+
+/* Nút menu mobile: mặc định ẩn trên desktop */
+.mobile-menu-toggle {
+    display: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+    .header-container {
+        width: 96%;
+    }
+
+    .logo {
+        width: 105px;
+    }
+
+    .logo img {
+        width: 88px;
+    }
+
+    .main-nav {
+        gap: clamp(12px, 2vw, 24px);
+    }
+
+    .main-nav a {
+        font-size: 9px;
+    }
+
+    .header-right {
+        width: 180px;
+        gap: 14px;
+    }
+
+    .cart-link {
+        min-width: 76px;
+        padding: 0 9px;
+        gap: 5px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 35px;
+    }
+
+    .footer-main-links {
+        column-gap: 25px;
+    }
+
+    .footer-bottom-links {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* TOP BAR */
+    .top-bar {
+        height: auto;
+        min-height: 30px;
+        padding: 6px 10px;
+        box-sizing: border-box;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .top-bar .top-item {
+        display: none;
+        padding: 0;
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .top-bar .top-item:first-child {
+        display: block;
+    }
+
+
+    /* MAIN HEADER */
+    .main-header {
+        height: 62px;
+        border-top-width: 3px;
+    }
+
+    .header-container {
+        width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+        gap: 10px;
+        position: relative;
+    }
+
+
+    /* LOGO */
+    .logo {
+        width: auto;
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+
+    .logo img {
+        width: 82px;
+        max-width: 100%;
+        max-height: 42px;
+        object-fit: contain;
+    }
+
+
+    /* MENU BUTTON */
+    .mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        order: 3;
+        flex: 0 0 34px;
+        width: 34px;
+        height: 38px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--blue);
+        font-size: 21px;
+        cursor: pointer;
+    }
+
+
+    /* NAVIGATION DROPDOWN */
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        flex: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 8px 16px;
+        box-sizing: border-box;
+        background: var(--cream);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 6px 14px rgba(28, 96, 184, 0.10);
+    }
+
+    .main-nav.mobile-menu-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 14px 5px;
+        border-bottom: 1px solid var(--border);
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .main-nav a:last-child {
+        border-bottom: 0;
+    }
+
+
+    /* RIGHT HEADER */
+    .header-right {
+        width: auto;
+        min-width: 0;
+        flex: 0 1 auto;
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .login-link {
+        font-size: 9px;
+    }
+
+    .cart-link {
+        min-width: 0;
+        height: 32px;
+        padding: 0 9px;
+        gap: 5px;
+        font-size: 9px;
+        box-shadow: none;
+    }
+
+    .cart-link i {
+        font-size: 11px;
+    }
+
+
+    /* FOOTER */
+    .footer-container {
+        width: 92%;
+        grid-template-columns: 1fr;
+        row-gap: 22px;
+        padding-top: 25px;
+        padding-bottom: 100px;
+    }
+
+    .footer-company h3 {
+        font-size: 14px;
+    }
+
+    .footer-company p {
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-right {
+        padding-top: 0;
+    }
+
+    .footer-main-links {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    .footer-column a {
+        margin-bottom: 13px;
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .footer-bottom-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin-top: 8px;
+    }
+
+    .footer-bottom-links a {
+        font-size: 10px;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .footer-decoration {
+        height: 75px;
+    }
+
+    .footer-decoration img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .header-container {
+        padding: 0 8px;
+        gap: 6px;
+    }
+
+    .logo img {
+        width: 68px;
+    }
+
+    .header-right {
+        gap: 7px;
+    }
+
+    .login-link {
+        font-size: 8px;
+    }
+
+    .cart-link {
+        height: 30px;
+        padding: 0 6px;
+        font-size: 8px;
+        gap: 4px;
+    }
+
+    .mobile-menu-toggle {
+        flex-basis: 30px;
+        width: 30px;
+        font-size: 19px;
+    }
+
+    .footer-container {
+        width: 90%;
+    }
+
+    .footer-main-links {
+        column-gap: 14px;
+    }
+
+    .footer-bottom-links {
+        gap: 10px 15px;
+    }
+}
+

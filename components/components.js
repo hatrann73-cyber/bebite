@@ -314,3 +314,64 @@ updateProfileLink();
         });
 
 });
+
+/* =====================================================
+   MOBILE MENU - HỖ TRỢ HEADER TẢI ĐỘNG
+===================================================== */
+
+document.addEventListener("click", function (event) {
+    const menuButton = event.target.closest(".mobile-menu-toggle");
+
+    // Nhấn nút menu: mở hoặc đóng
+    if (menuButton) {
+        const mainNav = document.getElementById("bebite-main-nav");
+
+        if (!mainNav) {
+            console.warn("Không tìm thấy #bebite-main-nav");
+            return;
+        }
+
+        const isOpen = mainNav.classList.toggle("mobile-menu-open");
+
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Đóng menu" : "Mở menu"
+        );
+
+        const icon = menuButton.querySelector("i");
+
+        if (icon) {
+            icon.classList.toggle("fa-bars", !isOpen);
+            icon.classList.toggle("fa-xmark", isOpen);
+        }
+
+        return;
+    }
+
+    // Nhấn vào link trong menu: đóng menu
+    const navLink = event.target.closest(
+        "#bebite-main-nav a"
+    );
+
+    if (navLink) {
+        const mainNav = document.getElementById("bebite-main-nav");
+        const button = document.querySelector(".mobile-menu-toggle");
+
+        if (mainNav) {
+            mainNav.classList.remove("mobile-menu-open");
+        }
+
+        if (button) {
+            button.setAttribute("aria-expanded", "false");
+            button.setAttribute("aria-label", "Mở menu");
+
+            const icon = button.querySelector("i");
+
+            if (icon) {
+                icon.classList.add("fa-bars");
+                icon.classList.remove("fa-xmark");
+            }
+        }
+    }
+});

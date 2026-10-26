@@ -988,3 +988,423 @@ font-style: italic;
     }
 
 }
+
+/* =====================================================
+   ABOUT US - RESPONSIVE REFINEMENT
+   Dán ở cuối aboutus.css
+===================================================== */
+
+/* Ảnh không vượt quá chiều rộng phần tử */
+.about-page img {
+    max-width: 100%;
+}
+
+.about-page .intro-image img,
+.about-page .values-image img,
+.about-page .promise-image img,
+.about-page .hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Giữ nội dung dài trong phạm vi bố cục */
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page p {
+    overflow-wrap: anywhere;
+}
+
+/* TABLET */
+@media (min-width: 601px) and (max-width: 800px) {
+    .about-breadcrumb {
+        padding: 14px 24px;
+        font-size: 10px;
+    }
+
+    .about-hero {
+        min-height: 340px;
+        padding: 42px 24px;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(23px, 3.5vw, 29px);
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .about-intro,
+    .about-values,
+    .about-promise {
+        width: 100%;
+        padding-left: 28px;
+        padding-right: 28px;
+        gap: 28px;
+        margin-top: 60px;
+    }
+
+    .intro-image {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .intro-content,
+    .values-content,
+    .promise-content {
+        min-width: 0;
+        padding-right: 0;
+    }
+
+    .intro-content h2,
+    .values-content h2,
+    .promise-content h2 {
+        font-size: 20px;
+    }
+
+    .intro-content > p,
+    .values-content > p,
+    .value-item p,
+    .promise-item p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .values-image,
+    .promise-image {
+        height: auto;
+        aspect-ratio: 4 / 5;
+        max-width: 520px;
+    }
+
+    .about-philosophy {
+        padding: 60px 26px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .philosophy-card {
+        min-width: 0;
+        min-height: 0;
+        padding: 22px 18px;
+    }
+
+    .philosophy-card p {
+        font-size: 12px;
+    }
+
+    .philosophy-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .about-page {
+        overflow-x: clip;
+    }
+
+    .about-breadcrumb {
+        padding: 12px 16px;
+        gap: 7px;
+        font-size: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* Hero */
+    .about-hero {
+        min-height: 0;
+        display: block;
+        padding: 42px 20px 46px;
+    }
+
+    .about-hero .hero-image {
+        display: none;
+    }
+
+    .about-hero .hero-content {
+        width: 100%;
+        max-width: 460px;
+        padding: 0;
+    }
+
+    .hero-content .small-title {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(22px, 6.4vw, 28px);
+        line-height: 1.4;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .hero-line {
+        margin: 18px auto;
+    }
+
+    /* Intro, Values, Promise */
+    .about-intro,
+    .about-values,
+    .about-promise {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        margin-top: 44px;
+        padding: 0 20px;
+        gap: 24px;
+    }
+
+    .about-intro {
+        margin-top: 38px;
+    }
+
+    .intro-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .intro-content,
+    .values-content,
+    .promise-content {
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+    }
+
+    .intro-content h2,
+    .values-content h2,
+    .promise-content h2 {
+        font-size: clamp(18px, 5.3vw, 22px);
+        line-height: 1.55;
+        margin-bottom: 15px;
+    }
+
+    .intro-content > p,
+    .values-content > p,
+    .value-item p,
+    .promise-item p {
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .section-label {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+
+    .quote-box {
+        margin-top: 18px;
+        padding: 17px 15px 17px 27px;
+    }
+
+    .quote-box p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* Values */
+    .value-list {
+        margin-top: 24px;
+    }
+
+    .value-item {
+        gap: 13px;
+        margin-bottom: 20px;
+    }
+
+    .value-number {
+        font-size: 13px;
+    }
+
+    .value-item h3 {
+        font-size: 12px;
+    }
+
+    .values-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        padding: 0 8px 8px 0;
+    }
+
+    /* Philosophy */
+    .about-philosophy {
+        margin-top: 54px;
+        padding: 48px 20px;
+    }
+
+    .philosophy-heading h2 {
+        font-size: clamp(19px, 5.5vw, 23px);
+        line-height: 1.55;
+    }
+
+    .philosophy-heading p {
+        font-size: 12px;
+        line-height: 1.8;
+        margin-top: 14px;
+    }
+
+    .philosophy-grid {
+        width: 100%;
+        margin-top: 28px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .philosophy-card {
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .philosophy-icon {
+        margin-bottom: 14px;
+    }
+
+    .philosophy-card > span {
+        font-size: 11px;
+    }
+
+    .philosophy-card h3 {
+        font-size: 12px;
+    }
+
+    .philosophy-card p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* Promise */
+    .about-promise {
+        margin-top: 50px;
+        margin-bottom: 52px;
+    }
+
+    .promise-content h2 {
+        margin-bottom: 24px;
+    }
+
+    .promise-item {
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .promise-number {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+    }
+
+    .promise-item h3 {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .promise-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        max-width: none;
+        margin: 0;
+    }
+
+    /* Final CTA */
+    .about-final {
+        min-height: 0;
+        padding: 52px 20px;
+    }
+
+    .final-content {
+        width: 100%;
+    }
+
+    .final-content > span {
+        font-size: 9px;
+    }
+
+    .final-content h2 {
+        font-size: clamp(21px, 6vw, 26px);
+        line-height: 1.5;
+    }
+
+    .final-content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .final-button {
+        max-width: 100%;
+        padding: 13px 17px;
+        font-size: 10px;
+        line-height: 1.5;
+        justify-content: center;
+    }
+
+    .final-decoration {
+        font-size: 82px;
+    }
+
+    .final-decoration-left {
+        left: -25px;
+        bottom: -30px;
+    }
+
+    .final-decoration-right {
+        right: -22px;
+        top: -30px;
+    }
+}
+
+/* MOBILE NHỎ */
+@media (max-width: 380px) {
+    .about-breadcrumb {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 9px;
+    }
+
+    .about-intro,
+    .about-values,
+    .about-promise {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .about-hero {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .about-philosophy {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .intro-content h2,
+    .values-content h2,
+    .promise-content h2 {
+        font-size: 18px;
+    }
+
+    .final-button {
+        gap: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}

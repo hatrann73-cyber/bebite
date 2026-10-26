@@ -1,7 +1,16 @@
 
 require("dotenv").config();
 
+const fs = require("fs");
 const mysql = require("mysql2");
+
+// Cấu hình SSL khi kết nối database online trên Aiven
+const sslConfig = process.env.DB_SSL_CA_PATH
+    ? {
+        ca: fs.readFileSync(process.env.DB_SSL_CA_PATH, "utf8"),
+        rejectUnauthorized: true
+    }
+    : undefined;
 
 const db = mysql.createPool({
     host: process.env.DB_HOST || "localhost",
@@ -9,9 +18,14 @@ const db = mysql.createPool({
     password: process.env.DB_PASSWORD || "",
     database: process.env.DB_NAME || "bebite_db",
     port: Number(process.env.DB_PORT) || 3306,
+
+    // Chỉ bật SSL khi đã cấu hình đường dẫn chứng chỉ CA
+    ...(sslConfig ? { ssl: sslConfig } : {}),
+
     waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
+    connectionLimit: 5,
+    queueLimit: 0,
+    connectTimeout: 20000
 });
 
 db.getConnection((err, connection) => {

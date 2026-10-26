@@ -1976,3 +1976,544 @@ backdrop-filter: blur(5px);
     }
 }
 
+/* =====================================================
+   BÉBITE HOME - RESPONSIVE FIX
+   Giữ nguyên desktop, tối ưu tablet và mobile
+===================================================== */
+
+/* Ảnh không vượt quá khung chứa */
+.hero-image,
+.journey-banner,
+.story-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-image img,
+.journey-banner img,
+.story-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Popup khảo sát: không vượt quá chiều cao màn hình */
+#welcomePopup {
+    padding: 16px !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#welcomePopup .welcome-popup {
+    width: min(500px, 100%);
+    max-width: 100%;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+/* Tránh nội dung dài làm tràn ngang */
+.intro-text,
+.product-description p,
+.quality-content p,
+.testimonial-text,
+.faq-question span:first-child,
+.faq-answer p {
+    overflow-wrap: anywhere;
+}
+
+/* Tablet */
+@media (min-width: 651px) and (max-width: 900px) {
+    .section-container {
+        width: 92%;
+    }
+
+    .statistics-container {
+        gap: 16px;
+    }
+
+    .stat-item {
+        gap: 8px;
+    }
+
+    .stat-item span {
+        font-size: 12px;
+    }
+
+    .quality-item,
+    .quality-item.reverse {
+        height: auto;
+        min-height: 280px;
+        grid-template-columns: 40% 60%;
+    }
+
+    .quality-image {
+        height: 100%;
+        min-height: 280px;
+    }
+
+    .quality-content {
+        padding: 18px;
+    }
+
+    .quality-content h3 {
+        font-size: 18px;
+    }
+
+    .quality-content p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .testimonial-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .nutrition-gallery {
+        width: 100%;
+    }
+}
+
+/* Điện thoại */
+@media (max-width: 650px) {
+    /* Các khoảng cách chung */
+    .section-container {
+        width: 90%;
+    }
+
+    .section-title {
+        font-size: clamp(21px, 6vw, 30px);
+        overflow-wrap: anywhere;
+    }
+
+    /* Hero */
+    .hero-image img,
+    .journey-banner img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Giới thiệu */
+    .intro-section {
+        padding: 24px 16px 32px;
+    }
+
+    .intro-logo {
+        max-width: 100%;
+    }
+
+    .intro-text {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .intro-highlight {
+        font-size: 12px;
+    }
+
+    /* Sản phẩm nổi bật */
+    .featured-products {
+        padding: 34px 0;
+    }
+
+    .product-title {
+        font-size: clamp(24px, 7vw, 36px);
+        padding: 0 12px;
+        line-height: 1.2 !important;
+    }
+
+    .showcase-wrapper {
+        margin-top: -10px !important;
+        padding-top: 30px !important;
+        padding-bottom: 24px;
+    }
+
+    .product-showcase {
+        gap: 12px !important;
+        padding: 12px 16px 16px !important;
+        scroll-snap-type: x proximity;
+    }
+
+    .product-item {
+        flex: 0 0 155px !important;
+        width: 155px !important;
+        min-width: 0 !important;
+        height: 220px !important;
+        scroll-snap-align: start;
+    }
+
+    .product-item img {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain;
+    }
+
+    .custom-scrollbar-wrapper {
+        width: calc(100% - 40px) !important;
+        margin-top: 10px !important;
+    }
+
+    .product-description {
+        margin-top: 20px;
+        padding: 0 18px;
+    }
+
+    .product-description p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .text-link {
+        font-size: 13px;
+    }
+
+    /* Thống kê */
+    .statistics {
+        padding: 20px 8px;
+    }
+
+    .statistics-container {
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .stat-item {
+        min-width: 0;
+        gap: 7px;
+    }
+
+    .stat-item strong {
+        font-size: clamp(17px, 5vw, 23px);
+    }
+
+    .stat-item span {
+        font-size: clamp(9px, 2.6vw, 11px);
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    /* Đánh giá khách hàng */
+    .testimonials-section {
+        padding: 38px 0 44px;
+    }
+
+    .testimonials-section .section-title {
+        margin-bottom: 24px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .testimonial-card:last-child {
+        grid-column: auto;
+    }
+
+    .testimonial-card {
+        padding: 20px 18px;
+    }
+
+    .testimonial-text {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .testimonial-author strong {
+        font-size: 12px;
+    }
+
+    .testimonial-author span {
+        font-size: 11px;
+    }
+
+    /* Cam kết chất lượng */
+    .quality-section {
+        padding: 36px 0 20px;
+        background-position: center;
+    }
+
+    .quality-section .section-title {
+        padding: 0 12px;
+        margin-bottom: 26px;
+        font-size: clamp(21px, 6vw, 28px);
+    }
+
+    .quality-item,
+    .quality-item.reverse {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        min-height: 0;
+        margin-bottom: 24px;
+    }
+
+    .quality-item .quality-image {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+        flex: none;
+    }
+
+    .quality-content {
+        width: 100%;
+        padding: 20px 18px 22px;
+    }
+
+    .quality-content h3 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .quality-content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    /* Gallery dinh dưỡng: chuyển sang grid */
+    .daily-nutrition {
+        padding: 36px 0 42px;
+    }
+
+    .daily-nutrition .section-title {
+        font-size: clamp(22px, 6vw, 30px);
+        padding: 0 12px;
+    }
+
+    .nutrition-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        width: 90%;
+        height: auto;
+        margin: 28px auto 0;
+    }
+
+    .nutrition-greenery {
+        display: none;
+    }
+
+    .nutrition-image,
+    .image-01,
+    .image-02,
+    .image-03,
+    .image-04,
+    .image-05 {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        padding: 5px;
+        transform: none;
+        min-width: 0;
+    }
+
+    .nutrition-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Ảnh thứ năm nằm giữa hàng cuối nếu cần */
+    .image-05 {
+        grid-column: 1 / -1;
+        width: 65%;
+        justify-self: center;
+    }
+
+    /* Câu hỏi thường gặp */
+    .faq-section {
+        padding: 42px 0 48px;
+    }
+
+    .faq-section .section-title {
+        padding: 0 12px;
+        margin-bottom: 25px;
+    }
+
+    .faq-list {
+        width: 90%;
+    }
+
+    .faq-question {
+        padding: 14px 12px;
+        gap: 10px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .faq-icon {
+        margin-left: 4px;
+    }
+
+    .faq-answer p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 1000px;
+    }
+
+    .back-to-top {
+        margin-top: 32px;
+        font-size: 11px;
+    }
+
+    /* Our Story */
+    .our-story {
+        padding: 0;
+    }
+
+    .story-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .story-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Popup khảo sát */
+    #welcomePopup .welcome-popup {
+        padding: 28px 20px 24px;
+    }
+
+    #welcomePopup .welcome-logo {
+        width: 82px;
+    }
+
+    #welcomePopup h2 {
+        font-size: clamp(20px, 6vw, 25px);
+    }
+
+    #welcomePopup .welcome-description,
+    #welcomePopup .question-description {
+        font-size: 12px;
+    }
+
+    #welcomePopup .question-option {
+        padding: 13px 12px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    #welcomePopup .welcome-button {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    /* Footer */
+    .footer {
+        min-height: auto;
+    }
+
+    .footer-container {
+        width: 90%;
+        min-height: 0;
+        padding: 28px 0 100px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .footer-logo {
+        width: 115px;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .footer-company h3 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .footer-company p {
+        font-size: 11px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-right {
+        padding-top: 0;
+        min-width: 0;
+    }
+
+    .footer-main-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 18px;
+        row-gap: 12px;
+    }
+
+    .footer-column a {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-bottom-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .footer-bottom-links a {
+        font-size: 10px;
+        white-space: normal;
+    }
+
+    .footer-decoration {
+        height: 75px;
+    }
+}
+
+/* Điện thoại rất nhỏ */
+@media (max-width: 380px) {
+    .product-item {
+        flex-basis: 138px !important;
+        width: 138px !important;
+        height: 200px !important;
+    }
+
+    .statistics-container {
+        gap: 3px;
+    }
+
+    .stat-item span {
+        font-size: 9px;
+    }
+
+    .quality-content {
+        padding: 17px 14px;
+    }
+
+    .nutrition-gallery {
+        gap: 10px;
+    }
+
+    #welcomePopup {
+        padding: 10px !important;
+    }
+
+    #welcomePopup .welcome-popup {
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px);
+        padding: 26px 16px 20px;
+    }
+}
+
