@@ -368,7 +368,7 @@ profileAgree.addEventListener("click", async function () {
         const oldProfile = currentUser.babyProfile || {};
 
         const response = await fetch(
-            "http://localhost:3000/api/baby-profile",
+            "https://bebite-backend.onrender.com/api/baby-profile",
             {
                 method: "POST",
                 headers: {

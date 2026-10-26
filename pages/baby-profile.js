@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
 
             const response = await fetch(
-                `http://localhost:3000/api/baby-profile/${currentUser.id}`
+                `https://bebite-backend.onrender.com/api/baby-profile/${currentUser.id}`
             );
 
             const data =
@@ -551,7 +551,7 @@ renderStageProgress(profile);
 
                     const response =
                         await fetch(
-                            "http://localhost:3000/api/baby-profile",
+                            "https://bebite-backend.onrender.com/api/baby-profile",
                             {
 
                                 method: "POST",
@@ -1089,7 +1089,7 @@ if (saveSurveyEdit) {
 
         try {
             const response = await fetch(
-                "http://localhost:3000/api/baby-profile",
+                "https://bebite-backend.onrender.com/api/baby-profile",
                 {
                     method: "POST",
                     headers: {
@@ -1629,7 +1629,7 @@ if (wantsMilkDrink && !milkAllergy) {
 
             const response =
                 await fetch(
-                    "http://localhost:3000/api/orders",
+                    "https://bebite-backend.onrender.com/api/orders",
                     {
 
                         method: "GET",

@@ -772,7 +772,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let result = null;
 
             try {
-                const response = await fetch("http://localhost:3000/api/orders", {
+                const response = await fetch("https://bebite-backend.onrender.com/api/orders", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

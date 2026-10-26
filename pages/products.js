@@ -2713,7 +2713,7 @@ function initLocationBarClose() {
 async function loadProductsFromAPI() {
   try {
     const response = await fetch(
-      "http://localhost:3000/api/products"
+      "https://bebite-backend.onrender.com/api/products"
     );
 
     if (!response.ok) {
